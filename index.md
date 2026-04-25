@@ -1,0 +1,192 @@
+---
+layout: default
+title: "Alisa Play Therapy"
+description: "Compassionate play therapy services for children. Helping children heal, grow, and thrive through the power of play."
+---
+
+<section id="hero" class="section">
+  <div class="container">
+    <div class="reveal">
+      <img src="/assets/images/logo_vertical.png" alt="Alisa Play Therapy" class="hero-logo">
+      <h1 class="hero-title">Healing <span>Through Play</span></h1>
+      <p class="hero-subtitle">A safe, nurturing space where children can express themselves, work through difficult feelings, and build resilience — guided by a trained and compassionate therapist.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Get in Touch</a>
+        <a href="#what-is-play-therapy" class="btn btn-outline">Learn More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+---
+
+<section id="what-is-play-therapy" class="section section--alt">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-header">
+        <span class="section-eyebrow">Understanding Play Therapy</span>
+        <h2 class="section-title">What is Play Therapy?</h2>
+        <p class="section-lead">Play is children's natural language. Before they have words for complex emotions, they play them out.</p>
+      </div>
+      <p>Play Therapy is a evidence-based approach that uses the power of play to help children make sense of difficult experiences, develop healthier coping skills, and build self-esteem and emotional regulation.</p>
+      <ul class="intro-list">
+        <li>Make sense of difficult experiences and big feelings</li>
+        <li>Develop healthier ways to cope with stress and anxiety</li>
+        <li>Build self-esteem, emotional regulation, and social skills</li>
+        <li>Heal from trauma, loss, or upheaval in a gentle, supported way</li>
+      </ul>
+      <p>In a Play Therapy session, your child is invited into a specially designed play space with a rich variety of materials — toys, art supplies, sand, and more. I observe and gently engage, following your child's lead while creating the safety and structure they need to explore at their own pace.</p>
+      <p>Parents and caregivers are also an important part of the process. I meet with you separately to discuss progress, share observations, and explore ways to support your child's growth at home.</p>
+    </div>
+  </div>
+</section>
+
+---
+
+<section id="is-it-right" class="section">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-header">
+        <span class="section-eyebrow">Is It Right for My Child</span>
+        <h2 class="section-title">Is Play Therapy Right for My Child?</h2>
+        <p class="section-lead">Play Therapy can be helpful for children and families navigating a wide range of challenges.</p>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary class="faq-question">Difficulty managing big emotions</summary>
+          <div class="faq-answer">
+            <p>Does your child have intense tantrums, frequent meltdowns, or seem overwhelmed by emotions that feel too big to handle? Play Therapy gives children tools to understand and regulate their emotional world.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">Behavioral challenges</summary>
+          <div class="faq-answer">
+            <p>Aggression, defiance, withdrawal, or difficulty following routines — these behaviors often mask unmet needs or unprocessed feelings. Play Therapy addresses the root, not just the behavior.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">Life transitions and disruptions</summary>
+          <div class="faq-answer">
+            <p>A new sibling, a move, parental separation, starting school, or a loss — these events can stir up big feelings that children struggle to put into words. Play Therapy provides a contained space to process these experiences.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">Social difficulties</summary>
+          <div class="faq-answer">
+            <p>Challenges with sharing, making friends, or navigating peer relationships. Play Therapy can help children develop social skills, empathy, and confidence in relating to others.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">Anxiety or worry</summary>
+          <div class="faq-answer">
+            <p>Excessive worry, school avoidance, sleep difficulties, or physical symptoms driven by anxiety. Through play, children can explore and practice new ways of being in the world.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">Neurodevelopmental differences</summary>
+          <div class="faq-answer">
+            <p>Play Therapy is adapted to meet children where they are, including children with ADHD, autism spectrum differences, or developmental differences. The play space is flexible, sensory-aware, and tailored to your child's needs.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+---
+
+<section id="services" class="section section--alt">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-header">
+        <span class="section-eyebrow">What I Offer</span>
+        <h2 class="section-title">Services</h2>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-card__icon">🎨</div>
+          <h3>Individual Play Therapy</h3>
+          <p>Weekly one-on-one sessions tailored to your child's needs. Sessions are 50 minutes for children aged 3–12, with frequency agreed together with parents.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon">👨‍👩‍👧</div>
+          <h3>Parent Consultations</h3>
+          <p>Separate sessions for parents and caregivers to discuss progress, explore strategies for supporting the child at home, and process feelings that arise on the parenting journey.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon">🏫</div>
+          <h3>School &amp; Clinic-Based</h3>
+          <p>I work as a contractor in different settings — schools, community health clinics, and other agencies. Sessions may be available in your area.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon">⚡</div>
+          <h3>Intensive Therapy Blocks</h3>
+          <p>Focused periods of work for children who benefit from condensed sessions — a series close together over a shorter time to build momentum and depth.</p>
+        </div>
+      </div>
+      <p style="margin-top: 36px; font-size: 0.9rem; color: var(--text-muted); text-align: center;">Sessions are offered in [your area] and surrounding areas. Please reach out to find what is available near you.</p>
+    </div>
+  </div>
+</section>
+
+---
+
+<section id="about" class="section">
+  <div class="container">
+    <div class="reveal about-grid">
+      <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=400&h=400&fit=crop&crop=face" alt="Alisa" class="about-image">
+      <div class="about-text">
+        <h2>About Alisa</h2>
+        <p>[Bio and qualifications from Alisa go here. This section will be replaced with her actual content when she's ready to provide it.]</p>
+        <h3>Qualifications</h3>
+        <p>[List of relevant qualifications — e.g., Master of Play Therapy, registered with relevant professional body, etc.]</p>
+        <h3>Approach</h3>
+        <p>[Brief description of her therapeutic approach and philosophy — e.g., child-centered, attachment-informed, trauma-sensitive...]</p>
+        <a href="/about" class="btn btn-primary" style="margin-top: 32px;">Read Full Bio</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+---
+
+<section id="contact" class="section section--alt">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-header">
+        <span class="section-eyebrow">Get in Touch</span>
+        <h2 class="section-title">Let's Talk</h2>
+      </div>
+      <p class="contact-lead">If you'd like to find out whether Play Therapy might be right for your child, or if you have any questions, reach out. A brief conversation can help us figure out if we're the right fit.</p>
+      <div class="contact-methods">
+        <a href="mailto:hello@alisaplaytherapy.com" class="contact-method">
+          <span class="contact-method__icon">✉</span>
+          hello@alisaplaytherapy.com
+        </a>
+        <a href="tel:+1234567890" class="contact-method">
+          <span class="contact-method__icon">☎</span>
+          [Phone number]
+        </a>
+        <span class="contact-method">
+          <span class="contact-method__icon">⌖</span>
+          [Location / area served]
+        </span>
+      </div>
+      <form class="contact-form" method="POST" netlify name="contact">
+        <div class="form-field">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-field">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell me a little about your child and what you're hoping to explore..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
