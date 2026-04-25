@@ -11,8 +11,8 @@ description: "Compassionate play therapy services for children. Helping children
       <h1 class="hero-title">Healing <span>Through Play</span></h1>
       <p class="hero-subtitle">A safe, nurturing space where children can express themselves, work through difficult feelings, and build resilience — guided by a trained and compassionate therapist.</p>
       <div class="hero-actions">
-        <a href="#contact" class="btn btn-primary">Get in Touch</a>
-        <a href="#what-is-play-therapy" class="btn btn-outline">Learn More</a>
+        <a href="{{ site.baseurl }}/#contact" class="btn btn-primary">Get in Touch</a>
+        <a href="{{ site.baseurl }}/#what-is-play-therapy" class="btn btn-outline">Learn More</a>
       </div>
     </div>
   </div>
