@@ -72,3 +72,47 @@ if (navToggle && navLinksEl) {
     navToggle.setAttribute('aria-expanded', isOpen);
   });
 }
+
+// ── Contact form submission ───────────────────────────────
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+  contactForm.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    const submitBtn = this.querySelector('button[type="submit"]');
+    const successMsg = this.querySelector('.form-success');
+    const errorMsg = this.querySelector('.form-error');
+
+    const formspreeUrl = this.getAttribute('action');
+    if (!formspreeUrl) {
+      errorMsg.style.display = 'block';
+      return;
+    }
+
+    // Reset states
+    successMsg.style.display = 'none';
+    errorMsg.style.display = 'none';
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+
+    const formData = new FormData(this);
+
+    try {
+      const res = await fetch(formspreeUrl, {
+        method: 'POST',
+        body: formData,
+        headers: { Accept: 'application/json' }
+      });
+      if (res.ok) {
+        successMsg.style.display = 'block';
+        this.reset();
+      } else {
+        errorMsg.style.display = 'block';
+      }
+    } catch {
+      errorMsg.style.display = 'block';
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send Message';
+    }
+  });
+}

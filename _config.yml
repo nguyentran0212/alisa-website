@@ -3,3 +3,7 @@ description: "Compassionate play therapy services for children. Helping children
 baseurl: ""
 url: ""
 google_fonts: "Lora:wght@400;600|Open+Sans:wght@400;600"
+formspree_url: ""
+contact_email: "hello@alisaplaytherapy.com"
+contact_phone: "+1234567890"
+contact_location: "[Location / area served]"
