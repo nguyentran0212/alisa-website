@@ -4,7 +4,7 @@ title: "Alisa Play Therapy"
 description: "Compassionate play therapy services for children. Helping children heal, grow, and thrive through the power of play."
 ---
 
-<section id="hero" class="section">
+<section id="hero" class="section" style="background-image: url('{{ site.hero_image }}');">
   <div class="container">
     <div class="reveal">
       <img src="/assets/images/logo_vertical.png" alt="Alisa Play Therapy" class="hero-logo">
