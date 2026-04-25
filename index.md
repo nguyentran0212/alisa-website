@@ -7,7 +7,7 @@ description: "Compassionate play therapy services for children. Helping children
 <section id="hero" class="section" style="background-image: url('{{ site.hero_image }}');">
   <div class="container">
     <div class="reveal">
-      <img src="/assets/images/logo_vertical.png" alt="Alisa Play Therapy" class="hero-logo">
+      <img src="{{ site.baseurl }}/assets/images/logo_vertical.png" alt="Alisa Play Therapy" class="hero-logo">
       <h1 class="hero-title">Healing <span>Through Play</span></h1>
       <p class="hero-subtitle">A safe, nurturing space where children can express themselves, work through difficult feelings, and build resilience — guided by a trained and compassionate therapist.</p>
       <div class="hero-actions">
