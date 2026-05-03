@@ -130,7 +130,7 @@ lang: zh
   </div>
 </section>
 
-{% assign featured_posts = site.posts | where: "featured", true | sort: "featured_order" | limit: 3 %}
+{% assign featured_posts = site.posts | where: "featured", true | where: "lang", "zh" | sort: "featured_order" | limit: 3 %}
 {% if featured_posts.size > 0 %}
 <section id="blog" class="section">
   <div class="container">
@@ -143,16 +143,16 @@ lang: zh
         {% for post in featured_posts %}
           <article class="post-card">
             <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
-            <p class="post-meta">{{ post.date | date: "%B %d, %Y" }}</p>
+            <p class="post-meta">{{ post.date | date: "%Y年%m月%d日" }}</p>
             {% if post.excerpt %}
               <p class="post-excerpt">{{ post.excerpt }}</p>
             {% endif %}
-            <a href="{{ site.baseurl }}{{ post.url }}" class="post-read-more">阅读更多 →</a>
+            <a href="{{ site.baseurl }}{{ post.url }}" class="post-read-more">{{ site.data.zh.blog.read_more | default: "阅读更多" }} →</a>
           </article>
         {% endfor %}
       </div>
       <p style="text-align:center; margin-top: 32px;">
-        <a href="{{ site.baseurl }}/blog" class="btn btn-outline">{{ site.data.zh.blog.view_all }}</a>
+        <a href="{{ site.baseurl }}/zh/blog" class="btn btn-outline">{{ site.data.zh.blog.view_all }}</a>
       </p>
     </div>
   </div>

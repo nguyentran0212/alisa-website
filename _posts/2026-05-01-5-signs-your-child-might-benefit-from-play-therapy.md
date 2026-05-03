@@ -2,6 +2,7 @@
 layout: post
 title: "5 Signs Your Child Might Benefit from Play Therapy"
 date: 2026-05-01
+lang: en
 excerpt: "Play Therapy can help children who are struggling with big emotions, behavioral challenges, or life transitions. Here are five signs it might be worth exploring for your child."
 featured: true
 featured_order: 1
