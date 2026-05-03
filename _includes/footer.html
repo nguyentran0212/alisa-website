@@ -1,5 +1,15 @@
 <footer id="site-footer">
   <div class="footer-inner">
-    <p>&copy; {{ site.time | date: "%Y" }} Alisa Play Therapy. <a href="/privacy/">Privacy Policy</a></p>
+    <p>
+      &copy; {{ site.time | date: "%Y" }} Alisa Play Therapy.
+      {% assign current_lang = page.lang | default: 'en' %}
+    {% if current_lang == 'zh' %}
+        {{ site.data.zh.footer.copyright_line }}
+        | <a href="{{ site.baseurl }}/zh/privacy/">{{ site.data.zh.footer.privacy_policy }}</a>
+      {% else %}
+        {{ site.data.en.footer.copyright_line }}
+        | <a href="{{ site.baseurl }}/privacy/">{{ site.data.en.footer.privacy_policy }}</a>
+      {% endif %}
+    </p>
   </div>
 </footer>

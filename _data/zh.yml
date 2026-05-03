@@ -1,0 +1,47 @@
+nav:
+  what_is_play_therapy: "什么是游戏治疗"
+  is_it_right: "我的孩子适合吗"
+  services: "服务项目"
+  about: "关于"
+  contact: "联系方式"
+  blog: "博客"
+buttons:
+  get_in_touch: "联系我们"
+  learn_more: "了解更多"
+  send_message: "发送消息"
+  read_full_bio: "阅读完整简介"
+footer:
+  privacy_policy: "隐私政策"
+  copyright_line: "保留所有权利。本网站所有内容受法律保护，未经书面许可不得复制或转载。"
+hero:
+  title: "通过游戏疗愈心灵"
+  subtitle: "在这里，孩子们可以在安全、温暖的环境中自由表达、处理困难情绪、建立韧性——在一位训练有素、充满同理心的治疗师的引导下成长。"
+  cta_touch: "联系我们"
+  cta_learn: "了解更多"
+sections:
+  what_is_play_therapy:
+    eyebrow: "了解游戏治疗"
+    title: "什么是游戏治疗？"
+    lead: "游戏是孩子的天然语言。在他们能够用语言表达复杂情绪之前，他们通过游戏来表达。"
+  is_it_right:
+    eyebrow: "我的孩子适合吗"
+    title: "游戏治疗适合我的孩子吗？"
+    lead: "游戏治疗可以帮助孩子和家庭应对各种挑战。"
+  services:
+    eyebrow: "提供的服务"
+    title: "服务项目"
+  about:
+    title: "关于 Alisa"
+  contact:
+    eyebrow: "联系我们"
+    title: "聊聊吧"
+    lead: "如果您想了解游戏治疗是否适合您的孩子，或有任何问题，请联系我。简短的交谈可以帮助我们确认是否合适。"
+form:
+  name_label: "您的姓名"
+  email_label: "电子邮件"
+  message_label: "留言"
+  message_placeholder: "请告诉我您孩子的基本情况，以及您希望探讨的方向……"
+blog:
+  from_the_blog: "博客精选"
+  recent_articles: "最新文章"
+  view_all: "查看所有文章"

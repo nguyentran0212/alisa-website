@@ -1,0 +1,47 @@
+nav:
+  what_is_play_therapy: "What is Play Therapy"
+  is_it_right: "Is It Right for My Child"
+  services: "Services"
+  about: "About"
+  contact: "Contact"
+  blog: "Blog"
+buttons:
+  get_in_touch: "Get in Touch"
+  learn_more: "Learn More"
+  send_message: "Send Message"
+  read_full_bio: "Read Full Bio"
+footer:
+  privacy_policy: "Privacy Policy"
+  copyright_line: "All rights reserved. All content on this site is protected and may not be reproduced without written permission."
+hero:
+  title: "Healing Through Play"
+  subtitle: "A safe, nurturing space where children can express themselves, work through difficult feelings, and build resilience — guided by a trained and compassionate therapist."
+  cta_touch: "Get in Touch"
+  cta_learn: "Learn More"
+sections:
+  what_is_play_therapy:
+    eyebrow: "Understanding Play Therapy"
+    title: "What is Play Therapy?"
+    lead: "Play is children's natural language. Before they have words for complex emotions, they play them out."
+  is_it_right:
+    eyebrow: "Is It Right for My Child"
+    title: "Is Play Therapy Right for My Child?"
+    lead: "Play Therapy can be helpful for children and families navigating a wide range of challenges."
+  services:
+    eyebrow: "What I Offer"
+    title: "Services"
+  about:
+    title: "About Alisa"
+  contact:
+    eyebrow: "Get in Touch"
+    title: "Let's Talk"
+    lead: "If you'd like to find out whether Play Therapy might be right for your child, or if you have any questions, reach out. A brief conversation can help us figure out if we're the right fit."
+form:
+  name_label: "Your Name"
+  email_label: "Email Address"
+  message_label: "Message"
+  message_placeholder: "Tell me a little about your child and what you're hoping to explore..."
+blog:
+  from_the_blog: "From the Blog"
+  recent_articles: "Recent Articles"
+  view_all: "View All Articles"
