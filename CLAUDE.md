@@ -32,9 +32,11 @@ A single-page Jekyll landing site for a play therapy practice. Designed to be ed
 ├── zh/
 │   ├── index.md             # Chinese home page
 │   ├── about.md             # Chinese about page
-│   └── privacy.md           # Chinese privacy policy
+│   ├── privacy.md           # Chinese privacy policy
+│   └── blog/
+│       └── index.md         # Chinese blog listing page
 ├── blog/
-│   └── index.md             # Blog listing page
+│   └── index.md             # Blog listing page (English)
 ├── _posts/                  # Blog posts (YYYY-MM-DD-title.md)
 ├── assets/
 │   ├── css/style.css       # All styles — rarely need to edit directly
@@ -99,7 +101,8 @@ hero_image: "/assets/images/hero.jpg"  # Hero background (local path or Unsplash
 | All contact info | Change `_config.yml` vars | Updates entire site automatically |
 | Form handler | Change `formspree_url` in `_config.yml` | From formspree.io dashboard |
 | Nav labels, buttons, section headers | `_data/en.yml` + `_data/zh.yml` | Always edit both files |
-| Blog posts | `_posts/YYYY-MM-DD-slug.md` | English only |
+| Blog posts (English) | `_posts/YYYY-MM-DD-slug.md` | Use `lang: en` in front matter |
+| Blog posts (中文) | `_posts/YYYY-MM-DD-slug-zh.md` | Use `lang: zh` + `permalink: /zh/blog/[slug]/` |
 
 ### Section IDs (for nav anchors)
 
@@ -226,7 +229,7 @@ Long-form body content lives directly in the `.md` files. **Every content file h
 | `index.md` | `zh/index.md` | Home page sections |
 | `about.md` | `zh/about.md` | Full bio page |
 | `privacy.md` | `zh/privacy.md` | Privacy policy |
-| `_posts/YYYY-MM-DD-title.md` | (no translation needed) | Blog posts are English only |
+| `blog/index.md` | `zh/blog/index.md` | Blog listing (each lists posts in that language) |
 
 **To add a new UI string (e.g., a new section eyebrow):**
 1. Add the key to `_data/en.yml` under the appropriate section
@@ -239,45 +242,72 @@ Long-form body content lives directly in the `.md` files. **Every content file h
 
 ### Home Page Featured Blog Section
 
-The "From the Blog" section on the home page is powered by Jekyll's `site.posts` with a `featured: true` filter. It appears on both `index.md` and `zh/index.md` when there are featured posts. No translation needed — the blog section text is pulled from `_data/en.yml` / `_data/zh.yml`.
+The "From the Blog" section on the home page is powered by Jekyll's `site.posts` with `featured: true` + `lang` filters. Only posts matching the page's language are shown:
+- English home: `| where: "lang", "en"`
+- Chinese home: `| where: "lang", "zh"`
+
+Blog section labels are pulled from `_data/en.yml` / `_data/zh.yml` (already i18n).
 
 ## Blog
 
 ### File Structure
 
 ```
-_posts/YYYY-MM-DD-title.md   # Blog post source files
-blog/index.md              # Blog listing page at /blog/
-_layouts/post.html         # Individual post layout
+_posts/YYYY-MM-DD-slug.md       # Blog post source files (English)
+_posts/YYYY-MM-DD-slug-zh.md    # Chinese blog posts (same folder, different lang)
+blog/index.md                   # English blog listing at /blog/
+zh/blog/index.md                # Chinese blog listing at /zh/blog/
+_layouts/post.html              # Individual post layout (shared by both languages)
 ```
 
 ### Writing a Blog Post
 
-Create a file in `_posts/` with the naming convention `YYYY-MM-DD-slug.md`:
+Create a file in `_posts/` with the naming convention `YYYY-MM-DD-slug.md`.
 
+**English post:**
 ```markdown
 ---
 layout: post
 title: "Post Title Here"
 date: 2026-05-01
+lang: en
 excerpt: "A short description for previews and SEO."
 featured: true
 featured_order: 1
 tags:
   - play-therapy
-  - child-development
 ---
 
 Post body content in Markdown...
+```
+
+**Chinese post:**
+```markdown
+---
+layout: post
+title: "中文标题"
+date: 2026-05-10
+lang: zh
+permalink: /zh/blog/slug/
+excerpt: "中文摘要。"
+featured: true
+featured_order: 2
+tags:
+  - play-therapy
+---
+
+中文正文内容...
 ```
 
 **Front matter fields:**
 
 | Field | Required | Notes |
 |---|---|---|
-| `layout` | Yes | Must be `post` |
+| `layout` | Yes | Always `post` |
 | `title` | Yes | Used in post header and browser tab |
 | `date` | Yes | Used for ordering; must match filename date |
+| `lang` | Yes | `en` or `zh` — controls which blog index and home page the post appears on |
+| `permalink` | Only for `lang: zh` | Must be `/zh/blog/[slug]/` for Chinese posts |
 | `excerpt` | Recommended | Short description for previews |
 | `featured` | No | Set to `true` to show on home page |
 | `featured_order` | Only if `featured: true` | Integer; lower = first |
@@ -285,15 +315,24 @@ Post body content in Markdown...
 
 ### Pinning Posts to Home Page
 
-Add `featured: true` and `featured_order: N` to any post. The home page displays up to 3 featured posts sorted by `featured_order`. Posts are English only — no Chinese translation needed for blog posts.
+Add `featured: true` and `featured_order: N` to any post. The home page only shows posts matching its language (`lang: en` on English home, `lang: zh` on Chinese home). Up to 3 featured posts per language, sorted by `featured_order`.
 
 ### Blog Post URLs
 
-Jekyll generates posts at `/YYYY/MM/DD/slug.html` (e.g., `/2026/05/01/my-post.html`). With `baseurl: "/alisa-website"`, the full URL is `/alisa-website/2026/05/01/my-post.html`.
+| Language | URL Pattern |
+|---|---|
+| English post | `/blog/YYYY/MM/DD/slug.html` |
+| Chinese post | `/zh/blog/[slug]/` (custom permalink in front matter) |
+
+English posts use Jekyll's default date-based URL. Chinese posts use a custom permalink at `/zh/blog/[slug]/` so the URL is clean and human-readable in Chinese.
 
 ### Linking to Blog Posts
 
 Always use `{{ site.baseurl }}{{ post.url }}` — never `{{ post.url }}` alone. The bare `post.url` produces paths without the `baseurl` prefix, causing 404s when the site is served from a subdirectory.
+
+### Blog Nav Link
+
+The "Blog" / "博客" nav link automatically switches based on `page.lang` — `/blog` on English pages, `/zh/blog` on Chinese pages. Do not hardcode this path.
 
 ## Design Tokens (CSS Variables)
 
@@ -338,7 +377,8 @@ All colors, fonts, and spacing are defined at the top of `assets/css/style.css`:
 | Add a new service card | Copy a `<div class="service-card">...</div>` in `index.md` (and `zh/index.md`) |
 | Add a new page | Create new `.md` file + Chinese version in `zh/` + add nav link |
 | Add/edit UI string | Edit both `_data/en.yml` and `_data/zh.yml` |
-| Write a blog post | Create `_posts/YYYY-MM-DD-slug.md` |
+| Write a blog post (EN) | Create `_posts/YYYY-MM-DD-slug.md` with `lang: en` |
+| Write a blog post (中文) | Create `_posts/YYYY-MM-DD-slug-zh.md` with `lang: zh` + `permalink: /zh/blog/[slug]/` |
 | Feature a post on home page | Add `featured: true` and `featured_order: N` to post front matter |
 | Deploy | `git push` to `main` |
 | Test locally | `bundle exec jekyll serve --port 4000` → `localhost:4000/alisa-website/` |
