@@ -8,8 +8,8 @@ description: "Compassionate play therapy services for children. Helping children
   <div class="container">
     <div class="reveal">
       <img src="{{ site.baseurl }}/assets/images/logo_vertical.png" alt="Alisa Play Therapy" class="hero-logo">
-      <h1 class="hero-title">Healing <span>Through Play</span></h1>
-      <p class="hero-subtitle">A safe, nurturing space where children can express themselves, work through difficult feelings, and build resilience — guided by a trained and compassionate therapist.</p>
+      <h1 class="hero-title"><span>Held in Play</span></h1>
+      <p class="hero-subtitle">Specialised therapeutic support for young children aged 3–6 and their families</p>
       <div class="hero-actions">
         <a href="{{ site.baseurl }}/#contact" class="btn btn-primary">Get in Touch</a>
         <a href="{{ site.baseurl }}/#what-is-play-therapy" class="btn btn-outline">Learn More</a>
@@ -26,17 +26,28 @@ description: "Compassionate play therapy services for children. Helping children
       <div class="section-header">
         <span class="section-eyebrow">Understanding Play Therapy</span>
         <h2 class="section-title">What is Play Therapy?</h2>
-        <p class="section-lead">Play is children's natural language. Before they have words for complex emotions, they play them out.</p>
+        <p class="section-lead">Children don't always have the words for the big feelings they carry. They have play.</p>
       </div>
-      <p>Play Therapy is a evidence-based approach that uses the power of play to help children make sense of difficult experiences, develop healthier coping skills, and build self-esteem and emotional regulation.</p>
-      <ul class="intro-list">
-        <li>Make sense of difficult experiences and big feelings</li>
-        <li>Develop healthier ways to cope with stress and anxiety</li>
-        <li>Build self-esteem, emotional regulation, and social skills</li>
-        <li>Heal from trauma, loss, or upheaval in a gentle, supported way</li>
-      </ul>
-      <p>In a Play Therapy session, your child is invited into a specially designed play space with a rich variety of materials — toys, art supplies, sand, and more. I observe and gently engage, following your child's lead while creating the safety and structure they need to explore at their own pace.</p>
-      <p>Parents and caregivers are also an important part of the process. I meet with you separately to discuss progress, share observations, and explore ways to support your child's growth at home.</p>
+      <div class="play-therapy-blocks">
+        <div class="play-therapy-block">
+          <div class="play-therapy-block__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 5.4L19 10l-5.2 1.6L12 17l-1.8-5.4L5 10l5.2-1.6L12 3z"/></svg>
+          </div>
+          <p>Play therapy is an evidence-based approach that uses play to gently support children in making sense of difficult feelings and experiences. Through this process, children develop emotional regulation, healthy coping, self-esteem, and social connection.</p>
+        </div>
+        <div class="play-therapy-block">
+          <div class="play-therapy-block__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.5l-1.2-1.1C6 15.3 3 12.7 3 9.5 3 6.5 5.4 4 8.4 4c1.7 0 3.4.8 4.5 2 1.1-1.2 2.7-2 4.4-2 3 0 5.5 2.5 5.5 5.5 0 3.2-3 5.8-7.7 9.9L12 20.5z"/></svg>
+          </div>
+          <p>In the playroom, children express—through toys, sand, drawings, puppets, and stories—<em>what they cannot yet put into words</em>. Through play, their inner world becomes visible and held within a safe, steady, and attuned relationship.</p>
+        </div>
+        <div class="play-therapy-block">
+          <div class="play-therapy-block__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.5"/><path d="M12 5V3M12 21v-2M19 12h2M3 12h2"/></svg>
+          </div>
+          <p>The play therapist offers a consistent presence in this process. <em>Not to fix, interpret, or direct</em>, but to remain alongside the child with calm attunement—supporting them as they explore, communicate, and make sense of what feels overwhelming.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -101,30 +112,26 @@ description: "Compassionate play therapy services for children. Helping children
       <div class="section-header">
         <span class="section-eyebrow">What I Offer</span>
         <h2 class="section-title">Services</h2>
+        <p class="section-lead">Services I provide include:</p>
       </div>
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-card__icon">🎨</div>
-          <h3>Individual Play Therapy</h3>
-          <p>Weekly one-on-one sessions tailored to your child's needs. Sessions are 50 minutes for children aged 3–12, with frequency agreed together with parents.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-card__icon">👨‍👩‍👧</div>
-          <h3>Parent Consultations</h3>
-          <p>Separate sessions for parents and caregivers to discuss progress, explore strategies for supporting the child at home, and process feelings that arise on the parenting journey.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-card__icon">🏫</div>
-          <h3>School &amp; Clinic-Based</h3>
-          <p>I work as a contractor in different settings — schools, community health clinics, and other agencies. Sessions may be available in your area.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-card__icon">⚡</div>
-          <h3>Intensive Therapy Blocks</h3>
-          <p>Focused periods of work for children who benefit from condensed sessions — a series close together over a shorter time to build momentum and depth.</p>
-        </div>
+      <div class="service-stack">
+        <article class="service-block">
+          <h3>Child-Centred Play Therapy</h3>
+          <p>Child-Centred Play Therapy is suitable for children who are experiencing emotional, behavioural, or relational challenges and benefit from a safe, consistent space to process their experiences through play.</p>
+          <p>Within a safe and held therapeutic relationship, children lead the process at their own pace, supported to express what they are feeling in a way that feels natural to them.</p>
+          <p>This approach supports emotional expression, regulation, and deeper self-understanding over time.</p>
+        </article>
+        <article class="service-block">
+          <h3>Learn to Play Therapy</h3>
+          <p>Learn to Play Therapy supports children who find it difficult to engage in flexible, imaginative, or reciprocal play.</p>
+          <p>This structured yet playful approach focuses on developing foundational play skills, shared attention, and connection with others. It supports children to engage more confidently and flexibly in play and relationships.</p>
+        </article>
+        <article class="service-block">
+          <h3>Filial Therapy</h3>
+          <p>Filial Therapy supports parents and caregivers to strengthen their relationship with their child through play.</p>
+          <p>With guidance and support, parents/caregivers learn how to use special playtimes to deepen connection, understanding, and attunement at home. It recognises parents as central to their child's emotional world and supports meaningful, lasting relational change.</p>
+        </article>
       </div>
-      <p style="margin-top: 36px; font-size: 0.9rem; color: var(--text-muted); text-align: center;">Sessions are offered in [your area] and surrounding areas. Please reach out to find what is available near you.</p>
     </div>
   </div>
 </section>
@@ -186,7 +193,11 @@ description: "Compassionate play therapy services for children. Helping children
         <span class="section-eyebrow">Get in Touch</span>
         <h2 class="section-title">Let's Talk</h2>
       </div>
-      <p class="contact-lead">If you'd like to find out whether Play Therapy might be right for your child, or if you have any questions, reach out. A brief conversation can help us figure out if we're the right fit.</p>
+      <div class="contact-intro">
+        <p class="contact-intro__lead">If you're wondering whether play therapy might be right for your child, or have questions about how it works, you're welcome to get in touch.</p>
+        <span class="contact-intro__divider" aria-hidden="true"></span>
+        <p class="contact-intro__note">A brief conversation can help us explore your concerns and whether this feels like the right fit for your child and family.</p>
+      </div>
       <div class="contact-methods">
         <a href="mailto:{{ site.contact_email }}" class="contact-method">
           <span class="contact-method__icon">
