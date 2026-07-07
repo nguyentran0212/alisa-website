@@ -128,13 +128,13 @@ description: "Compassionate play therapy services for children. Helping children
           <summary class="faq-question">Does my child need a diagnosis or referral?</summary>
           <div class="faq-answer">
             <p>Not really.</p>
-            <p>If you have concerns about your child's emotions, behaviour, or social development, you can reach out directly.</p>
+            <p>If you have concerns about your child's emotions, behaviour, or social development, feel free to reach out.</p>
           </div>
         </details>
         <details class="faq-item">
           <summary class="faq-question">Where do sessions happen?</summary>
           <div class="faq-answer">
-            <p>Limited spots in Holden Hill. Sessions can also be mobile (across Metropolitan Adelaide), which means I come to your child. Most often this is your home, where your child is already comfortable. By arrangement, sessions can be held at your child's childcare or school. Additional travel charges apply for outreach sessions.</p>
+            <p>Limited spots in Holden Hill. Sessions can also be mobile (across Metropolitan Adelaide), which means I come to your child. Most often this is your home, where your child is already comfortable. By arrangement, sessions can be held at your child's childcare or school. Additional travel charges may apply for outreach sessions.</p>
             <p>Parent consultations and parent–child sessions (filial therapy) are held online.</p>
           </div>
         </details>

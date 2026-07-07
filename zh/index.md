@@ -127,13 +127,13 @@ lang: zh
           <summary class="faq-question">来之前，孩子需要先被诊断或确诊吗？</summary>
           <div class="faq-answer">
             <p>不需要。</p>
-            <p>如果你对孩子的情绪、行为或社交发展有担忧，可以直接联系我。</p>
+            <p>如果您对孩子的情绪、行为或社交发展有担忧，欢迎随时联系我。</p>
           </div>
         </details>
         <details class="faq-item">
           <summary class="faq-question">游戏治疗在哪里进行？</summary>
           <div class="faq-answer">
-            <p>线下: Holden hill 有少量名额。也提供上门服务（家中或学校），覆盖阿德莱德市区15 分钟车程，额外的出行费用按距离计算。</p>
+            <p>线下: Holden hill 有少量名额。同时提供上门服务（家中或学校），覆盖阿德莱德市区15分钟车程。超出15分钟的车程额外计费。</p>
             <p>线上： 家长咨询、亲子游戏治疗可在线上进行。</p>
           </div>
         </details>
