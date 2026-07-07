@@ -10,15 +10,15 @@
     <ul class="nav-links">
       {% if current_lang == 'zh' %}
         <li><a href="{{ site.baseurl }}/zh/#what-is-play-therapy">{{ site.data.zh.nav.what_is_play_therapy }}</a></li>
-        <li><a href="{{ site.baseurl }}/zh/#is-it-right">{{ site.data.zh.nav.is_it_right }}</a></li>
         <li><a href="{{ site.baseurl }}/zh/#services">{{ site.data.zh.nav.services }}</a></li>
         <li><a href="{{ site.baseurl }}/zh/about">{{ site.data.zh.nav.about }}</a></li>
+        <li><a href="{{ site.baseurl }}/zh/#faq">常见问题</a></li>
         <li><a href="{{ site.baseurl }}/zh/#contact">{{ site.data.zh.nav.contact }}</a></li>
       {% else %}
         <li><a href="{{ site.baseurl }}/#what-is-play-therapy">{{ site.data.en.nav.what_is_play_therapy }}</a></li>
-        <li><a href="{{ site.baseurl }}/#is-it-right">{{ site.data.en.nav.is_it_right }}</a></li>
         <li><a href="{{ site.baseurl }}/#services">{{ site.data.en.nav.services }}</a></li>
         <li><a href="{{ site.baseurl }}/about">{{ site.data.en.nav.about }}</a></li>
+        <li><a href="{{ site.baseurl }}/#faq">FAQ</a></li>
         <li><a href="{{ site.baseurl }}/#contact">{{ site.data.en.nav.contact }}</a></li>
       {% endif %}
       <li><a href="{% if current_lang == 'zh' %}{{ site.baseurl }}/zh/blog{% else %}{{ site.baseurl }}/blog{% endif %}">{% if current_lang == 'zh' %}{{ site.data.zh.nav.blog }}{% else %}{{ site.data.en.nav.blog }}{% endif %}</a></li>

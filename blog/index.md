@@ -14,7 +14,7 @@ permalink: /blog/
         <p class="section-lead">Articles on play therapy, child development, and more.</p>
       </div>
       <div class="blog-list">
-        {% assign en_posts = site.posts | where: "lang", "en" | sort: "date" | reverse %}
+        {% assign en_posts = site.posts | where: "lang", "en" | sort: "featured_order" %}
         {% for post in en_posts %}
           <article class="post-card">
             <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>

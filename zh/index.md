@@ -29,67 +29,11 @@ lang: zh
         <h2 class="section-title">{{ site.data.zh.sections.what_is_play_therapy.title }}</h2>
         <p class="section-lead">{{ site.data.zh.sections.what_is_play_therapy.lead }}</p>
       </div>
-      <p>游戏治疗是一种循证方法，利用游戏的力量帮助孩子理解困难经历、发展更健康的应对技能，并建立自尊和情绪调节能力。</p>
-      <ul class="intro-list">
-        <li>理解困难经历和强烈的情绪</li>
-        <li>发展更健康的压力和焦虑应对方式</li>
-        <li>建立自尊、情绪调节能力和社交技能</li>
-        <li>在温和、支持的环境中治愈创伤、失落或动荡</li>
-      </ul>
-      <p>在游戏治疗过程中，您的孩子会被邀请进入一个专门设计的游戏空间，提供丰富的材料——玩具、美术用品、沙盘等等。我观察并温和地参与，跟随孩子的引导，同时创造他们需要的安全感和结构，让他们按照自己的节奏探索。</p>
-      <p>父母和照护者也是这个过程的重要组成部分。我会单独与您会面，讨论进展、分享观察，并探讨如何在家中支持孩子的成长。</p>
-    </div>
-  </div>
-</section>
-
----
-
-<section id="is-it-right" class="section">
-  <div class="container">
-    <div class="reveal">
-      <div class="section-header">
-        <span class="section-eyebrow">{{ site.data.zh.sections.is_it_right.eyebrow }}</span>
-        <h2 class="section-title">{{ site.data.zh.sections.is_it_right.title }}</h2>
-        <p class="section-lead">{{ site.data.zh.sections.is_it_right.lead }}</p>
-      </div>
-      <div class="faq-list">
-        <details class="faq-item">
-          <summary class="faq-question">难以管理强烈的情绪</summary>
-          <div class="faq-answer">
-            <p>您的孩子是否经常发脾气、崩溃，或者似乎被那些难以承受的情绪所淹没？游戏治疗为孩子提供了理解和调节情绪世界的工具。</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary class="faq-question">行为挑战</summary>
-          <div class="faq-answer">
-            <p>攻击性、违抗、回避或难以遵守日常规律——这些行为往往掩盖了未满足的需求或未处理的情感。游戏治疗从根源入手，而不只是行为表面。</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary class="faq-question">生活转变和变化</summary>
-          <div class="faq-answer">
-            <p>新弟妹的出生、搬家、父母分居、上学或失去亲人——这些事件可能引发孩子难以用语言表达的巨大情绪。游戏治疗提供了一个安全的空间来处理这些经历。</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary class="faq-question">社交困难</summary>
-          <div class="faq-answer">
-            <p>在分享、交朋友或处理同伴关系方面有困难。游戏治疗可以帮助孩子发展社交技能、同理心和在与人相处中的自信。</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary class="faq-question">焦虑或担忧</summary>
-          <div class="faq-answer">
-            <p>过度担忧、回避学校、睡眠困难或由焦虑引起的身体症状。通过游戏，孩子们可以探索和练习新的与世界相处的方式。</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary class="faq-question">神经发育差异</summary>
-          <div class="faq-answer">
-            <p>游戏治疗会根据孩子的实际情况进行调整，包括患有多动症、自闭症谱系差异或发育差异的儿童。游戏空间灵活、对感官友好，并根据您孩子的需求量身定制。</p>
-          </div>
-        </details>
-      </div>
+      <p>你有没有过这样的时刻——心里压着一件沉甸甸的事，压了很久，终于开口说给一个真正懂你的人听？不是那种急着给建议的人，而是愿意听、愿意陪、愿意为你情绪腾出空间的人。说完之后，你轻松了一点。不是问题消失了，而是你不再一个人扛。</p>
+      <p>对孩子来说，这种体验同样重要。 只是，<strong>孩子往往还说不清心里正在发生的事。所以，他们会做最自然的事——他们会玩。</strong></p>
+      <p class="play-therapy-highlight">游戏是孩子的语言，玩具是他们的词汇。 — Garry Landreth</p>
+      <p>游戏治疗，是一种与孩子相处的方式。它尊重游戏作为孩子与生俱来的语言。在一个安全、被全然接纳的关系里，孩子借助玩偶、木偶、颜料和各种玩具，去表达、去探索那些可能太复杂、太混乱、太沉重而难以言说的经历。在游戏治疗的过程中，孩子会慢慢地建立起: 更强的情绪觉察、更稳的自我调节、更多的自信，以及对"我能行"那份踏踏实实的相信——相信自己，有力量面对生活中的挑战。</p>
+      <p>游戏治疗，建立在数十年研究与临床实践之上。 它源于儿童发展研究与治疗工作的深厚积累<a href="https://evidencebasedchildtherapy.com/meta-analyses-reviews/" class="play-therapy-inline-link" target="_blank" rel="noopener">（了解更多循证儿童治疗）</a>。其核心，是一份人本主义的信念: <strong>当孩子感受到安全、被接纳、被真诚地理解，他们就能以自己的方式、自己的节奏，朝成长与疗愈迈进。</strong></p>
     </div>
   </div>
 </section>
@@ -103,34 +47,124 @@ lang: zh
         <span class="section-eyebrow">{{ site.data.zh.sections.services.eyebrow }}</span>
         <h2 class="section-title">{{ site.data.zh.sections.services.title }}</h2>
       </div>
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-card__icon">🎨</div>
-          <h3>个体游戏治疗</h3>
-          <p>根据您孩子的需求量身定制的每周一对一 sessions。适合3-12岁儿童的 sessions 为50分钟，频率由治疗师与家长共同商定。</p>
-        </div>
-        <div class="service-card">
-          <div class="service-card__icon">👨‍👩‍👧</div>
-          <h3>家长咨询</h3>
-          <p>为家长和照护者提供的单独 sessions，讨论孩子的进展、探讨在家中支持孩子的方法，以及处理育儿过程中产生的情感。</p>
-        </div>
-        <div class="service-card">
-          <div class="service-card__icon">🏫</div>
-          <h3>学校与诊所合作</h3>
-          <p>我在不同的机构担任合同制治疗师——学校、社区健康诊所和其他机构。您所在地区可能提供 sessions。</p>
-        </div>
-        <div class="service-card">
-          <div class="service-card__icon">⚡</div>
-          <h3>强化治疗集中期</h3>
-          <p>为需要浓缩 sessions 的孩子设计的工作集中期——在较短时间内进行一系列密集 sessions，以建立动力和深度。</p>
-        </div>
+      <div class="services-grid-3">
+        <article class="service-tile">
+          <h3>以儿童为中心的游戏治疗</h3>
+          <p class="service-tile__tagline">一个孩子可以慢慢长大的情绪空间。</p>
+          <p>在这里，孩子不需要变成"更好的孩子"，只需要做自己。他们按自己的节奏，在游戏中被稳稳接住——慢慢地，长出更稳的情绪、更强的自信、面对生活的力量。</p>
+          <a href="{{ site.baseurl }}/2026/07/02/what-is-child-centered-play-therapy-zh.html" class="service-tile__more">阅读更多 <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="service-tile">
+          <h3>Learn to Play 游戏治疗</h3>
+          <p class="service-tile__tagline">孩子还没学会玩？不是不想，是还没找到方式。</p>
+          <p>有些孩子还没学会主动玩耍、加入玩耍，或与他人一起专注地玩。Learn to Play 在治疗师的陪伴下，帮助孩子一步步建立起玩耍的能力——从独自探索，到与他人联结。</p>
+          <a href="{{ site.baseurl }}/2026/07/02/what-is-learn-to-play-therapy-zh.html" class="service-tile__more">阅读更多 <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="service-tile">
+          <h3>亲子游戏治疗</h3>
+          <p class="service-tile__tagline">父母走进孩子内心，增进亲子关系。</p>
+          <p>治疗师和父母一起工作，帮助父母更深地理解孩子，并在每一次日常互动中，建立起更稳、更亲的连接。</p>
+          <a href="{{ site.baseurl }}/2026/07/02/what-is-filial-therapy-zh.html" class="service-tile__more">阅读更多 <span aria-hidden="true">→</span></a>
+        </article>
       </div>
-      <p style="margin-top: 36px; font-size: 0.9rem; color: var(--text-muted); text-align: center;">Sessions 在[您的地区]及周边地区提供。请联系我们了解您附近有哪些可用服务。</p>
     </div>
   </div>
 </section>
 
-{% assign featured_posts = site.posts | where: "featured", true | where: "lang", "zh" | sort: "featured_order" | limit: 3 %}
+---
+
+<section id="about" class="section">
+  <div class="container">
+    <div class="reveal about-grid">
+      <img src="{{ site.baseurl }}/assets/images/alisa.png" alt="Alisa" class="about-image">
+      <div class="about-text">
+        <h2>{{ site.data.zh.sections.about.title }}</h2>
+        <p>我是一名游戏治疗师，也是一名早教老师——来自中国，在澳大利亚生活和工作。 2015 年我来到澳洲读早教，之后一直从事幼儿教育的工作。十年来，我的工作一直围绕着 3–6 岁的孩子。</p>
+        <p>我常常被那些"卡住"的孩子吸引——卡在大的情绪里、卡在激烈的反应里、卡在一些看似难以打破的模式里。在从事早教的头几年，我尝试了各种方法去了解和帮助这些孩子。我慢慢意识到：<strong>行为，从来不是故事的全部</strong>。 我们肉眼看到的，常常是孩子在用他仅知道的方式，努力传达一些他还说不出的话。</p>
+        <p class="about-credentials">游戏治疗硕士 · 教育学硕士（幼儿方向）<br>注册游戏治疗师（APPTA & PTPA） · 注册幼教（南澳大利亚）</p>
+        <a href="{{ site.baseurl }}/zh/about" class="btn btn-primary" style="margin-top: 24px;">{{ site.data.zh.buttons.read_full_bio }}</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+---
+
+<section id="faq" class="section">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-header">
+        <span class="section-eyebrow">您可能想知道</span>
+        <h2 class="section-title">常见问题</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary class="faq-question">费用</summary>
+          <div class="faq-answer">
+            <div class="faq-pricing">
+              <div class="faq-pricing-block">
+                <h4 class="faq-pricing-heading">自费客户</h4>
+                <ul class="faq-pricing-list">
+                  <li><span>初次咨询（一次性，90分钟）</span><span class="faq-pricing-amount">$255</span></li>
+                  <li><span>游戏治疗</span><span class="faq-pricing-amount">$170/小时</span></li>
+                  <li><span>家长回顾会议</span><span class="faq-pricing-amount">$170/小时</span></li>
+                </ul>
+              </div>
+              <div class="faq-pricing-block">
+                <h4 class="faq-pricing-heading">NDIS 客户</h4>
+                <ul class="faq-pricing-list">
+                  <li><span>初次咨询（一次性，90分钟）</span><span class="faq-pricing-amount">$290.98</span></li>
+                  <li><span>游戏治疗</span><span class="faq-pricing-amount">$193.99/小时</span></li>
+                  <li><span>家长回顾会议</span><span class="faq-pricing-amount">$193.99/小时</span></li>
+                </ul>
+              </div>
+            </div>
+            <p class="faq-note">上门服务（家中或学校）可能会收取出行费用。</p>
+            <p class="faq-note">费用会在 2027 年 7 月做一次调整。如果有变化，您会提前收到通知。</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">来之前，孩子需要先被诊断或确诊吗？</summary>
+          <div class="faq-answer">
+            <p>不需要。</p>
+            <p>如果你对孩子的情绪、行为或社交发展有担忧，可以直接联系我。</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">游戏治疗在哪里进行？</summary>
+          <div class="faq-answer">
+            <p>线下: Holden hill 有少量名额。也提供上门服务（家中或学校），覆盖阿德莱德市区15 分钟车程，额外的出行费用按距离计算。</p>
+            <p>线上： 家长咨询、亲子游戏治疗可在线上进行。</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">治疗需要多长时间？</summary>
+          <div class="faq-answer">
+            <p>这没有一个标准答案——每个孩子都不一样。大多数孩子需要 20 次左右的治疗。有些孩子更快，有些孩子需要更久，尤其是当困扰已经持续了相当一段时间的时候。我会和你一起定期回顾进展。我们会边走、边看、边调整。</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">游戏治疗的频率和时长是怎样的？</summary>
+          <div class="faq-answer">
+            <p>每周一次。孩子有足够的时间去消化治疗中发生的事，也不至于间隔太久，让刚松动的情绪又压回去。最好固定在同一个时间、同一个地点——这种稳定性，对孩子来说是最重要的。他们不需要担心"今天会不会有什么不一样"，只需要知道"每周的这个时间，我有一个属于自己的空间"。每次游戏治疗是 45 分钟 + 15 分钟治疗记录和整理。</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">孩子进行游戏治疗时，父母需要在场吗？</summary>
+          <div class="faq-answer">
+            <p>大多数时候，父母是不在游戏室的——当家里那种亲子关系的张力暂时不在场，孩子通常会把平时觉得难以显露的那一面展现出来。游戏室成了一个不同的空间，而这种"不同"，正是变化能发生的地方。</p>
+            <p>每个孩子的节奏不一样。如果孩子还小、刚开始接触治疗、或者一离开你就容易焦虑，我们可以从你在游戏室里陪一段开始，慢慢退出。偶尔，孩子可能需要你陪几分钟作为过渡。</p>
+            </div>
+    </details>
+      </div>
+      <p style="text-align: center; margin-top: 32px;"><a href="{{ site.baseurl }}/zh/#contact" class="btn btn-primary">还有更多问题？欢迎联系我</a></p>
+    </div>
+  </div>
+</section>
+
+---
+
+{% assign featured_posts = site.posts | where: "featured", true | where: "lang", "zh" | sort: "featured_order" | slice: 0, 3 %}
 {% if featured_posts.size > 0 %}
 <section id="blog" class="section">
   <div class="container">
@@ -152,31 +186,12 @@ lang: zh
         {% endfor %}
       </div>
       <p style="text-align:center; margin-top: 32px;">
-        <a href="{{ site.baseurl }}/zh/blog" class="btn btn-outline">{{ site.data.zh.blog.view_all }}</a>
+        <a href="{{ site.baseurl }}/blog" class="btn btn-outline">{{ site.data.zh.blog.view_all }}</a>
       </p>
     </div>
   </div>
 </section>
 {% endif %}
-
----
-
-<section id="about" class="section">
-  <div class="container">
-    <div class="reveal about-grid">
-      <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=400&h=400&fit=crop&crop=face" alt="Alisa" class="about-image">
-      <div class="about-text">
-        <h2>{{ site.data.zh.sections.about.title }}</h2>
-        <p>[此处放置 bio 和资格认证。当 Alisa 准备好提供实际内容时，将替换此部分。]</p>
-        <h3>资格认证</h3>
-        <p>[相关资格列表——例如游戏治疗硕士、相关专业机构注册等]</p>
-        <h3>方法取向</h3>
-        <p>[她的治疗方法和哲学的简要描述——例如以儿童为中心、以依恋为导向、对创伤敏感……]</p>
-        <a href="{{ site.baseurl }}/zh/about" class="btn btn-primary" style="margin-top: 32px;">{{ site.data.zh.buttons.read_full_bio }}</a>
-      </div>
-    </div>
-  </div>
-</section>
 
 ---
 
@@ -205,7 +220,7 @@ lang: zh
           <span class="contact-method__icon">
             <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
           </span>
-          {{ site.contact_location }}
+          {{ site.contact_location_zh }}
         </span>
       </div>
       <form class="contact-form" id="contact-form" method="POST" action="{{ site.formspree_url }}">

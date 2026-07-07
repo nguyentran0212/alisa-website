@@ -15,7 +15,7 @@ permalink: /zh/blog/
         <p class="section-lead">关于游戏治疗、儿童发展和更多主题的文章。</p>
       </div>
       <div class="blog-list">
-        {% assign zh_posts = site.posts | where: "lang", "zh" | sort: "date" | reverse %}
+        {% assign zh_posts = site.posts | where: "lang", "zh" | sort: "featured_order" %}
         {% for post in zh_posts %}
           <article class="post-card">
             <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>

@@ -1,8 +1,7 @@
 nav:
   what_is_play_therapy: "What is Play Therapy"
-  is_it_right: "Is It Right for My Child"
   services: "Services"
-  about: "About"
+  about: "About Alisa"
   contact: "Contact"
   blog: "Blog"
 buttons:
@@ -23,10 +22,6 @@ sections:
     eyebrow: "Understanding Play Therapy"
     title: "What is Play Therapy?"
     lead: "Play is children's natural language. Before they have words for complex emotions, they play them out."
-  is_it_right:
-    eyebrow: "Is It Right for My Child"
-    title: "Is Play Therapy Right for My Child?"
-    lead: "Play Therapy can be helpful for children and families navigating a wide range of challenges."
   services:
     eyebrow: "What I Offer"
     title: "Services"
