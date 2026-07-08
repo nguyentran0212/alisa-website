@@ -107,7 +107,7 @@ description: "Compassionate play therapy services for children. Helping children
                 <h4 class="faq-pricing-heading">Private Paying clients</h4>
                 <ul class="faq-pricing-list">
                   <li><span>Intake consultation (one-off, 90 minutes)</span><span class="faq-pricing-amount">$255</span></li>
-                  <li><span>Child Session</span><span class="faq-pricing-amount">$170/h</span></li>
+                  <li><span>Therapy session</span><span class="faq-pricing-amount">$170/h</span></li>
                   <li><span>Parent Review Meetings</span><span class="faq-pricing-amount">$170/h</span></li>
                 </ul>
               </div>
@@ -115,7 +115,7 @@ description: "Compassionate play therapy services for children. Helping children
                 <h4 class="faq-pricing-heading">NDIS clients</h4>
                 <ul class="faq-pricing-list">
                   <li><span>Intake consultation (one-off, 90 minutes)</span><span class="faq-pricing-amount">$290.98</span></li>
-                  <li><span>Child Session</span><span class="faq-pricing-amount">$193.99/h</span></li>
+                  <li><span>Therapy session</span><span class="faq-pricing-amount">$193.99/h</span></li>
                   <li><span>Parent Review Meetings</span><span class="faq-pricing-amount">$193.99/h</span></li>
                 </ul>
               </div>
@@ -158,6 +158,12 @@ description: "Compassionate play therapy services for children. Helping children
             <p>Whether you stay in the playroom or not, and for how long, depends on your child's needs.</p>
             <p>Generally, parents are not in the play space during sessions. This matters more than it sounds. Children express themselves differently when the relational dynamics of home aren't in the room. The play space becomes a different kind of space, and that difference is part of what makes the work possible.</p>
             <p>Some children need a gentler start. If your child is very young, new to therapy, or finding it hard to settle, we can plan for you to be nearby at first and step out gradually. Occasionally, your child may need you to stay in the playroom for a few minutes as a transition. Whatever we decide, it's about attuning to what your child needs in that moment, and we work it out together.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">When are sessions available?</summary>
+          <div class="faq-answer">
+            <p>Sessions are available on Wednesdays and Fridays, between 8:30am and 5pm.</p>
           </div>
         </details>
       </div>

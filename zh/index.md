@@ -156,6 +156,12 @@ lang: zh
             <p>每个孩子的节奏不一样。如果孩子还小、刚开始接触治疗、或者一离开你就容易焦虑，我们可以从你在游戏室里陪一段开始，慢慢退出。偶尔，孩子可能需要你陪几分钟作为过渡。</p>
             </div>
     </details>
+        <details class="faq-item">
+          <summary class="faq-question">治疗什么时候可以预约？</summary>
+          <div class="faq-answer">
+            <p>目前，游戏治疗在周三和周五开放，时间为上午8点30分至下午5点。</p>
+          </div>
+        </details>
       </div>
       <p style="text-align: center; margin-top: 32px;"><a href="{{ site.baseurl }}/zh/#contact" class="btn btn-primary">还有更多问题？欢迎联系我</a></p>
     </div>
