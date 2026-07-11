@@ -11,8 +11,7 @@ description: "Compassionate play therapy services for children. Helping children
       <h1 class="hero-title"><span>Held in Play</span></h1>
       <p class="hero-subtitle">Specialised therapeutic support for young children aged 3–6 and their families</p>
       <div class="hero-actions">
-        <a href="{{ site.baseurl }}/#contact" class="btn btn-primary">Get in Touch</a>
-        <a href="{{ site.baseurl }}/#what-is-play-therapy" class="btn btn-outline">Learn More</a>
+        <a href="{{ site.baseurl }}/#services" class="btn btn-primary">{{ site.data.en.hero.cta }}</a>
       </div>
     </div>
   </div>

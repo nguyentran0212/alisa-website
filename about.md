@@ -25,5 +25,13 @@ description: "About Alisa — qualifications, approach, and background in play t
       </div>
       <a href="/#contact" class="btn btn-primary" style="margin-top: 32px;">Get in Touch</a>
     </div>
+    <div class="credentials-logos" style="margin-top: 64px;">
+      <a href="https://appta.org.au" target="_blank" rel="noopener" aria-label="Australasia Pacific Play Therapy Association">
+        <img src="{{ site.baseurl }}/assets/images/appta-logo.png" alt="APPTA — Australasia Pacific Play Therapy Association">
+      </a>
+      <a href="https://www.ptpa.org.au/adelaide/registered-play-therapist/chunxiao-liao?from=badge" title="Find me on Play Therapy Practitioners Association" target="_blank" rel="noopener" aria-label="PTPA — Registered Play Therapist">
+        <img class="credentials-logo--badge" src="{{ site.baseurl }}/assets/images/ptpa-logo.png" alt="PTPA Registered Play Therapist badge">
+      </a>
+    </div>
   </div>
 </section>

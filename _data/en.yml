@@ -15,8 +15,7 @@ footer:
 hero:
   title: "Healing Through Play"
   subtitle: "A safe, nurturing space where children can express themselves, work through difficult feelings, and build resilience — guided by a trained and compassionate therapist."
-  cta_touch: "Get in Touch"
-  cta_learn: "Learn More"
+  cta: "Learn More About My Approach"
 sections:
   what_is_play_therapy:
     eyebrow: "Understanding Play Therapy"

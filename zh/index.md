@@ -12,8 +12,7 @@ lang: zh
       <h1 class="hero-title">{{ site.data.zh.hero.title }}</h1>
       <p class="hero-subtitle">{{ site.data.zh.hero.subtitle }}</p>
       <div class="hero-actions">
-        <a href="{{ site.baseurl }}/zh/#contact" class="btn btn-primary">{{ site.data.zh.hero.cta_touch }}</a>
-        <a href="{{ site.baseurl }}/zh/#what-is-play-therapy" class="btn btn-outline">{{ site.data.zh.hero.cta_learn }}</a>
+        <a href="{{ site.baseurl }}/zh/#services" class="btn btn-primary">{{ site.data.zh.hero.cta }}</a>
       </div>
     </div>
   </div>

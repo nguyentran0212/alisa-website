@@ -15,8 +15,7 @@ footer:
 hero:
   title: "在游戏中被承托"
   subtitle: "为 3–6 岁的幼儿及其家庭提供专业的游戏治疗支持"
-  cta_touch: "联系我"
-  cta_learn: "了解更多"
+  cta: "了解我的治疗方式"
 sections:
   what_is_play_therapy:
     eyebrow: "了解游戏治疗"

@@ -20,5 +20,13 @@ lang: zh
       <p class="about-credentials">游戏治疗硕士 · 教育学硕士（幼儿方向）<br>注册游戏治疗师（APPTA & PTPA） · 注册幼教（南澳大利亚）</p>
       <a href="{{ site.baseurl }}/zh/#contact" class="btn btn-primary" style="margin-top: 32px;">{{ site.data.zh.buttons.get_in_touch }}</a>
     </div>
+    <div class="credentials-logos" style="margin-top: 64px;">
+      <a href="https://appta.org.au" target="_blank" rel="noopener" aria-label="Australasia Pacific Play Therapy Association">
+        <img src="{{ site.baseurl }}/assets/images/appta-logo.png" alt="APPTA — Australasia Pacific Play Therapy Association">
+      </a>
+      <a href="https://www.ptpa.org.au/adelaide/registered-play-therapist/chunxiao-liao?from=badge" title="Find me on Play Therapy Practitioners Association" target="_blank" rel="noopener" aria-label="PTPA — Registered Play Therapist">
+        <img class="credentials-logo--badge" src="{{ site.baseurl }}/assets/images/ptpa-logo.png" alt="PTPA Registered Play Therapist badge">
+      </a>
+    </div>
   </div>
 </section>
