@@ -147,8 +147,7 @@ description: "Compassionate play therapy services for children. Helping children
         <details class="faq-item">
           <summary class="faq-question">How often are sessions, and how long is each one?</summary>
           <div class="faq-answer">
-            <p>Weekly sessions are the standard. Children do best when therapy is predictable and consistent, and weekly rhythm gives that.</p>
-            <p>Each child session is 45 minutes + 15 minutes clinical administration and reset after your child has left the session.</p>
+            <p>Weekly sessions are the standard. Children do best when therapy is predictable and consistent, and weekly rhythm gives that. Each therapy session is 1 hour.</p>
           </div>
         </details>
         <details class="faq-item">
