@@ -285,6 +285,13 @@ img { max-width: 100%; height: auto; display: block; }
   #hero { background-attachment: scroll; }
 }
 
+/* iPad / touch devices: background-attachment: fixed renders poorly (background looks blurry and dark) */
+@media (hover: none) and (pointer: coarse), (max-width: 1024px) {
+  #hero {
+    background-attachment: scroll;
+  }
+}
+
 @media (max-width: 700px) {
   #hero {
     min-height: 90vh;
