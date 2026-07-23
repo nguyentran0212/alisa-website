@@ -1,12 +1,13 @@
 ---
 layout: default
 ---
+{%- assign canonical_url = site.url | append: page.url -%}
 <article class="post">
   <header class="post-header">
     <div class="container">
       <h1>{{ page.title }}</h1>
       <p class="post-meta">
-        <time>{{ page.date | date: "%B %d, %Y" }}</time>
+        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
         {% if page.tags.size > 0 %}
           <span class="post-tags">{{ page.tags | join: " / " }}</span>
         {% endif %}
@@ -19,3 +20,40 @@ layout: default
     </div>
   </div>
 </article>
+
+<!-- JSON-LD: BlogPosting -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "@id": {{ canonical_url | jsonify }},
+  "headline": {{ page.title | jsonify }},
+  "description": {{ page.excerpt | default: page.description | default: site.description | strip_html | normalize_whitespace | jsonify }},
+  "url": {{ canonical_url | jsonify }},
+  "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+  "dateModified": {{ page.last_modified_at | default: page.date | date_to_xmlschema | jsonify }},
+  "inLanguage": {{ page.lang | default: 'en' | jsonify }},
+  "author": {
+    "@type": "Person",
+    "@id": {{ site.url | append: "/#alisa" | jsonify }},
+    "name": {{ site.author.name | jsonify }},
+    "alternateName": {{ site.author.alternate_name | jsonify }},
+    "jobTitle": {{ site.author.role | jsonify }}
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": {{ site.url | append: "/#business" | jsonify }},
+    "name": {{ site.practice_name | jsonify }},
+    "logo": {
+      "@type": "ImageObject",
+      "url": {{ site.og_image | absolute_url | jsonify }}
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ canonical_url | jsonify }}
+  },
+  "keywords": {{ page.tags | join: ', ' | jsonify }},
+  "articleSection": "Play Therapy"
+}
+</script>

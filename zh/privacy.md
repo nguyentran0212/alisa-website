@@ -1,7 +1,8 @@
 ---
 layout: default
-title: "Privacy Policy"
-description: "Privacy Policy for Alisa Play Therapy"
+title: "隐私政策"
+title_tag: "隐私政策 | Alisa 游戏治疗"
+description: "Alisa 游戏治疗隐私政策 —— 我们如何收集、使用和保护您与孩子的信息。"
 permalink: /zh/privacy/
 lang: zh
 ---

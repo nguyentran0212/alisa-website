@@ -1,7 +1,8 @@
 ---
 layout: default
-title: "关于 Alisa"
-description: "关于 Alisa — 资格认证与游戏治疗背景。"
+title: "关于 Alisa — 阿德莱德游戏治疗师"
+title_tag: "关于 Alisa | 阿德莱德游戏治疗师 | 游戏治疗硕士"
+description: "Alisa 是澳大利亚太平洋游戏治疗协会（APPTA）与游戏治疗师协会（PTPA）的注册游戏治疗师、幼教老师，在阿德莱德为3-6岁儿童及其家庭提供专业支持。"
 lang: zh
 ---
 

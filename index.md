@@ -1,7 +1,9 @@
 ---
 layout: default
-title: "Alisa Play Therapy"
-description: "Compassionate play therapy services for children. Helping children heal, grow, and thrive through the power of play."
+title: "Alisa Play Therapy | Play Therapist in Adelaide for Ages 3–6"
+title_tag: "Alisa Play Therapy | Play Therapist in Adelaide for Ages 3–6"
+description: "Play therapy in Adelaide for children aged 3–6. Specialised support for emotional regulation, behaviour, and family connection. Mobile sessions across Metropolitan Adelaide and telehealth."
+keywords: "play therapy Adelaide, child therapist Adelaide, play therapist for 3-6 year olds, early childhood therapist, mobile play therapy Adelaide, child emotional regulation Adelaide"
 ---
 
 <section id="hero" class="section" style="background-image: url('{{ site.hero_image }}');">
@@ -9,9 +11,16 @@ description: "Compassionate play therapy services for children. Helping children
     <div class="reveal">
       <img src="{{ site.baseurl }}/assets/images/logo_vertical.png" alt="Alisa Play Therapy" class="hero-logo">
       <h1 class="hero-title"><span>Held in Play</span></h1>
-      <p class="hero-subtitle">Specialised therapeutic support for young children aged 3–6 and their families</p>
-      <div class="hero-actions">
-        <a href="{{ site.baseurl }}/#services" class="btn btn-primary">{{ site.data.en.hero.cta }}</a>
+      <p class="hero-subtitle">Play therapy in Adelaide for children aged 3–6 and their families. Supporting emotional regulation, confidence, social skills, and stronger family connections.</p>
+      <div class="hero-badges">
+        <span class="hero-badge">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          English &amp; Mandarin
+        </span>
+        <span class="hero-badge">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Mobile service available
+        </span>
       </div>
     </div>
   </div>
@@ -133,7 +142,7 @@ description: "Compassionate play therapy services for children. Helping children
         <details class="faq-item">
           <summary class="faq-question">Where do sessions happen?</summary>
           <div class="faq-answer">
-            <p>Limited spots in Holden Hill. Sessions can also be mobile (across Metropolitan Adelaide), which means I come to your child. Most often this is your home, where your child is already comfortable. By arrangement, sessions can be held at your child's childcare or school. Additional travel charges may apply for outreach sessions.</p>
+            <p>Sessions are mobile across Metropolitan Adelaide, which means I come to your child. Most often this is your home, where your child is already comfortable. By arrangement, sessions can be held at your child's childcare or school.</p>
             <p>Parent consultations and parent–child sessions (filial therapy) are held online.</p>
           </div>
         </details>
@@ -169,6 +178,72 @@ description: "Compassionate play therapy services for children. Helping children
     </div>
   </div>
 </section>
+
+<!-- JSON-LD: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What are the fees for play therapy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Private paying clients: $255 for the 90-minute intake consultation, $170 per hour for therapy sessions and parent review meetings. NDIS clients: $290.98 for the intake consultation and $193.99 per hour for sessions and parent reviews. Travel charges may apply for home or school sessions, always confirmed in advance. Fees are subject to review on 1 July 2027."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does my child need a diagnosis or referral to start play therapy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No diagnosis or referral is required. If you have concerns about your child's emotions, behaviour, or social development, you are welcome to reach out directly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where do play therapy sessions happen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sessions are mobile across Metropolitan Adelaide — I come to your child. Most often this is your home where your child is already comfortable. By arrangement, sessions can be held at your child's childcare or school. Parent consultations and filial therapy sessions are held online."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does play therapy take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most children are in therapy for around 20 sessions. Some settle faster, others need longer, especially when difficulties are deeper or have been ongoing. Progress is reviewed regularly with you, and there is no fixed commitment — you commit to a process, and we keep checking in together about how it's going."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often are sessions and how long is each one?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Weekly sessions are the standard because children do best when therapy is predictable and consistent. Each therapy session is 1 hour."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I stay in the room during my child's play therapy sessions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Generally, parents are not in the play space during sessions — children express themselves differently when the relational dynamics of home aren't in the room, and that difference is part of what makes the work possible. For very young children or those new to therapy, we can plan for you to be nearby at first and step out gradually. Whatever we decide is about attuning to what your child needs in that moment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When are play therapy sessions available?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sessions are available on Wednesdays and Fridays, between 8:30am and 5pm."
+      }
+    }
+  ]
+}
+</script>
 
 ---
 

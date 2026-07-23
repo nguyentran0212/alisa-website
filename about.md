@@ -1,7 +1,9 @@
 ---
 layout: default
-title: "About Alisa"
-description: "About Alisa — qualifications, approach, and background in play therapy."
+title: "About Alisa — Play Therapist in Adelaide"
+title_tag: "About Alisa | Play Therapist in Adelaide | Master of Play Therapy"
+description: "Alisa is a Registered Play Therapist (APPTA & PTPA) and early childhood teacher based in Adelaide, supporting children aged 3–6 and their families."
+keywords: "Alisa play therapist Adelaide, Chunxiao Liao play therapy, registered play therapist APPTA, early childhood therapist Adelaide"
 ---
 
 <section id="about-page" class="section">
@@ -35,3 +37,41 @@ description: "About Alisa — qualifications, approach, and background in play t
     </div>
   </div>
 </section>
+
+<!-- JSON-LD: Person -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": [
+    "Person",
+    "MedicalBusiness"
+  ],
+  "@id": {{ site.url | append: "/#alisa" | jsonify }},
+  "name": {{ site.author.name | jsonify }},
+  "alternateName": {{ site.author.alternate_name | jsonify }},
+  "jobTitle": {{ site.author.role | jsonify }},
+  "description": "Registered Play Therapist (APPTA & PTPA) and early childhood teacher based in Adelaide, supporting children aged 3–6 and their families through play therapy.",
+  "url": {{ site.url | jsonify }},
+  "email": {{ site.contact_email | jsonify }},
+  "telephone": {{ site.contact_phone_e164 | jsonify }},
+  "knowsLanguage": {{ site.practice_languages | jsonify }},
+  "alumniOf": [
+    { "@type": "EducationalOrganization", "name": "Master of Play Therapy" },
+    { "@type": "EducationalOrganization", "name": "Master of Teaching (Early Childhood)" }
+  ],
+  "memberOf": [
+    { "@type": "Organization", "name": "Australasia Pacific Play Therapy Association (APPTA)", "url": "https://appta.org.au" },
+    { "@type": "Organization", "name": "Play Therapy Practitioners Association (PTPA)", "url": "https://www.ptpa.org.au" }
+  ],
+  "worksFor": { "@id": {{ site.url | append: "/#business" | jsonify }} },
+  "areaServed": [
+    { "@type": "City", "name": {{ site.practice_city | jsonify }} },
+    { "@type": "State", "name": {{ site.practice_region | jsonify }} }
+  ],
+  "hasCredential": [
+    { "@type": "EducationalOccupationalCredential", "credentialCategory": "registration", "name": "Registered Play Therapist — APPTA" },
+    { "@type": "EducationalOccupationalCredential", "credentialCategory": "registration", "name": "Registered Play Therapist — PTPA" },
+    { "@type": "EducationalOccupationalCredential", "credentialCategory": "registration", "name": "Registered Teacher (Early Childhood), South Australia" }
+  ]
+}
+</script>

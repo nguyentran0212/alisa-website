@@ -1,7 +1,9 @@
 ---
 layout: default
-title: "Alisa Play Therapy"
-description: "Compassionate play therapy services for children. Helping children heal, grow, and thrive through the power of play."
+title: "阿丽莎游戏治疗 | 阿德莱德3-6岁儿童游戏治疗师"
+title_tag: "阿丽莎游戏治疗 | 阿德莱德3-6岁儿童游戏治疗师"
+description: "阿德莱德儿童游戏治疗，专业支持3-6岁儿童的情绪调节、行为及家庭关系。提供上门服务，覆盖阿德莱德市区及周边，可线上治疗。"
+keywords: "阿德莱德游戏治疗, 儿童游戏治疗师, 阿德莱德儿童心理咨询, 3-6岁儿童治疗, 阿德莱德上门游戏治疗"
 lang: zh
 ---
 
@@ -11,8 +13,15 @@ lang: zh
       <img src="{{ site.baseurl }}/assets/images/logo_vertical.png" alt="Alisa Play Therapy" class="hero-logo">
       <h1 class="hero-title">{{ site.data.zh.hero.title }}</h1>
       <p class="hero-subtitle">{{ site.data.zh.hero.subtitle }}</p>
-      <div class="hero-actions">
-        <a href="{{ site.baseurl }}/zh/#services" class="btn btn-primary">{{ site.data.zh.hero.cta }}</a>
+      <div class="hero-badges">
+        <span class="hero-badge">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          English &amp; 中文
+        </span>
+        <span class="hero-badge">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          提供上门服务
+        </span>
       </div>
     </div>
   </div>
@@ -29,7 +38,7 @@ lang: zh
         <p class="section-lead">{{ site.data.zh.sections.what_is_play_therapy.lead }}</p>
       </div>
       <p>你有没有过这样的时刻——心里压着一件沉甸甸的事，压了很久，终于开口说给一个真正懂你的人听？不是那种急着给建议的人，而是愿意听、愿意陪、愿意为你情绪腾出空间的人。说完之后，你轻松了一点。不是问题消失了，而是你不再一个人扛。</p>
-      <p>对孩子来说，这种体验同样重要。 只是，<strong>孩子往往还说不清心里正在发生的事。所以，他们会做最自然的事——他们会玩。</strong></p>
+      <p>对孩子来说，这种体验同样重要。 只是，<strong>孩子往往还说不清心里正在发生的事。所以，所以，他们选择了玩。</strong></p>
       <p class="play-therapy-highlight">游戏是孩子的语言，玩具是他们的词汇。 — Garry Landreth</p>
       <p>游戏治疗，是一种与孩子相处的方式。它尊重游戏作为孩子与生俱来的语言。在一个安全、被全然接纳的关系里，孩子借助玩偶、木偶、颜料和各种玩具，去表达、去探索那些可能太复杂、太混乱、太沉重而难以言说的经历。在游戏治疗的过程中，孩子会慢慢地建立起: 更强的情绪觉察、更稳的自我调节、更多的自信，以及对"我能行"那份踏踏实实的相信——相信自己，有力量面对生活中的挑战。</p>
       <p>游戏治疗，建立在数十年研究与临床实践之上。 它源于儿童发展研究与治疗工作的深厚积累<a href="https://evidencebasedchildtherapy.com/meta-analyses-reviews/" class="play-therapy-inline-link" target="_blank" rel="noopener">（了解更多循证儿童治疗）</a>。其核心，是一份人本主义的信念: <strong>当孩子感受到安全、被接纳、被真诚地理解，他们就能以自己的方式、自己的节奏，朝成长与疗愈迈进。</strong></p>
@@ -132,8 +141,8 @@ lang: zh
         <details class="faq-item">
           <summary class="faq-question">游戏治疗在哪里进行？</summary>
           <div class="faq-answer">
-            <p>线下: Holden hill 有少量名额。同时提供上门服务（家中或学校），覆盖阿德莱德市区15分钟车程。超出15分钟的车程额外计费。</p>
-            <p>线上： 家长咨询、亲子游戏治疗可在线上进行。</p>
+            <p>提供上门服务，覆盖阿德莱德市区及周边。游戏治疗通常在您家中进行——熟悉的环境能让孩子更放松。也可以协商在托儿所或学校开展。</p>
+            <p>亲子咨询和亲子游戏治疗在线上进行。</p>
           </div>
         </details>
         <details class="faq-item">
