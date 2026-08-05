@@ -37,11 +37,65 @@ lang: zh
         <h2 class="section-title">{{ site.data.zh.sections.what_is_play_therapy.title }}</h2>
         <p class="section-lead">{{ site.data.zh.sections.what_is_play_therapy.lead }}</p>
       </div>
-      <p>你有没有过这种时刻——一件压在心里很久的事，终于开口说给一个你信任的人听。听的人，也许只是安静地陪着你，或者给你一个理解的拥抱。说完，你轻松了一些。问题还在，但你发现自己多了一份力量，去面对那些曾经觉得很难的事。</p>
-      <p>对孩子来说，这种体验同样重要。 只是，<strong>孩子往往还说不清心里正在发生的事。所以，他们选择了玩。</strong></p>
+      <p>你有没有过这种时刻——把一件压在心里的事，说给一个真正在听、真正懂你的人。听的人不会急着帮你"解决"，只是陪着你、为你留出空间，让那份感受被看见、被承接。说出口后，你会觉得轻了一些。问题还在，但你不再是独自扌着。当我们被接纳、被理解，往往会慢慢地，找到自己的方式往前走。</p>
+      <p>孩子，同样需要这样的体验。只是，他们常常还说不清自己的感受、经历和担心。<strong>所以，他们用最熟悉的方式——玩——来表达。</strong></p>
       <p class="play-therapy-highlight">游戏是孩子的语言，玩具是他们的词汇。 — Garry Landreth</p>
-      <p>游戏治疗，是一种与孩子相处的方式。它尊重游戏作为孩子与生俱来的语言。在一个安全、被全然接纳的关系里，孩子借助玩偶、木偶、颜料和各种玩具，去表达、去探索那些可能太复杂、太混乱、太沉重而难以言说的经历。在游戏治疗的过程中，孩子会慢慢地建立起: 更强的情绪觉察、更稳的自我调节、更多的自信，以及对"我能行"那份踏踏实实的相信——相信自己，有力量面对生活中的挑战。</p>
-      <p>游戏治疗，建立在数十年研究与临床实践之上。 它源于儿童发展研究与治疗工作的深厚积累<a href="https://evidencebasedchildtherapy.com/meta-analyses-reviews/" class="play-therapy-inline-link" target="_blank" rel="noopener">（了解更多循证儿童治疗）</a>。其核心，是一份人本主义的信念: <strong>当孩子感受到安全、被接纳、被真诚地理解，他们就能以自己的方式、自己的节奏，朝成长与疗愈迈进。</strong></p>
+      <p>游戏治疗，是一种儿童心理咨询方式。它尊重游戏作为孩子与生俱来的语言——孩子用它来表达、探索、理解自己的世界。在一个安全、被全然接纳的治疗关系里，孩子借助玩具、玩偶、木偶、颜料和各种创意活动，去诉说那些可能太复杂、太混乱、太沉重而难以用语言表达的感受。</p>
+      <p>慢慢地，这个过程会帮孩子长出<strong>更强的情绪觉察，学会和大大的情绪相处，建立起更多的自信，也更踏实地相信自己——相信自己有力量面对生活中的挑战。</strong></p>
+    </div>
+  </div>
+</section>
+
+---
+
+<section id="is-this-for-my-child" class="section">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-header">
+        <span class="section-eyebrow">孩子需要游戏治疗吗？</span>
+        <h2 class="section-title">如果您的孩子正在经历以下情况，游戏治疗可能会有所帮助：</h2>
+      </div>
+      <div class="signs-grid">
+        <article class="sign-card">
+          <span class="sign-card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </span>
+          <h3>强烈的情绪和崩溃</h3>
+          <p>频繁的发脾气、情绪爆发，或难以平静下来。</p>
+        </article>
+        <article class="sign-card">
+          <span class="sign-card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+            </svg>
+          </span>
+          <h3>行为上的挑战</h3>
+          <p>攻击性行为、违抗、沉默退缩，或在日常作息中遇到困难。</p>
+        </article>
+        <article class="sign-card">
+          <span class="sign-card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </span>
+          <h3>玩耍和社交中的困难</h3>
+          <p>在玩耍技能、加入同伴游戏、建立友谊或在社交场合中缺乏自信。</p>
+        </article>
+        <article class="sign-card">
+          <span class="sign-card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/>
+            </svg>
+          </span>
+          <h3>焦虑、担忧或重大生活变化</h3>
+          <p>担忧、过度黏人、沉默退缩，或在面对变化（如上学、家庭变化、失去亲人）时难以适应。</p>
+        </article>
+      </div>
     </div>
   </div>
 </section>
@@ -88,7 +142,7 @@ lang: zh
       <div class="about-text">
         <h2>{{ site.data.zh.sections.about.title }}</h2>
         <p>我是一名游戏治疗师，也是一名早教老师——来自中国，在澳大利亚生活和工作。 2015 年我来到澳洲读早教，之后一直从事幼儿教育的工作。十年来，我的工作一直围绕着 3–6 岁的孩子。</p>
-        <p>我常常被那些"卡住"的孩子吸引——卡在大的情绪里、卡在激烈的反应里、卡在一些看似难以打破的模式里。在从事早教的头几年，我尝试了各种方法去了解和帮助这些孩子。我慢慢意识到：<strong>行为，从来不是故事的全部</strong>。 我们肉眼看到的，常常是孩子在用他仅知道的方式，努力传达一些他还说不出的话。</p>
+        <p>我相信，孩子在关系中成长，也在关系中被疗愈。当一个孩子感受到安全、被接纳、被真诚地理解，他就能慢慢找到属于自己的力量。在温暖、稳当的治疗关系里，我给孩子一个空间——去表达、去探索，按自己的节奏，长出属于自己的力量。</p>
         <p class="about-credentials">游戏治疗硕士 · 教育学硕士（幼儿方向）<br>注册游戏治疗师（APPTA & PTPA） · 注册幼教（南澳大利亚）</p>
         <a href="{{ site.baseurl }}/zh/about" class="btn btn-primary" style="margin-top: 24px;">{{ site.data.zh.buttons.read_full_bio }}</a>
       </div>
@@ -106,6 +160,18 @@ lang: zh
         <h2 class="section-title">常见问题</h2>
       </div>
       <div class="faq-list">
+        <details class="faq-item">
+          <summary class="faq-question">治疗流程是怎样的？</summary>
+          <div class="faq-answer">
+            <p>整个治疗通常分为四个步骤：</p>
+            <ol>
+              <li><strong>初次咨询</strong> —— 一次 90 分钟的会谈。我们会一起梳理孩子的成长经历，您关心的方向，以及您希望通过治疗达成的目标。</li>
+              <li><strong>常规治疗</strong> —— 通常每周一次，每次一小时。稳定、可预期的节奏，对孩子最有效。</li>
+              <li><strong>家长回顾会</strong> —— 每 5–6 次治疗，我们会安排一次回顾，一起看看进展、聊聊调整。您不是旁观者——治疗，是您和孩子一起走的过程。</li>
+              <li><strong>结案</strong> —— 当孩子准备好了，我们会一起规划结束的方式。不是突然停下来，而是慢慢拉长间隔，让孩子有时间过渡和适应。</li>
+            </ol>
+          </div>
+        </details>
         <details class="faq-item">
           <summary class="faq-question">费用</summary>
           <div class="faq-answer">
@@ -149,12 +215,6 @@ lang: zh
           <summary class="faq-question">治疗需要多长时间？</summary>
           <div class="faq-answer">
             <p>这没有一个标准答案——每个孩子都不一样。大多数孩子需要 20 次左右的治疗。有些孩子更快，有些孩子需要更久，尤其是当困扰已经持续了相当一段时间的时候。我会和你一起定期回顾进展。我们会边走、边看、边调整。</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary class="faq-question">游戏治疗的频率和时长是怎样的？</summary>
-          <div class="faq-answer">
-            <p>每周一次。孩子有足够的时间去消化治疗中发生的事，也不至于间隔太久，让刚松动的情绪又压回去。最好固定在同一个时间、同一个地点——这种稳定性，对孩子来说是最重要的。他们不需要担心"今天会不会有什么不一样"，只需要知道"每周的这个时间，我有一个属于自己的空间"。单次游戏治疗时长是1小时。</p>
           </div>
         </details>
         <details class="faq-item">
