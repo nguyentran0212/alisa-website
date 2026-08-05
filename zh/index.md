@@ -260,7 +260,7 @@ lang: zh
         {% endfor %}
       </div>
       <p style="text-align:center; margin-top: 32px;">
-        <a href="{{ site.baseurl }}/blog" class="btn btn-outline">{{ site.data.zh.blog.view_all }}</a>
+        <a href="{{ site.baseurl }}/zh/blog" class="btn btn-outline">{{ site.data.zh.blog.view_all }}</a>
       </p>
     </div>
   </div>
