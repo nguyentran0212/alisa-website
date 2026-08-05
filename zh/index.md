@@ -52,8 +52,8 @@ lang: zh
   <div class="container">
     <div class="reveal">
       <div class="section-header">
-        <span class="section-eyebrow">孩子需要游戏治疗吗？</span>
-        <h2 class="section-title">如果您的孩子正在经历以下情况，游戏治疗可能会有所帮助：</h2>
+        <span class="section-eyebrow">游戏治疗适合我的孩子吗？</span>
+        <h2 class="section-title">游戏治疗帮助正在面对以下情况的孩子：</h2>
       </div>
       <div class="signs-grid">
         <article class="sign-card">

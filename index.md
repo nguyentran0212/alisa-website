@@ -51,7 +51,7 @@ keywords: "play therapy Adelaide, child therapist Adelaide, play therapist for 3
     <div class="reveal">
       <div class="section-header">
         <span class="section-eyebrow">Is This for My Child?</span>
-        <h2 class="section-title">Play Therapy may benefit children who are experiencing:</h2>
+        <h2 class="section-title">Play Therapy supports children who are navigating:</h2>
       </div>
       <div class="signs-grid">
         <article class="sign-card">
