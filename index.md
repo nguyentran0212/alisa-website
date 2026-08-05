@@ -35,11 +35,68 @@ keywords: "play therapy Adelaide, child therapist Adelaide, play therapist for 3
         <span class="section-eyebrow">Understanding Play Therapy</span>
         <h2 class="section-title">What is Play Therapy?</h2>
       </div>
-      <p>You know that feeling when something has been sitting heavy on you, and you finally share it with someone who truly understands? Not someone who rushes to fix it, but someone who listens, stays with you, and makes space for what you’re feeling. You walk away a little lighter. Not because the problem has disappeared, but because you are no longer carrying it alone.</p>
-      <p>For children, that experience is important too. The difference is that <strong>children often find it difficult to put into words what is happening within them. Instead, they do what comes most naturally—they play.</strong></p>
+      <p>Have you ever felt lighter after sharing something with someone who truly listened and understood? Not someone who rushes to fix things, but someone who stays with you, makes space for what you are feeling, and helps you feel less alone. When we feel accepted and understood, we are often better able to make sense of our experiences and find our own ways forward.</p>
+      <p>Children need this experience too. The difference is that young children often find it difficult to put their feelings, experiences, and worries into words. <strong>Instead, they communicate through the language they know best — play.</strong></p>
       <p class="play-therapy-highlight">Play is children’s language. Toys are their words. — Garry Landreth</p>
-      <p>Play therapy is a way of being with children that honours play as their natural language. In a safe and accepting therapeutic relationship, children use dolls, puppets, paints, and other toys to express and explore experiences that may be too complex, confusing, or overwhelming to articulate. Over time, this process gently fosters greater emotional awareness, self-regulation, confidence, and a growing trust in their own capacity to navigate life’s challenges.</p>
-      <p>Play Therapy is grounded in decades of research and clinical practice in child development and therapeutic work <a href="https://evidencebasedchildtherapy.com/meta-analyses-reviews/" class="play-therapy-inline-link" target="_blank" rel="noopener">(Read more on evidence-based child therapy)</a>. At its heart is a humanistic belief that <strong>when children experience safety, acceptance, and genuine understanding, they are able to move toward growth and healing in their own way and at their own pace.</strong></p>
+      <p>Play Therapy is a form of child counselling that honours play as children’s natural way of expressing, exploring, and making sense of their world. Within a safe and accepting therapeutic relationship, children use toys, dolls, puppets, art materials, and creative activities to communicate feelings and experiences that may be too complex, confusing, or overwhelming to put into words.</p>
+      <p>Over time, this process gently supports children to develop <strong>greater emotional awareness, learn ways to manage big feelings, build confidence, and strengthen trust in their own ability to navigate life’s challenges.</strong></p>
+    </div>
+  </div>
+</section>
+
+---
+
+<section id="is-this-for-my-child" class="section">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-header">
+        <span class="section-eyebrow">Is This for My Child?</span>
+        <h2 class="section-title">Play Therapy may benefit children who are experiencing:</h2>
+      </div>
+      <div class="signs-grid">
+        <article class="sign-card">
+          <span class="sign-card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </span>
+          <h3>Big Emotions and Meltdowns</h3>
+          <p>Frequent tantrums, emotional outbursts, or difficulty calming down.</p>
+        </article>
+        <article class="sign-card">
+          <span class="sign-card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+            </svg>
+          </span>
+          <h3>Behavioural Challenges</h3>
+          <p>Aggression, defiance, withdrawal, or struggles with everyday routines.</p>
+        </article>
+        <article class="sign-card">
+          <span class="sign-card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </span>
+          <h3>Play and Social Difficulties</h3>
+          <p>Struggles with play skills, joining in with peers, making friends, or feeling confident in social situations.</p>
+        </article>
+        <article class="sign-card">
+          <span class="sign-card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/>
+            </svg>
+          </span>
+          <h3>Anxiety, Worries, or Big Life Changes</h3>
+          <p>Worries, clinginess, withdrawal, or difficulty adjusting to changes such as starting school, family changes, or loss.</p>
+        </article>
+      </div>
+      <p style="text-align: center; margin-top: 48px;">
+        <a href="{{ site.baseurl }}/2026/07/02/is-play-therapy-right-for-my-child.html" class="btn btn-primary">Find out More</a>
+      </p>
     </div>
   </div>
 </section>
@@ -89,7 +146,7 @@ keywords: "play therapy Adelaide, child therapist Adelaide, play therapist for 3
       <div class="about-text">
         <h2>About Alisa</h2>
         <p>I am a play therapist and early childhood teacher, originally from China. I came to Australia in 2015 to study Teaching, and since then my work has centred around young children aged 3–6.</p>
-        <p>I have always been drawn to children who feel stuck — in big feelings, intense reactions, or patterns that seem hard to shift. Early in my teaching career, I began to notice that behaviour rarely tells the whole story. That understanding led me to play therapy.</p>
+        <p>I believe children grow and heal within relationships where they feel safe, accepted, and genuinely understood. Through a warm and supportive therapeutic relationship, I provide children with a space where they can express themselves, explore their experiences, and discover their own strengths at their own pace.</p>
         <p class="about-credentials">Master of Play Therapy · Master of Teaching (Early Childhood)<br>Registered Play Therapist (APPTA &amp; PTPA) · Registered Teacher, Early Childhood (SA)</p>
         <a href="/about" class="btn btn-primary" style="margin-top: 24px;">Read More About Me</a>
       </div>
@@ -107,6 +164,18 @@ keywords: "play therapy Adelaide, child therapist Adelaide, play therapist for 3
         <h2 class="section-title">Frequently Asked Questions</h2>
       </div>
       <div class="faq-list">
+        <details class="faq-item">
+          <summary class="faq-question">How does the process look like?</summary>
+          <div class="faq-answer">
+            <p>The process usually happens in four steps:</p>
+            <ol>
+              <li><strong>Intake consultation</strong> — a one-off 90-minute meeting to talk through your child's history, your concerns, and what you're hoping for from therapy.</li>
+              <li><strong>Regular therapy sessions</strong> — usually weekly, around one hour each. Children do best when therapy is predictable and consistent, and weekly rhythm gives that.</li>
+              <li><strong>Parent review meetings</strong> — regular check-ins (every 5 or 6 sessions) to talk about progress and adjust the plan if needed. You're part of the process, not on the outside of it.</li>
+              <li><strong>Ending therapy</strong> — when your child is ready, we plan the ending together. Sessions are gradually spaced out rather than stopping suddenly, so your child has time to adjust.</li>
+            </ol>
+          </div>
+        </details>
         <details class="faq-item">
           <summary class="faq-question">Fees</summary>
           <div class="faq-answer">
@@ -154,12 +223,6 @@ keywords: "play therapy Adelaide, child therapist Adelaide, play therapist for 3
           </div>
         </details>
         <details class="faq-item">
-          <summary class="faq-question">How often are sessions, and how long is each one?</summary>
-          <div class="faq-answer">
-            <p>Weekly sessions are the standard. Children do best when therapy is predictable and consistent, and weekly rhythm gives that. Each therapy session is 1 hour.</p>
-          </div>
-        </details>
-        <details class="faq-item">
           <summary class="faq-question">Do I stay in the room during sessions?</summary>
           <div class="faq-answer">
             <p>Whether you stay in the playroom or not, and for how long, depends on your child's needs.</p>
@@ -185,6 +248,14 @@ keywords: "play therapy Adelaide, child therapist Adelaide, play therapist for 3
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How does the play therapy process work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The process happens in four steps: (1) Intake consultation — a one-off 90-minute meeting to discuss your child's history, your concerns, and what you're hoping for from therapy. (2) Regular therapy sessions — usually weekly, around one hour each. Children do best when therapy is predictable and consistent. (3) Parent review meetings — regular check-ins (every 5 or 6 sessions) to talk about progress and adjust the plan if needed. You're part of the process. (4) Ending therapy — when your child is ready, sessions are gradually spaced out rather than stopping suddenly, so your child has time to adjust."
+      }
+    },
     {
       "@type": "Question",
       "name": "What are the fees for play therapy?",
@@ -215,14 +286,6 @@ keywords: "play therapy Adelaide, child therapist Adelaide, play therapist for 3
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Most children are in therapy for around 20 sessions. Some settle faster, others need longer, especially when difficulties are deeper or have been ongoing. Progress is reviewed regularly with you, and there is no fixed commitment — you commit to a process, and we keep checking in together about how it's going."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How often are sessions and how long is each one?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Weekly sessions are the standard because children do best when therapy is predictable and consistent. Each therapy session is 1 hour."
       }
     },
     {
