@@ -37,8 +37,8 @@ lang: zh
         <h2 class="section-title">{{ site.data.zh.sections.what_is_play_therapy.title }}</h2>
         <p class="section-lead">{{ site.data.zh.sections.what_is_play_therapy.lead }}</p>
       </div>
-      <p>你有没有过这种时刻——把一件压在心里的事，说给一个真正在听、真正懂你的人。听的人不会急着帮你"解决"，只是陪着你、为你留出空间，让那份感受被看见、被承接。说出口后，你会觉得轻了一些。问题还在，但你不再是独自扌着。当我们被接纳、被理解，往往会慢慢地，找到自己的方式往前走。</p>
-      <p>孩子，同样需要这样的体验。只是，他们常常还说不清自己的感受、经历和担心。<strong>所以，他们用最熟悉的方式——玩——来表达。</strong></p>
+      <p>你有没有过这种时刻——把一件压在心底的事，说给一个愿意倾听、能够懂你的人。对方可能不会急着给你建议或者帮你"解决"，只是陪着你、留出空间，让你的感受被看见、被接纳。说出口后，你会觉得轻了一些。问题或许还在，但你不再是一个人扛着。当我们感到被接纳、被理解，往往会慢慢生出勇气，找到适合自己的方式往前走。</p>
+      <p>孩子也一样需要这样的体验。只是他们还说不清自己的感受、经历和心事。<strong>所以，他们用自己最熟悉的方式 —玩— 来表达自己。</strong></p>
       <p class="play-therapy-highlight">游戏是孩子的语言，玩具是他们的词汇。 — Garry Landreth</p>
       <p>游戏治疗，是一种儿童心理咨询方式。它尊重游戏作为孩子与生俱来的语言——孩子用它来表达、探索、理解自己的世界。在一个安全、被全然接纳的治疗关系里，孩子借助玩具、玩偶、木偶、颜料和各种创意活动，去诉说那些可能太复杂、太混乱、太沉重而难以用语言表达的感受。</p>
       <p>慢慢地，这个过程会帮孩子长出<strong>更强的情绪觉察，学会和大大的情绪相处，建立起更多的自信，也更踏实地相信自己——相信自己有力量面对生活中的挑战。</strong></p>
@@ -62,8 +62,8 @@ lang: zh
               <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
             </svg>
           </span>
-          <h3>强烈的情绪和崩溃</h3>
-          <p>频繁的发脾气、情绪爆发，或难以平静下来。</p>
+          <h3>情绪波动大、容易崩溃</h3>
+          <p>动不动就发脾气、大哭大闹，或者难以平静下来。</p>
         </article>
         <article class="sign-card">
           <span class="sign-card-icon" aria-hidden="true">
@@ -72,7 +72,7 @@ lang: zh
             </svg>
           </span>
           <h3>行为上的挑战</h3>
-          <p>攻击性行为、违抗、沉默退缩，或在日常作息中遇到困难。</p>
+          <p>容易发脾气、不愿配合，遇事退缩，或难以遵循日常作息安排。</p>
         </article>
         <article class="sign-card">
           <span class="sign-card-icon" aria-hidden="true">
@@ -84,7 +84,7 @@ lang: zh
             </svg>
           </span>
           <h3>玩耍和社交中的困难</h3>
-          <p>在玩耍技能、加入同伴游戏、建立友谊或在社交场合中缺乏自信。</p>
+          <p>不太会玩、不知道怎样加入同伴、交朋友有些困难，在社交场合中容易不自在。</p>
         </article>
         <article class="sign-card">
           <span class="sign-card-icon" aria-hidden="true">
@@ -96,6 +96,9 @@ lang: zh
           <p>担忧、过度黏人、沉默退缩，或在面对变化（如上学、家庭变化、失去亲人）时难以适应。</p>
         </article>
       </div>
+      <p style="text-align: center; margin-top: 48px;">
+        <a href="{{ site.baseurl }}/2026/07/02/is-play-therapy-right-for-my-child-zh.html" class="btn btn-primary">了解更多</a>
+      </p>
     </div>
   </div>
 </section>
@@ -109,6 +112,9 @@ lang: zh
         <span class="section-eyebrow">{{ site.data.zh.sections.services.eyebrow }}</span>
         <h2 class="section-title">{{ site.data.zh.sections.services.title }}</h2>
       </div>
+      <div class="services-overview">
+        <p class="services-overview__sub">我提供三种游戏治疗方法，支持儿童和家庭。</p>
+      </div>
       <div class="services-grid-3">
         <article class="service-tile">
           <h3>以儿童为中心的游戏治疗</h3>
@@ -119,13 +125,13 @@ lang: zh
         <article class="service-tile">
           <h3>Learn to Play 游戏治疗</h3>
           <p class="service-tile__tagline">孩子还没学会玩？不是不想，是还没找到方式。</p>
-          <p>有些孩子还没学会主动玩耍、加入玩耍，或与他人一起专注地玩。Learn to Play 在治疗师的陪伴下，帮助孩子一步步建立起玩耍的能力——从独自探索，到与他人联结。</p>
+          <p>有些孩子还不太会主动玩、不知道怎么加入同伴，或跟别人一起专注地玩。在治疗师的陪伴下，孩子一步步建立起玩耍的能力——从独自探索，到与他人建立联系。</p>
           <a href="{{ site.baseurl }}/2026/07/02/what-is-learn-to-play-therapy-zh.html" class="service-tile__more">阅读更多 <span aria-hidden="true">→</span></a>
         </article>
         <article class="service-tile">
           <h3>亲子游戏治疗</h3>
           <p class="service-tile__tagline">父母走进孩子内心，增进亲子关系。</p>
-          <p>治疗师和父母一起工作，帮助父母更深地理解孩子，并在每一次日常互动中，建立起更稳、更亲的连接。</p>
+          <p>治疗师和父母一起，帮助父母更好地理解孩子，在日常的每一个互动里，建立起更稳固、更亲密的联结。</p>
           <a href="{{ site.baseurl }}/2026/07/02/what-is-filial-therapy-zh.html" class="service-tile__more">阅读更多 <span aria-hidden="true">→</span></a>
         </article>
       </div>
@@ -166,9 +172,9 @@ lang: zh
             <p>整个治疗通常分为四个步骤：</p>
             <ol>
               <li><strong>初次咨询</strong> —— 一次 90 分钟的会谈。我们会一起梳理孩子的成长经历，您关心的方向，以及您希望通过治疗达成的目标。</li>
-              <li><strong>常规治疗</strong> —— 通常每周一次，每次一小时。稳定、可预期的节奏，对孩子最有效。</li>
-              <li><strong>家长回顾会</strong> —— 每 5–6 次治疗，我们会安排一次回顾，一起看看进展、聊聊调整。您不是旁观者——治疗，是您和孩子一起走的过程。</li>
-              <li><strong>结案</strong> —— 当孩子准备好了，我们会一起规划结束的方式。不是突然停下来，而是慢慢拉长间隔，让孩子有时间过渡和适应。</li>
+              <li><strong>常规治疗</strong> —— 通常每周一次，每次一小时。稳定、可预期的节奏，对孩子最有帮助。</li>
+              <li><strong>家长回顾会</strong> —— 每做完 5–6 次治疗后，我们会安排一次回顾，一起看看孩子的进展、聊聊下一步的方向。您不是旁观者——治疗不只是孩子的事，也是您和孩子一起经历的过程。</li>
+              <li><strong>结案</strong> —— 当孩子准备好的时候，我们会一起商量结束的方式。通过最后的几次治疗，给孩子足够的时间去适应和告别。</li>
             </ol>
           </div>
         </details>
@@ -222,8 +228,8 @@ lang: zh
           <div class="faq-answer">
             <p>大多数时候，父母是不在游戏室的——当家里那种亲子关系的张力暂时不在场，孩子通常会把平时觉得难以显露的那一面展现出来。游戏室成了一个不同的空间，而这种"不同"，正是变化能发生的地方。</p>
             <p>每个孩子的节奏不一样。如果孩子还小、刚开始接触治疗、或者一离开你就容易焦虑，我们可以从你在游戏室里陪一段开始，慢慢退出。偶尔，孩子可能需要你陪几分钟作为过渡。</p>
-            </div>
-    </details>
+          </div>
+        </details>
         <details class="faq-item">
           <summary class="faq-question">治疗什么时候可以预约？</summary>
           <div class="faq-answer">

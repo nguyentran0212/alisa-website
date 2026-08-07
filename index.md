@@ -172,7 +172,7 @@ keywords: "play therapy Adelaide, child therapist Adelaide, play therapist for 3
               <li><strong>Intake consultation</strong> — a one-off 90-minute meeting to talk through your child's history, your concerns, and what you're hoping for from therapy.</li>
               <li><strong>Regular therapy sessions</strong> — usually weekly, around one hour each. Children do best when therapy is predictable and consistent, and weekly rhythm gives that.</li>
               <li><strong>Parent review meetings</strong> — regular check-ins (every 5 or 6 sessions) to talk about progress and adjust the plan if needed. You're part of the process, not on the outside of it.</li>
-              <li><strong>Ending therapy</strong> — when your child is ready, we plan the ending together. Sessions are gradually spaced out rather than stopping suddenly, so your child has time to adjust.</li>
+              <li><strong>Ending therapy</strong> — when your child is ready, we plan the ending together. Countdown sessions will be discussed and arranged ahead rather than stopping suddenly, so your child has time to adjust.</li>
             </ol>
           </div>
         </details>
