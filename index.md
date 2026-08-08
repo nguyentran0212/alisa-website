@@ -9,7 +9,6 @@ keywords: "play therapy Adelaide, child therapist Adelaide, play therapist for 3
 <section id="hero" class="section" style="background-image: url('{{ site.hero_image }}');">
   <div class="container">
     <div class="reveal">
-      <img src="{{ site.baseurl }}/assets/images/logo_vertical.png" alt="Alisa Play Therapy" class="hero-logo">
       <h1 class="hero-title"><span>Held in Play</span></h1>
       <p class="hero-subtitle">Play therapy in Adelaide for children aged 3–6 and their families. Supporting emotional regulation, confidence, social skills, and stronger family connections.</p>
       <div class="hero-badges">

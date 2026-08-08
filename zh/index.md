@@ -10,7 +10,6 @@ lang: zh
 <section id="hero" class="section" style="background-image: url('{{ site.hero_image }}');">
   <div class="container">
     <div class="reveal">
-      <img src="{{ site.baseurl }}/assets/images/logo_vertical.png" alt="Alisa Play Therapy" class="hero-logo">
       <h1 class="hero-title">{{ site.data.zh.hero.title }}</h1>
       <p class="hero-subtitle">{{ site.data.zh.hero.subtitle }}</p>
       <div class="hero-badges">
