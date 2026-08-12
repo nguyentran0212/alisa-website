@@ -277,12 +277,16 @@ lang: zh
 <section id="contact" class="section section--alt">
   <div class="container">
     <div class="reveal">
-      <div class="section-header">
+      <div class="section-header" style="text-align: center;">
         <span class="section-eyebrow">{{ site.data.zh.sections.contact.eyebrow }}</span>
         <h2 class="section-title">{{ site.data.zh.sections.contact.title }}</h2>
       </div>
-      <p class="contact-lead">{{ site.data.zh.sections.contact.lead }}</p>
-      <div class="contact-methods">
+      <div class="contact-intro" style="text-align: center; max-width: 780px; margin: 0 auto;">
+        <p style="margin-bottom: 16px;"><strong>{{ site.data.zh.sections.contact.intro_bold }}</strong> {{ site.data.zh.sections.contact.intro_text }}.</p>
+        <a href="https://play-therapy-with-alisa-1.splose.com/public-form/04c0af96-beb3-4509-b853-e8d18937b193" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="font-size: 1.1rem; padding: 15px 40px; font-weight: 700;">{{ site.data.zh.buttons.register_interest }}</a>
+        <p style="margin-top: 24px; font-style: italic;">{{ site.data.zh.sections.contact.prefer_talk }} <a href="mailto:{{ site.contact_email }}?subject=15-minute%20Discover%20Call" style="color: var(--green);">{{ site.data.zh.buttons.book_discover_call }}</a></p>
+      </div>
+      <div class="contact-methods" style="margin-top: 40px;">
         <a href="mailto:{{ site.contact_email }}" class="contact-method">
           <span class="contact-method__icon">
             <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
@@ -302,26 +306,6 @@ lang: zh
           {{ site.contact_location_zh }}
         </span>
       </div>
-      <form class="contact-form" id="contact-form" method="POST" action="{{ site.formspree_url }}">
-        <div class="form-field" style="display:none;">
-          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
-        </div>
-        <div class="form-field">
-          <label for="name">{{ site.data.zh.form.name_label }}</label>
-          <input type="text" id="name" name="name" required>
-        </div>
-        <div class="form-field">
-          <label for="email">{{ site.data.zh.form.email_label }}</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        <div class="form-field">
-          <label for="message">{{ site.data.zh.form.message_label }}</label>
-          <textarea id="message" name="message" rows="5" placeholder="{{ site.data.zh.form.message_placeholder }}" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary" style="width: 100%;">{{ site.data.zh.buttons.send_message }}</button>
-        <p class="form-status form-success" style="display:none; margin-top:16px; color:var(--green); text-align:center;">感谢您——您的消息已发送。我会尽快与您联系。</p>
-        <p class="form-status form-error" style="display:none; margin-top:16px; color:#c0392b; text-align:center;">出了点问题。请重试，或直接发送邮件至 <a href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a>。</p>
-      </form>
     </div>
   </div>
 </section>

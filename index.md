@@ -343,14 +343,16 @@ keywords: "play therapy Adelaide, child therapist Adelaide, play therapist for 3
 <section id="contact" class="section section--alt">
   <div class="container">
     <div class="reveal">
-      <div class="section-header">
+      <div class="section-header" style="text-align: center;">
         <span class="section-eyebrow">Get in Touch</span>
         <h2 class="section-title">Let's Talk</h2>
       </div>
-      <div class="contact-intro">
-        <p class="contact-intro__lead">If you're wondering whether play therapy might be right for your child, feel free to book a 15min Discover Call!</p>
+      <div class="contact-intro" style="text-align: center; max-width: 780px; margin: 0 auto;">
+        <p style="margin-bottom: 16px;"><strong>Interested in play therapy?</strong> If you're considering it is for your child, the first step is to register your interest. Tell me a little about your child and what you're looking for, and I'll be in touch to discuss availability and the next steps.</p>
+        <a href="https://play-therapy-with-alisa-1.splose.com/public-form/04c0af96-beb3-4509-b853-e8d18937b193" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="font-size: 1.1rem; padding: 15px 40px; font-weight: 700;">Register Your Interest</a>
+        <p style="margin-top: 24px; font-style: italic;">Prefer to talk first? <a href="mailto:{{ site.contact_email }}?subject=15-minute%20Discover%20Call" style="color: var(--green);">Book a 15-minute Discover Call</a></p>
       </div>
-      <div class="contact-methods">
+      <div class="contact-methods" style="margin-top: 40px;">
         <a href="mailto:{{ site.contact_email }}" class="contact-method">
           <span class="contact-method__icon">
             <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
@@ -370,26 +372,6 @@ keywords: "play therapy Adelaide, child therapist Adelaide, play therapist for 3
           {{ site.contact_location }}
         </span>
       </div>
-      <form class="contact-form" id="contact-form" method="POST" action="{{ site.formspree_url }}">
-        <div class="form-field" style="display:none;">
-          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
-        </div>
-        <div class="form-field">
-          <label for="name">Your Name</label>
-          <input type="text" id="name" name="name" required>
-        </div>
-        <div class="form-field">
-          <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        <div class="form-field">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" placeholder="Tell me a little about your child and what you're hoping to explore..." required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
-        <p class="form-status form-success" style="display:none; margin-top:16px; color:var(--green); text-align:center;">Thank you — your message has been sent. I'll be in touch soon.</p>
-        <p class="form-status form-error" style="display:none; margin-top:16px; color:#c0392b; text-align:center;">Something went wrong. Please try again or email me directly at <a href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a>.</p>
-      </form>
     </div>
   </div>
 </section>
