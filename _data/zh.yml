@@ -11,7 +11,7 @@ buttons:
   send_message: "发送消息"
   read_full_bio: "阅读完整简介"
   register_interest: "注册您的兴趣"
-  book_discover_call: "预约15分钟了解电话"
+  book_discover_call: "预约15分钟免费咨询"
 footer:
   privacy_policy: "隐私政策"
   copyright_line: "保留所有权利。本网站所有内容受法律保护，未经书面许可不得复制或转载。"

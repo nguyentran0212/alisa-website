@@ -350,7 +350,7 @@ keywords: "play therapy Adelaide, child therapist Adelaide, play therapist for 3
       <div class="contact-intro" style="text-align: center; max-width: 780px; margin: 0 auto;">
         <p style="margin-bottom: 16px;"><strong>Interested in play therapy?</strong> If you're considering it is for your child, the first step is to register your interest. Tell me a little about your child and what you're looking for, and I'll be in touch to discuss availability and the next steps.</p>
         <a href="https://play-therapy-with-alisa-1.splose.com/public-form/04c0af96-beb3-4509-b853-e8d18937b193" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="font-size: 1.1rem; padding: 15px 40px; font-weight: 700;">Register Your Interest</a>
-        <p style="margin-top: 24px; font-style: italic;">Prefer to talk first? <a href="mailto:{{ site.contact_email }}?subject=15-minute%20Discover%20Call" style="color: var(--green);">Book a 15-minute Discover Call</a></p>
+        <p style="margin-top: 24px; font-style: italic;">Prefer to talk first? <a href="mailto:{{ site.contact_email }}?subject=15-minute%20Discover%20Call" style="color: var(--green);">Book a Free 15-minute Discovery Call</a></p>
       </div>
       <div class="contact-methods" style="margin-top: 40px;">
         <a href="mailto:{{ site.contact_email }}" class="contact-method">
