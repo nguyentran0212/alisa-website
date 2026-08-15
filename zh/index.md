@@ -180,6 +180,7 @@ lang: zh
         <details class="faq-item">
           <summary class="faq-question">费用</summary>
           <div class="faq-answer">
+            <p class="faq-note" style="margin-bottom: 18px;">以下费用均为澳元（AUD）</p>
             <div class="faq-pricing">
               <div class="faq-pricing-block">
                 <h4 class="faq-pricing-heading">自费客户</h4>
