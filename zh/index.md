@@ -19,7 +19,7 @@ lang: zh
         </span>
         <span class="hero-badge">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          提供上门服务
+          提供上门服务（阿德莱德市区及周边）
         </span>
       </div>
     </div>
@@ -61,8 +61,8 @@ lang: zh
               <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
             </svg>
           </span>
-          <h3>情绪波动大、容易崩溃</h3>
-          <p>动不动就发脾气、大哭大闹，或者难以平静下来。</p>
+          <h3>情绪波动大，难以平静下来</h3>
+          <p>情绪来得强烈或变化较快，容易大哭，情绪激动时很难自己平复，或者需要较长时间才能恢复平静。</p>
         </article>
         <article class="sign-card">
           <span class="sign-card-icon" aria-hidden="true">
@@ -71,7 +71,7 @@ lang: zh
             </svg>
           </span>
           <h3>行为上的挑战</h3>
-          <p>容易发脾气、不愿配合，遇事退缩，或难以遵循日常作息安排。</p>
+          <p>容易抗拒或不愿配合日常安排，遇到困难时容易退缩，或者会通过摔东西、打人等行为表达自己的情绪和需要。</p>
         </article>
         <article class="sign-card">
           <span class="sign-card-icon" aria-hidden="true">
@@ -83,7 +83,7 @@ lang: zh
             </svg>
           </span>
           <h3>玩耍和社交中的困难</h3>
-          <p>不太会玩、不知道怎样加入同伴、交朋友有些困难，在社交场合中容易不自在。</p>
+          <p>不太知道如何开始或延续游戏，难以加入同伴的游戏，交朋友有些困难，或在社交场合中容易感到不自在。</p>
         </article>
         <article class="sign-card">
           <span class="sign-card-icon" aria-hidden="true">
@@ -91,8 +91,8 @@ lang: zh
               <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/>
             </svg>
           </span>
-          <h3>焦虑、担忧或重大生活变化</h3>
-          <p>担忧、过度黏人、沉默退缩，或在面对变化（如上学、家庭变化、失去亲人）时难以适应。</p>
+          <h3>焦虑、担忧或正在经历生活变化</h3>
+          <p>表现出担忧、过度黏人、沉默或退缩，或者在面对新的环境或生活变化时难以适应，例如开始上学、家庭结构变化、搬家或失去亲人。</p>
         </article>
       </div>
       <p style="text-align: center; margin-top: 48px;">
