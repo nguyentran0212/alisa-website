@@ -2,7 +2,7 @@
 layout: default
 title: "About Alisa — Play Therapist in Adelaide"
 title_tag: "About Alisa | Play Therapist in Adelaide | Master of Play Therapy"
-description: "Alisa is a Registered Play Therapist (APPTA & PTPA) and early childhood teacher based in Adelaide, supporting children aged 3–6 and their families."
+description: "Alisa is a Registered Play Therapist (APPTA & PTPA) and early childhood teacher based in Adelaide, supporting children aged 3-8 and their families."
 keywords: "Alisa play therapist Adelaide, Chunxiao Liao play therapy, registered play therapist APPTA, early childhood therapist Adelaide"
 ---
 
@@ -12,7 +12,7 @@ keywords: "Alisa play therapist Adelaide, Chunxiao Liao play therapy, registered
       <h2 class="section-title">About Alisa</h2>
     </div>
     <div class="about-text">
-      <p>I am a play therapist and early childhood teacher, originally from China. I came to Australia in 2015 to study Teaching, and since then my work has centred around supporting young children aged 3–6 and their families.</p>
+      <p>I am a play therapist and early childhood teacher, originally from China. I came to Australia in 2015 to study Teaching, and since then my work has centred around supporting young children aged 3-8 and their families.</p>
       <p>I have always been drawn to children who seem stuck — in big feelings, intense reactions, or patterns of behaviour that feel difficult to shift. Early in my teaching career, I found myself searching for ways to better understand and support these children. Through this process, I came to realise that behaviour rarely tells the whole story. What we see on the surface is often a child's best attempt to communicate something they do not yet have the words to express.</p>
       <p>As I continued searching for answers, I discovered Play Therapy. It brought together what I had been learning, and offered a way of understanding children that felt both intuitive and deeply respectful of their experience. My background in early childhood education, together with my specialised training in play therapy, gives me a strong foundation for understanding young children's development and emotional needs. It helps me recognise when a child's play, emotions, relationships, or responses may be communicating a need for additional support, while always keeping the child — not the behaviour — at the centre of my understanding.</p>
       <p>I believe children grow and heal within relationships where they feel safe, accepted, and genuinely understood. Through a warm and supportive therapeutic relationship, I provide children with a space where they can express themselves, explore their experiences, and discover their own strengths at their own pace.</p>
@@ -51,7 +51,7 @@ keywords: "Alisa play therapist Adelaide, Chunxiao Liao play therapy, registered
   "name": {{ site.author.name | jsonify }},
   "alternateName": {{ site.author.alternate_name | jsonify }},
   "jobTitle": {{ site.author.role | jsonify }},
-  "description": "Registered Play Therapist (APPTA & PTPA) and early childhood teacher based in Adelaide, supporting children aged 3–6 and their families through play therapy.",
+  "description": "Registered Play Therapist (APPTA & PTPA) and early childhood teacher based in Adelaide, supporting children aged 3-8 and their families through play therapy.",
   "url": {{ site.url | jsonify }},
   "email": {{ site.contact_email | jsonify }},
   "telephone": {{ site.contact_phone_e164 | jsonify }},

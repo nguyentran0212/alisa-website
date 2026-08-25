@@ -1,16 +1,16 @@
 ---
 layout: default
-title: "Alisa Play Therapy | Play Therapist in Adelaide for Ages 3–6"
-title_tag: "Alisa Play Therapy | Play Therapist in Adelaide for Ages 3–6"
-description: "Play therapy in Adelaide for children aged 3–6. Specialised support for emotional regulation, behaviour, and family connection. Mobile sessions across Metropolitan Adelaide and telehealth."
-keywords: "play therapy Adelaide, child therapist Adelaide, play therapist for 3-6 year olds, early childhood therapist, mobile play therapy Adelaide, child emotional regulation Adelaide"
+title: "Alisa Play Therapy | Play Therapist in Adelaide for Ages 3-8"
+title_tag: "Alisa Play Therapy | Play Therapist in Adelaide for Ages 3-8"
+description: "Play therapy in Adelaide for children aged 3-8. Specialised support for emotional regulation, behaviour, and family connection. Mobile sessions across Metropolitan Adelaide and telehealth."
+keywords: "play therapy Adelaide, child therapist Adelaide, play therapist for 3-8 year olds, early childhood therapist, mobile play therapy Adelaide, child emotional regulation Adelaide"
 ---
 
 <section id="hero" class="section" style="background-image: url('{{ site.hero_image }}');">
   <div class="container">
     <div class="reveal">
       <h1 class="hero-title"><span>Held in Play</span></h1>
-      <p class="hero-subtitle">Play therapy in Adelaide for children aged 3–6 and their families. Supporting emotional regulation, confidence, social skills, and stronger family connections.</p>
+      <p class="hero-subtitle">Play therapy in Adelaide for children aged 3-8 and their families. Supporting emotional regulation, confidence, social skills, and stronger family connections.</p>
       <div class="hero-badges">
         <span class="hero-badge">
           <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
@@ -128,7 +128,7 @@ keywords: "play therapy Adelaide, child therapist Adelaide, play therapist for 3
         <article class="service-tile">
           <h3>Filial Therapy</h3>
           <p class="service-tile__tagline">Strengthening connection through guided play</p>
-          <p>A parent-focused approach that teaches essential therapeutic skills to use at home. This work deepens the parent–child relationship and supports emotional connection through intentional shared playtimes.</p>
+          <p>A parent-focused approach that teaches essential therapeutic skills to use at home. This work deepens the parent-child relationship and supports emotional connection through intentional shared playtimes.</p>
           <a href="{{ site.baseurl }}/2026/07/02/what-is-filial-therapy.html" class="service-tile__more">Read More <span aria-hidden="true">→</span></a>
         </article>
       </div>
@@ -144,7 +144,7 @@ keywords: "play therapy Adelaide, child therapist Adelaide, play therapist for 3
       <img src="{{ site.baseurl }}/assets/images/alisa.png" alt="Alisa" class="about-image">
       <div class="about-text">
         <h2>About Alisa</h2>
-        <p>I am a play therapist and early childhood teacher, originally from China. I came to Australia in 2015 to study Teaching, and since then my work has centred around young children aged 3–6.</p>
+        <p>I am a play therapist and early childhood teacher, originally from China. I came to Australia in 2015 to study Teaching, and since then my work has centred around young children aged 3-8.</p>
         <p>I believe children grow and heal within relationships where they feel safe, accepted, and genuinely understood. Through a warm and supportive therapeutic relationship, I provide children with a space where they can express themselves, explore their experiences, and discover their own strengths at their own pace.</p>
         <p class="about-credentials">Master of Play Therapy · Master of Teaching (Early Childhood)<br>Registered Play Therapist (APPTA &amp; PTPA) · Registered Teacher, Early Childhood (SA)</p>
         <a href="/about" class="btn btn-primary" style="margin-top: 24px;">Read More About Me</a>
@@ -211,7 +211,7 @@ keywords: "play therapy Adelaide, child therapist Adelaide, play therapist for 3
           <summary class="faq-question">Where do sessions happen?</summary>
           <div class="faq-answer">
             <p>Sessions are mobile across Metropolitan Adelaide, which means I come to your child. Most often this is your home, where your child is already comfortable. By arrangement, sessions can be held at your child's childcare or school.</p>
-            <p>Parent consultations and parent–child sessions (filial therapy) are held online.</p>
+            <p>Parent consultations and parent-child sessions (filial therapy) are held online.</p>
           </div>
         </details>
         <details class="faq-item">
