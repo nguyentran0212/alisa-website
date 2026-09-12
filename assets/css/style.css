@@ -453,38 +453,40 @@ section { position: relative; }
 
 /* ============ hero ============
  *
- * The photo is a sibling of .wrap, positioned absolutely so it bleeds to the
- * right edge of the viewport. .wrap sits above it (z-index: 1) and keeps the
- * copy inside the standard max-width gutter.
- *
- * Photo width is 60vw (a touch narrower than the ref's 65.53vw) so the photo
- * never reaches the text column. The grid ratio is tightened to give the
- * text more room and the photo a smaller share. Inside the photo, an organic
- * clip-path pulls the left edge inward — more inset at the top (where the
- * text lives), more open at the bottom (where there's empty canvas) — so the
- * photo feels hand-cut rather than rectangular.
+ * Image fills the full viewport width and height (bleeds both edges).
+ * A left-to-right gradient overlay sits between the image and the copy,
+ * fading from canvas-coloured at the left (~60% wide) to transparent on
+ * the right. The text reads cleanly over the faded area; the image stays
+ * visible in the right ~40% as pure photo content.
  */
 
 .hero {
   position: relative;
   background: var(--canvas);
   overflow: hidden;
+  min-height: 36vw;
 }
 .hero .wrap {
   position: relative;
   z-index: 2;
   display: grid;
-  grid-template-columns: minmax(0, 0.85fr) 1.15fr;
-  gap: clamp(2.5rem, 5vw, 4rem);
+  grid-template-columns: minmax(0, 1fr);
   align-items: center;
-  min-height: 36vw;
-  padding-top: clamp(1.5rem, 2.6vw, 2.2rem);
-  padding-bottom: clamp(2rem, 4vw, 3.2rem);
+  min-height: inherit;
+  padding-top: clamp(2.5rem, 5vw, 4.5rem);
+  padding-bottom: clamp(3rem, 5.5vw, 5rem);
 }
-.hero h1 { margin-bottom: var(--s-1); text-wrap: balance; }
+.hero h1 { margin-bottom: var(--s-2); text-wrap: balance; max-width: 18ch; }
 .hero h1 .accent { color: var(--clay); }
-.hero-copy { min-width: 0; }   /* grid item: let text wrap, not grow the column */
-.hero .lede { max-width: 30rem; margin-top: var(--s-4); }
+.hero-copy { min-width: 0; max-width: 36rem; }
+.hero .lede { max-width: 32rem; margin-top: var(--s-4); }
+.hero-meta-text {
+  margin-top: var(--s-3);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--sage-deep);
+}
 .hero-actions {
   margin-top: var(--s-8);
   display: flex;
@@ -493,38 +495,38 @@ section { position: relative; }
   gap: var(--s-4);
 }
 
-/* Sibling of .wrap. Bleeds to the right edge of the viewport. Background
-   matches the hero's canvas so the gap between the clip-path's left edge
-   and the text column blends into the page (not a sage strip). */
+/* Full-bleed background image. z-index 0 so the gradient and copy sit
+   above it. */
 .hero-art {
   position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 60vw;
+  inset: 0;
+  z-index: 0;
   overflow: hidden;
-  background: var(--canvas);
 }
-.hero-art .organic-frame {
-  position: relative;
+.hero-art img {
   width: 100%;
   height: 100%;
-  /* Organic left edge. Inset is deepest at the top (where the text lives)
-     and shallowest at the bottom (where the canvas is empty), so the photo
-     feels hand-cut. The widest point is at y=100% (x=0%), where the photo
-     extends all the way to the left edge of the box. */
-  clip-path: polygon(
-    18% 0,
-    100% 0,
-    100% 100%,
-    0% 100%,
-    8% 80%,
-    14% 55%,
-    18% 30%,
-    18% 0
-  );
+  object-fit: cover;
+  object-position: center 35%;
 }
-.hero-art img { width: 100%; height: 100%; object-fit: cover; }
+
+/* The gradient: a soft canvas-to-transparent wash over the left ~60%
+   that gives the text a backdrop without a hard edge. z-index 1 sits
+   above the image but below the copy. */
+.hero-gradient {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    to right,
+    var(--canvas) 0%,
+    var(--canvas) 30%,
+    rgba(250, 250, 247, 0.85) 45%,
+    rgba(250, 250, 247, 0.35) 60%,
+    rgba(250, 250, 247, 0) 70%
+  );
+  pointer-events: none;
+}
 
 /* Hero meta badge: removed — was just decorative placement text and
    doesn't belong in the design. */
@@ -564,7 +566,16 @@ section { position: relative; }
   margin-inline: auto;
 }
 
-/* ============ services — expanding <details> cards ============ */
+/* ============ services — expanding <details> cards ============
+ *
+ * Three collapsed cards by default; tapping the summary expands one to full
+ * width, overlaying the other two. The +/− toggle rotates to become an X.
+ * The animation uses ::details-content with block-size (gated by
+ * interpolate-size: allow-keywords, with a snap-open fallback).
+ *
+ * Alisa's wording is short, so the expanded body has space to breathe —
+ * each card holds title, subtitle, a one-line lead, the body paragraph,
+ * a bullet list, and a "Read more →" link to the blog post. */
 
 .service-grid {
   display: grid;
@@ -584,8 +595,7 @@ section { position: relative; }
 }
 .service[open] { box-shadow: var(--shadow-lift); }
 
-/* An open card covers its siblings — pinned to row 1, allowed to span.
-   Otherwise the open card would push the other two around. */
+/* An open card covers its siblings: pinned to row 1, allowed to span. */
 @media (min-width: 881px) {
   .service { grid-row: 1; }
   .service:nth-child(1) { grid-column: 1; }
@@ -599,8 +609,7 @@ section { position: relative; }
   }
   .service[open] .service-lead { column-span: all; max-width: none; }
   .service[open] .service-body p,
-  .service[open] .service-body li,
-  .service[open] .service-list-intro { break-inside: avoid; }
+  .service[open] .service-body li { break-inside: avoid; }
 }
 
 .service summary {
@@ -610,14 +619,14 @@ section { position: relative; }
   display: flex;
   align-items: center;
   gap: var(--s-4);
-  padding: var(--s-5) 3.25rem var(--s-5) var(--s-6);
+  padding: var(--s-5) 3.5rem var(--s-5) var(--s-6);
 }
 .service summary::-webkit-details-marker { display: none; }
 
 .service-ico {
   flex: 0 0 auto;
-  width: 56px;
-  height: 56px;
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
   background: var(--clay-tint);
   display: flex;
@@ -631,9 +640,9 @@ section { position: relative; }
 @media (hover: hover) {
 .service:hover .service-ico { transform: rotate(-5deg) scale(1.06); }
 }
-.service[open] .service-ico { transform: rotate(4deg) scale(1.04); width: 66px; height: 66px; }
+.service[open] .service-ico { transform: rotate(4deg) scale(1.04); width: 60px; height: 60px; }
 
-.service-head { display: block; }
+.service-head { display: block; flex: 1; min-width: 0; }
 .service-title {
   display: block;
   font-family: 'Lora', Georgia, serif;
@@ -652,7 +661,7 @@ section { position: relative; }
 }
 .service[open] .service-title { font-size: var(--fs-xl); }
 
-/* plus / minus — rotates the second bar to become an X on open. */
+/* + / − toggle — second bar rotates to become an X when open. */
 .service summary::before,
 .service summary::after {
   content: '';
@@ -669,9 +678,9 @@ section { position: relative; }
 .service summary::after { transform: translateY(-50%) rotate(90deg); }
 .service[open] summary::after { transform: translateY(-50%) rotate(0deg); }
 
-/* <details> hides its content when closed; ::details-content is the level
-   that lets block-size animate. interpolate-size: allow-keywords (above)
-   is what makes auto animatable; unsupported browsers snap open. */
+/* <details> hides content when closed; ::details-content is the level that
+   lets block-size animate. interpolate-size: allow-keywords (above) is
+   what makes auto animatable; unsupported browsers snap open. */
 .service::details-content {
   block-size: 0;
   overflow: hidden;
@@ -708,103 +717,97 @@ section { position: relative; }
   border-bottom: 1px solid var(--hairline);
 }
 
-.service-list-intro { margin-top: var(--s-4); font-weight: 700; color: var(--sage-darker); }
-
-.service-list {
-  margin: var(--s-3) 0 0;
-  padding: 0;
-  list-style: none;
-  display: grid;
-  gap: var(--s-2);
+.service-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: var(--s-4);
+  font-weight: 700;
+  font-size: var(--fs-sm);
+  color: var(--clay-dark);
+  text-decoration: none;
+  transition: color var(--t-fast) var(--ease);
 }
-.service-list li { position: relative; padding-left: var(--s-6); }
-.service-list li::before {
-  content: '';
-  position: absolute;
-  left: 0.15rem; top: 0.6em;
-  width: 6px; height: 6px;
-  border-radius: 50%;
-  background: var(--clay);
+@media (hover: hover) {
+.service-cta:hover { color: var(--sage-darker); }
 }
-.service-list strong { color: var(--sage-darker); }
 
-/* One lift for the three expanders, only on devices that hover. */
+/* One lift for the two expanders, only on devices that hover. */
 @media (hover: hover) {
   .service:not([open]):hover,
   .faq details:not([open]):hover { transform: translateY(-2px); box-shadow: var(--shadow-lift); }
   .nav-links .btn:hover { transform: none; }
 }
 
-/* ============ process — what to expect ============ */
+/* ============ what is play therapy (Alisa's long-form prose) ============
+ *
+ * Renders the 4-paragraph intro with the Garry Landreth quote pulled out
+ * as a blockquote. Lives inside .prose, so typography inherits. */
 
-.process {
-  position: relative;
-  max-width: 72rem;
-  margin-inline: auto;
-}
-
-/* A simple horizontal timeline for 4 steps. On mobile, it stacks vertically. */
-.steps {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--s-4);
-  position: relative;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-/* The road is a thin line behind the pins. On mobile it goes vertical. */
-.steps::before {
-  content: '';
-  position: absolute;
-  left: 1.5rem;
-  right: 1.5rem;
-  top: 2.25rem;
-  height: 2px;
-  background: linear-gradient(to right, var(--sage-light), var(--sage), var(--sage-light));
-  z-index: 0;
-}
-
-.step {
-  position: relative;
-  text-align: center;
-  padding: 0 var(--s-3);
-  z-index: 1;
-}
-.step-pin {
-  width: 4.5rem;
-  height: 4.5rem;
-  margin: 0 auto var(--s-4);
-  border-radius: 50%;
-  background: var(--paper);
-  border: 3px solid var(--clay);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.prose blockquote {
+  margin: var(--s-8) 0;
+  padding: var(--s-6) var(--s-8);
+  border-left: 3px solid var(--clay);
+  background: var(--band);
+  border-radius: 0 var(--radius) var(--radius) 0;
   font-family: 'Lora', Georgia, serif;
   font-size: var(--fs-lg);
-  font-weight: 700;
-  color: var(--clay-dark);
-  box-shadow: var(--shadow-soft);
+  font-style: italic;
+  line-height: 1.45;
+  color: var(--sage-darker);
 }
-.step-num {
-  font-size: var(--fs-xs);
-  font-weight: 800;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--sage-deep);
+.prose blockquote strong { color: var(--sage-darker); font-style: normal; }
+.prose blockquote::before {
+  content: '\201C';   /* opening curly quote */
   display: block;
-  margin-bottom: var(--s-1);
+  font-size: 2.5rem;
+  line-height: 0.5;
+  color: var(--clay);
+  margin-bottom: var(--s-3);
 }
-.step h3 {
+
+/* ============ is this for my child (Alisa's 4 categories) ============
+ *
+ * A 2x2 grid of small cards on the band, each with a title + description.
+ * No icons — Alisa's categories are text-only. */
+
+.for-my-child-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(1.25rem, 2.5vw, 2rem);
+  max-width: 56rem;
+  margin-inline: auto;
+}
+.card-for-child {
+  background: var(--paper);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  padding: clamp(1.25rem, 2.5vw, 1.75rem);
+  transition: box-shadow var(--t-base) var(--ease), transform var(--t-base) var(--ease);
+}
+@media (hover: hover) {
+.card-for-child:hover { box-shadow: var(--shadow-lift); transform: translateY(-2px); }
+}
+.card-for-child h3 {
   font-family: 'Lora', Georgia, serif;
   font-size: var(--fs-md);
+  font-weight: 600;
+  color: var(--sage-darker);
   margin-bottom: var(--s-2);
+  line-height: 1.3;
 }
-.step p {
+.card-for-child p {
   font-size: var(--fs-sm);
-  color: var(--muted);
-  line-height: 1.55;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.section-actions {
+  margin-top: var(--s-8);
+  display: flex;
+  justify-content: center;
+  gap: var(--s-3);
 }
 
 /* ============ meet alisa (about on home) ============ */
@@ -1141,23 +1144,6 @@ section { position: relative; }
 }
 .form-success p { color: var(--muted); max-width: 36rem; margin-inline: auto; }
 
-/* ============ cta band (closing) ============ */
-
-.cta-band { background: var(--band-tint); }
-.cta-band .wrap {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: clamp(1.5rem, 4vw, 3rem);
-  align-items: center;
-  text-align: left;
-}
-.cta-band h2 {
-  font-size: clamp(1.45rem, 2.4vw, 2rem);
-  margin-bottom: var(--s-3);
-  text-wrap: balance;
-}
-.cta-band p { color: var(--muted); max-width: 36rem; margin-bottom: 0; }
-
 /* ============ footer ============ */
 
 .site-footer {
@@ -1335,30 +1321,28 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
 
 @media (max-width: 960px) {
   .hero .wrap,
-  .about-grid,
-  .contact-grid { grid-template-columns: 1fr; }
+  .about-grid { grid-template-columns: 1fr; }
   .hero .wrap { min-height: 0; }
-  /* Single column: drop the absolute positioning so the photo stacks under
-     the copy, full-bleed, domed top + flat bottom (same arch language as the
-     desktop silhouette). */
-  .hero-art {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 1.15 / 1;
-    max-width: none;
-  }
-  .hero-art .organic-frame {
-    /* Replace the desktop clip-path with border-radius: domed top + flat
-       bottom (the same shape as the desktop silhouette, squared at the
-       bottom). */
-    clip-path: none;
-    border-radius: 46% 46% 0 0 / 21% 21% 0 0;
+  /* On mobile, give the hero more height so the image + copy both fit. */
+  .hero { min-height: 70vh; }
+  .hero-gradient {
+    /* Stronger wash on mobile so the copy reads over a busy photo. */
+    background: linear-gradient(
+      to right,
+      var(--canvas) 0%,
+      rgba(250, 250, 247, 0.92) 50%,
+      rgba(250, 250, 247, 0.5) 75%,
+      rgba(250, 250, 247, 0) 90%
+    );
   }
   .about-art { max-width: 26rem; margin-inline: auto; width: 100%; }
   .about-copy p { max-width: 33rem; }
   .notices { grid-template-columns: 1fr; }
-  .cta-band .wrap { grid-template-columns: 1fr; text-align: center; }
-  .cta-band p { margin-inline: auto; }
+  .for-my-child-grid { grid-template-columns: 1fr; }
+  .service-grid { grid-template-columns: 1fr; }
+  .contact-lead-html { max-width: 100%; }
+  .contact-cta-row { flex-direction: column; align-items: stretch; }
+  .contact-cta-row .btn { width: 100%; }
 }
 
 @media (min-width: 761px) and (max-width: 1200px) {
