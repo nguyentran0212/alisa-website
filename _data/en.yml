@@ -71,7 +71,7 @@ sections:
       - title: "Anxiety, Worries, or Big Life Changes"
         body: "Worries, clinginess, withdrawal, or difficulty adjusting to changes such as starting school, family changes, or loss."
     cta: "Find out More"
-    cta_url: "/blog/2026/07/02/is-play-therapy-right-for-my-child.html"
+    cta_url: "/2026/07/02/is-play-therapy-right-for-my-child.html"
 
   services:
     eyebrow: "What I Offer"
@@ -83,19 +83,19 @@ sections:
         lead: "A calm, accepting space where your child leads the process through play."
         body: "Within a consistent therapeutic relationship, children are supported to explore their inner world, build emotional understanding, and grow in resilience."
         cta: "Read More"
-        cta_url: "/blog/2026/07/02/what-is-child-centered-play-therapy.html"
+        cta_url: "/2026/07/02/what-is-child-centered-play-therapy.html"
       - title: "Learn to Play Therapy"
         sub: "Developing the foundations of play and connection"
         lead: "A structured, play-based approach for children who need support with engagement, flexibility, and imagination."
         body: "Sessions gently build the skills needed for learning, relationships, and reciprocal play."
         cta: "Read More"
-        cta_url: "/blog/2026/07/02/what-is-learn-to-play-therapy.html"
+        cta_url: "/2026/07/02/what-is-learn-to-play-therapy.html"
       - title: "Filial Therapy"
         sub: "Strengthening connection through guided play"
         lead: "A parent-focused approach that teaches essential therapeutic skills to use at home."
         body: "This work deepens the parent-child relationship and supports emotional connection through intentional shared playtimes."
         cta: "Read More"
-        cta_url: "/blog/2026/07/02/what-is-filial-therapy.html"
+        cta_url: "/2026/07/02/what-is-filial-therapy.html"
 
   about:
     eyebrow: "About Alisa"

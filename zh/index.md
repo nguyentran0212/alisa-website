@@ -32,7 +32,7 @@ permalink: /zh/
   <!-- ============ WHAT IS PLAY THERAPY ============ -->
   <section id="what-is-play-therapy">
     <div class="wrap">
-      <div class="section-head">
+      <div class="section-head center">
         <p class="eyebrow">{{ site.data.zh.sections.what_is_play_therapy.eyebrow }}</p>
         <h2>{{ site.data.zh.sections.what_is_play_therapy.title }}</h2>
       </div>
@@ -103,16 +103,19 @@ permalink: /zh/
   <!-- ============ ABOUT ============ -->
   <section id="about">
     <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">{{ site.data.zh.sections.about.eyebrow }}</p>
-        <h2>{{ site.data.zh.sections.about.title }}</h2>
-      </div>
-      <div class="prose reveal" style="max-width: 40rem; margin-inline: auto;">
-        {{ site.data.zh.sections.about.bio_html }}
-        <p class="credentials-line">{{ site.data.zh.sections.about.credentials }}</p>
-      </div>
-      <div class="section-actions">
-        <a class="btn btn-ghost" href="{{ site.baseurl }}{{ site.data.zh.sections.about.cta_url }}">{{ site.data.zh.sections.about.cta }}</a>
+      <div class="about-home-grid">
+        <div class="about-home-art reveal">
+          <img src="{{ site.baseurl }}/assets/images/alisa.png" alt="Alisa Liao，注册游戏治疗师">
+        </div>
+        <div class="about-home-bio reveal" style="--d: 0.08s">
+          <p class="eyebrow">{{ site.data.zh.sections.about.eyebrow }}</p>
+          <h2>{{ site.data.zh.sections.about.title }}</h2>
+          {{ site.data.zh.sections.about.bio_html }}
+          <p class="about-home-credentials"><strong>{{ site.data.zh.sections.about.credentials }}</strong></p>
+          <div class="section-actions" style="justify-content: flex-start; margin-top: var(--s-8);">
+            <a class="btn btn-ghost" href="{{ site.baseurl }}{{ site.data.zh.sections.about.cta_url }}">{{ site.data.zh.sections.about.cta }}</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -208,41 +211,44 @@ permalink: /zh/
   <!-- ============ CONTACT ============ -->
   <section id="contact">
     <div class="wrap">
-      <div class="section-head center">
-        <p class="eyebrow">{{ site.data.zh.sections.contact.eyebrow }}</p>
-        <h2>{{ site.data.zh.sections.contact.title }}</h2>
-        <div class="contact-lead-html">{{ site.data.zh.sections.contact.lead_html }}</div>
-      </div>
-
-      <div class="contact-cta-row reveal">
-        <a class="btn btn-primary btn-lg" href="{{ site.data.zh.splose_form_url }}" target="_blank" rel="noopener">{{ site.data.zh.sections.contact.primary_cta }}</a>
-        <a class="btn btn-ghost btn-lg" href="{{ site.data.zh.discovery_call_url }}">{{ site.data.zh.sections.contact.secondary_cta }}</a>
-      </div>
-
-      <ul class="contact-list reveal">
-        {%- for c in site.data.zh.sections.contact.items -%}
-        <li>
-          <span class="contact-ico" aria-hidden="true">
-            {%- case forloop.index -%}
-              {%- when 1 -%}
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
-              {%- when 2 -%}
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
-              {%- else -%}
-                <svg viewBox="0 0 24 24" fill="0" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-7-9-12a9 9 0 0 1 18 0c-2 5-9 12-9 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
-            {%- endcase -%}
-          </span>
-          <div>
-            <span class="label">{{ c.label }}</span>
-            {%- if c.href -%}
-              <a href="{{ c.href }}">{{ c.value }}</a>
-            {%- else -%}
-              <span>{{ c.value }}</span>
-            {%- endif -%}
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <div class="section-head">
+            <p class="eyebrow">{{ site.data.zh.sections.contact.eyebrow }}</p>
+            <h2>{{ site.data.zh.sections.contact.title }}</h2>
           </div>
-        </li>
-        {%- endfor -%}
-      </ul>
+          <div class="contact-lead-html">{{ site.data.zh.sections.contact.lead_html }}</div>
+          <div class="contact-cta-row">
+            <a class="btn btn-primary" href="{{ site.data.zh.splose_form_url }}" target="_blank" rel="noopener">{{ site.data.zh.sections.contact.primary_cta }}</a>
+            <a class="btn btn-ghost" href="{{ site.data.zh.discovery_call_url }}">{{ site.data.zh.sections.contact.secondary_cta }}</a>
+          </div>
+        </div>
+
+        <ul class="contact-list reveal" style="--d: 0.08s">
+          {%- for c in site.data.zh.sections.contact.items -%}
+          <li>
+            <span class="contact-ico" aria-hidden="true">
+              {%- case forloop.index -%}
+                {%- when 1 -%}
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+                {%- when 2 -%}
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+                {%- else -%}
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-7-9-12a9 9 0 0 1 18 0c-2 5-9 12-9 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+              {%- endcase -%}
+            </span>
+            <div>
+              <span class="label">{{ c.label }}</span>
+              {%- if c.href -%}
+                <a href="{{ c.href }}">{{ c.value }}</a>
+              {%- else -%}
+                <span>{{ c.value }}</span>
+              {%- endif -%}
+            </div>
+          </li>
+          {%- endfor -%}
+        </ul>
+      </div>
     </div>
   </section>
 

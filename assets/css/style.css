@@ -620,6 +620,9 @@ section { position: relative; }
   align-items: center;
   gap: var(--s-4);
   padding: var(--s-5) 3.5rem var(--s-5) var(--s-6);
+  /* Lock the summary height so the 3 service cards line up regardless of
+     how each title wraps. ~2 lines of Lora at fs-md + padding. */
+  min-height: 7rem;
 }
 .service summary::-webkit-details-marker { display: none; }
 
@@ -810,7 +813,49 @@ section { position: relative; }
   gap: var(--s-3);
 }
 
-/* ============ meet alisa (about on home) ============ */
+/* ============ meet alisa (about on home) ============
+ *
+ * 2-column layout on home: Alisa's portrait on the left, the brief bio
+ * (matching /about but trimmed) on the right. On mobile, single column. */
+
+.about-home-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) 1.15fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+  max-width: var(--maxw);
+  margin-inline: auto;
+}
+.about-home-art {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--sage-light);
+  box-shadow: var(--shadow-soft);
+}
+.about-home-art img { width: 100%; height: 100%; object-fit: cover; }
+.about-home-bio {
+  min-width: 0;
+}
+.about-home-bio h2 {
+  font-size: var(--fs-h1);
+  margin-bottom: var(--s-6);
+  text-wrap: balance;
+}
+.about-home-bio p + p { margin-top: var(--s-4); }
+.about-home-credentials {
+  margin-top: var(--s-6);
+  font-size: var(--fs-sm);
+  color: var(--text);
+  line-height: 1.6;
+}
+.about-home-credentials strong { color: var(--sage-darker); display: block; margin-bottom: var(--s-2); }
+
+@media (max-width: 960px) {
+  .about-home-grid { grid-template-columns: 1fr; }
+  .about-home-art { max-width: 26rem; margin-inline: auto; }
+}
 
 .about-grid {
   display: grid;
@@ -945,7 +990,17 @@ section { position: relative; }
   .faq details[open] .answer { animation: panel-body-in var(--t-slow) var(--ease) both; }
 }
 
-/* ============ fees ============ */
+/* ============ fees ============
+ *
+ * The card sits below a centered section-head. Centered with margin-inline:
+ * auto so it lines up visually with the heading above. */
+
+.fees-intro {
+  text-align: center;
+  max-width: var(--w-column);
+  margin: 0 auto var(--s-12);
+}
+.fees-intro .eyebrow { color: var(--sage-deep); }
 
 .fees-card {
   background: var(--paper);
@@ -953,6 +1008,7 @@ section { position: relative; }
   box-shadow: var(--shadow-soft);
   padding: clamp(1.5rem, 4vw, 2.5rem);
   max-width: var(--w-panel);
+  width: 100%;
   margin-inline: auto;
 }
 .fees-intro {
@@ -971,7 +1027,7 @@ section { position: relative; }
   gap: var(--s-4);
   padding: var(--s-5) 0;
   border-top: 1px solid var(--hairline);
-  align-items: start;
+  align-items: center;
 }
 .fee-item:last-child { border-bottom: 1px solid var(--hairline); }
 .fee-name {
@@ -979,6 +1035,9 @@ section { position: relative; }
   font-size: var(--fs-md);
   font-weight: 600;
   color: var(--sage-darker);
+  /* Without min-width:0 the grid column won't shrink and the longest
+     fee-name stretches the whole card past its max-width. */
+  min-width: 0;
 }
 .fee-detail {
   margin-top: var(--s-1);
@@ -993,9 +1052,11 @@ section { position: relative; }
   color: var(--clay-dark);
   text-align: right;
   white-space: nowrap;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.3rem;
 }
 .fee-price .fee-unit {
-  display: block;
   font-family: 'Open Sans', sans-serif;
   font-size: var(--fs-sm);
   font-weight: 600;
@@ -1006,36 +1067,50 @@ section { position: relative; }
 
 /* ============ contact ============
  *
- * The section-head lives inside the left column with the contact list, so the
- * eyebrow + title align with the contact items rather than floating above both
- * columns. The lead sits between the title and the list. The form occupies
- * the right column. */
+ * 2-column on desktop: the headline + intro + CTA pair live on the left,
+ * the contact details (email / phone / service area) live on the right.
+ * On mobile, single column. */
 
 .contact-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
   gap: clamp(2rem, 5vw, 4rem);
   align-items: start;
 }
+.contact-info { min-width: 0; }
 .contact-info .section-head { margin-bottom: var(--s-4); }
-.contact-lead {
-  color: var(--muted);
+.contact-info .section-head.center { margin-bottom: var(--s-6); }
+.contact-lead-html {
+  color: var(--text);
   margin-bottom: var(--s-6);
   max-width: 32rem;
 }
+.contact-lead-html p + p { margin-top: var(--s-3); }
+.contact-lead-html strong { color: var(--sage-darker); }
+
+.contact-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-3);
+  margin-bottom: var(--s-8);
+}
+.contact-cta-row .btn { width: auto; }
+
 .contact-list {
   list-style: none;
-  padding: 0;
+  padding: var(--s-6);
   margin: 0;
   display: grid;
   gap: var(--s-5);
+  background: var(--band);
+  border-radius: var(--radius-lg);
 }
 .contact-list li { display: grid; grid-template-columns: auto 1fr; gap: var(--s-3); align-items: start; }
 .contact-ico {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: var(--sage-light);
+  background: var(--paper);
   color: var(--sage-deep);
   display: flex;
   align-items: center;
@@ -1370,6 +1445,9 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
 .prose {
   max-width: 38rem;
   margin-inline: auto;
+  /* Override the default p text-wrap:pretty for prose blocks — they read
+     better with standard wrap. */
+  text-align: left;
 }
 .prose > * + * { margin-top: var(--s-4); }
 .prose h2 {
