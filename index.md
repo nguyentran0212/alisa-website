@@ -1,377 +1,324 @@
 ---
 layout: default
 title: "Alisa Play Therapy | Play Therapist in Adelaide for Ages 3-8"
-title_tag: "Alisa Play Therapy | Play Therapist in Adelaide for Ages 3-8"
 description: "Play therapy in Adelaide for children aged 3-8. Specialised support for emotional regulation, behaviour, and family connection. Mobile sessions across Metropolitan Adelaide and telehealth."
-keywords: "play therapy Adelaide, child therapist Adelaide, play therapist for 3-8 year olds, early childhood therapist, mobile play therapy Adelaide, child emotional regulation Adelaide"
+lang: en
+permalink: /
 ---
 
-<section id="hero" class="section" style="background-image: url('{{ site.hero_image }}');">
-  <div class="container">
-    <div class="reveal">
-      <h1 class="hero-title"><span>Held in Play</span></h1>
-      <p class="hero-subtitle">Play therapy in Adelaide for children aged 3-8 and their families. Supporting emotional regulation, confidence, social skills, and stronger family connections.</p>
-      <div class="hero-badges">
-        <span class="hero-badge">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-          English &amp; Mandarin
-        </span>
-        <span class="hero-badge">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Mobile service available
-        </span>
+<a class="skip" href="#main">Skip to content</a>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-copy">
+        <p class="eyebrow">{{ site.data.en.hero.eyebrow }}</p>
+        {%- assign title = site.data.en.hero.title -%}
+        {%- assign accent_word = site.data.en.hero.title_accent -%}
+        {%- assign parts = title | split: accent_word -%}
+        <h1>{{ parts[0] }}<span class="accent">{{ accent_word }}</span>{{ parts[1] }}</h1>
+        <p class="lede">{{ site.data.en.hero.subtitle }}</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contact">{{ site.data.en.hero.cta_primary }}</a>
+          <a class="btn btn-ghost" href="#approach">{{ site.data.en.hero.cta_secondary }}</a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-
----
-
-<section id="what-is-play-therapy" class="section section--alt">
-  <div class="container">
-    <div class="reveal">
-      <div class="section-header">
-        <span class="section-eyebrow">Understanding Play Therapy</span>
-        <h2 class="section-title">What is Play Therapy?</h2>
+    <!-- hero photo: sibling of .wrap so it can bleed to the right edge -->
+    <div class="hero-art reveal" aria-hidden="true">
+      <div class="organic-frame">
+        <img src="{{ site.hero_image }}" alt="">
       </div>
-      <p>Have you ever felt lighter after sharing something with someone who truly listened and understood? Not someone who rushes to fix things, but someone who stays with you, makes space for what you are feeling, and helps you feel less alone. When we feel accepted and understood, we are often better able to make sense of our experiences and find our own ways forward.</p>
-      <p>Children need this experience too. The difference is that young children often find it difficult to put their feelings, experiences, and worries into words. <strong>Instead, they communicate through the language they know best — play.</strong></p>
-      <p class="play-therapy-highlight">Play is children’s language. Toys are their words. — Garry Landreth</p>
-      <p>Play Therapy is a form of child counselling that honours play as children’s natural way of expressing, exploring, and making sense of their world. Within a safe and accepting therapeutic relationship, children use toys, dolls, puppets, art materials, and creative activities to communicate feelings and experiences that may be too complex, confusing, or overwhelming to put into words.</p>
-      <p>Over time, this process gently supports children to develop <strong>greater emotional awareness, learn ways to manage big feelings, build confidence, and strengthen trust in their own ability to navigate life’s challenges.</strong></p>
     </div>
-  </div>
-</section>
+  </section>
 
----
-
-<section id="is-this-for-my-child" class="section">
-  <div class="container">
-    <div class="reveal">
-      <div class="section-header">
-        <span class="section-eyebrow">Is This for My Child?</span>
-        <h2 class="section-title">Play Therapy supports children who are navigating:</h2>
+  <!-- ============ APPROACH (3 pillars on band) ============ -->
+  <section class="bg-band section-short" id="approach">
+    <div class="wrap">
+      <div class="section-head center">
+        <p class="eyebrow">{{ site.data.en.sections.approach.eyebrow }}</p>
+        <h2>{{ site.data.en.sections.approach.title }}</h2>
+        <p>{{ site.data.en.sections.approach.lead }}</p>
       </div>
-      <div class="signs-grid">
-        <article class="sign-card">
-          <span class="sign-card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-            </svg>
+      <div class="pillars">
+        {%- for p in site.data.en.sections.approach.pillars -%}
+        <div class="pillar reveal" {% unless forloop.first %}style="--d: {{ forloop.index0 | times: 0.08 }}s"{% endunless %}>
+          <span class="pillar-ico" aria-hidden="true">
+            {%- case forloop.index -%}
+              {%- when 1 -%}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-9.5-9.5C.5 7 5 3 8.5 4.5 10 5 11 6 12 7c1-1 2-2 3.5-2.5C19 3 23.5 7 21.5 11.5 19 16.5 12 21 12 21z"/></svg>
+              {%- when 2 -%}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V6l-8-4z"/><path d="M9 12l2 2 4-4"/></svg>
+              {%- else -%}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2 21v-2a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v2"/><circle cx="17" cy="9" r="2.5"/><path d="M22 19v-1a3.5 3.5 0 0 0-3-3.5"/></svg>
+            {%- endcase -%}
           </span>
-          <h3>Big Emotions and Meltdowns</h3>
-          <p>Frequent tantrums, emotional outbursts, or difficulty calming down.</p>
-        </article>
-        <article class="sign-card">
-          <span class="sign-card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
-            </svg>
-          </span>
-          <h3>Behavioural Challenges</h3>
-          <p>Aggression, defiance, withdrawal, or struggles with everyday routines.</p>
-        </article>
-        <article class="sign-card">
-          <span class="sign-card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
-              <circle cx="9" cy="7" r="4"/>
-              <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
-              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-            </svg>
-          </span>
-          <h3>Play and Social Difficulties</h3>
-          <p>Struggles with play skills, joining in with peers, making friends, or feeling confident in social situations.</p>
-        </article>
-        <article class="sign-card">
-          <span class="sign-card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/>
-            </svg>
-          </span>
-          <h3>Anxiety, Worries, or Big Life Changes</h3>
-          <p>Worries, clinginess, withdrawal, or difficulty adjusting to changes such as starting school, family changes, or loss.</p>
-        </article>
-      </div>
-      <p style="text-align: center; margin-top: 48px;">
-        <a href="{{ site.baseurl }}/2026/07/02/is-play-therapy-right-for-my-child.html" class="btn btn-primary">Find out More</a>
-      </p>
-    </div>
-  </div>
-</section>
-
----
-
-<section id="services" class="section section--alt">
-  <div class="container">
-    <div class="reveal">
-      <div class="section-header">
-        <span class="section-eyebrow">What I Offer</span>
-        <h2 class="section-title">Services</h2>
-      </div>
-      <div class="services-overview">
-        <p class="services-overview__sub">I offer three specialised play-based approaches to support children and families.</p>
-      </div>
-      <div class="services-grid-3">
-        <article class="service-tile">
-          <h3>Child-Centered Play Therapy</h3>
-          <p class="service-tile__tagline">A child-led space for emotional growth</p>
-          <p>A calm, accepting space where your child leads the process through play. Within a consistent therapeutic relationship, children are supported to explore their inner world, build emotional understanding, and grow in resilience.</p>
-          <a href="{{ site.baseurl }}/2026/07/02/what-is-child-centered-play-therapy.html" class="service-tile__more">Read More <span aria-hidden="true">→</span></a>
-        </article>
-        <article class="service-tile">
-          <h3>Learn to Play Therapy</h3>
-          <p class="service-tile__tagline">Developing the foundations of play and connection</p>
-          <p>A structured, play-based approach for children who need support with engagement, flexibility, and imagination. Sessions gently build the skills needed for learning, relationships, and reciprocal play.</p>
-          <a href="{{ site.baseurl }}/2026/07/02/what-is-learn-to-play-therapy.html" class="service-tile__more">Read More <span aria-hidden="true">→</span></a>
-        </article>
-        <article class="service-tile">
-          <h3>Filial Therapy</h3>
-          <p class="service-tile__tagline">Strengthening connection through guided play</p>
-          <p>A parent-focused approach that teaches essential therapeutic skills to use at home. This work deepens the parent-child relationship and supports emotional connection through intentional shared playtimes.</p>
-          <a href="{{ site.baseurl }}/2026/07/02/what-is-filial-therapy.html" class="service-tile__more">Read More <span aria-hidden="true">→</span></a>
-        </article>
+          <h3>{{ p.title }}</h3>
+          <p>{{ p.body }}</p>
+        </div>
+        {%- endfor -%}
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
----
-
-<section id="about" class="section">
-  <div class="container">
-    <div class="reveal about-grid">
-      <img src="{{ site.baseurl }}/assets/images/alisa.png" alt="Alisa" class="about-image">
-      <div class="about-text">
-        <h2>About Alisa</h2>
-        <p>I am a play therapist and early childhood teacher, originally from China. I came to Australia in 2015 to study Teaching, and since then my work has centred around young children aged 3-8.</p>
-        <p>I believe children grow and heal within relationships where they feel safe, accepted, and genuinely understood. Through a warm and supportive therapeutic relationship, I provide children with a space where they can express themselves, explore their experiences, and discover their own strengths at their own pace.</p>
-        <p class="about-credentials">Master of Play Therapy · Master of Teaching (Early Childhood)<br>Registered Play Therapist (APPTA &amp; PTPA) · Registered Teacher, Early Childhood (SA)</p>
-        <a href="/about" class="btn btn-primary" style="margin-top: 24px;">Read More About Me</a>
+  <!-- ============ SERVICES (expanding <details> cards) ============ -->
+  <section id="services">
+    <div class="wrap">
+      <div class="section-head center">
+        <p class="eyebrow">{{ site.data.en.sections.services.eyebrow }}</p>
+        <h2>{{ site.data.en.sections.services.title }}</h2>
+        <p>{{ site.data.en.sections.services.lead }}</p>
       </div>
-    </div>
-  </div>
-</section>
-
----
-
-<section id="faq" class="section">
-  <div class="container">
-    <div class="reveal">
-      <div class="section-header">
-        <span class="section-eyebrow">You Might Wonder</span>
-        <h2 class="section-title">Frequently Asked Questions</h2>
-      </div>
-      <div class="faq-list">
-        <details class="faq-item">
-          <summary class="faq-question">How does the process look like?</summary>
-          <div class="faq-answer">
-            <p>The process usually happens in four steps:</p>
-            <ol>
-              <li><strong>Intake consultation</strong> — a one-off 90-minute meeting to talk through your child's history, your concerns, and what you're hoping for from therapy.</li>
-              <li><strong>Regular therapy sessions</strong> — usually weekly, around one hour each. Children do best when therapy is predictable and consistent, and weekly rhythm gives that.</li>
-              <li><strong>Parent review meetings</strong> — regular check-ins (every 5 or 6 sessions) to talk about progress and adjust the plan if needed. You're part of the process, not on the outside of it.</li>
-              <li><strong>Ending therapy</strong> — when your child is ready, we plan the ending together. Countdown sessions will be discussed and arranged ahead rather than stopping suddenly, so your child has time to adjust.</li>
-            </ol>
+      <div class="service-grid">
+        {%- for s in site.data.en.sections.services.items -%}
+        <details class="service reveal" {% unless forloop.first %}style="--d: {{ forloop.index0 | times: 0.08 }}s"{% endunless %}>
+          <summary>
+            <span class="service-ico" aria-hidden="true">
+              {%- case forloop.index -%}
+                {%- when 1 -%}
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h6V4l8 8-8 8v-5H4z"/></svg>
+                {%- when 2 -%}
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="10" cy="11" r="1"/><circle cx="14" cy="11" r="1"/><path d="M8.5 15.5c1 1 2 1.5 3.5 1.5s2.5-.5 3.5-1.5"/></svg>
+                {%- else -%}
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11V8a5 5 0 0 1 10 0v3"/><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M12 15v2"/></svg>
+              {%- endcase -%}
+            </span>
+            <span class="service-head">
+              <span class="service-title">{{ s.title }}</span>
+              <span class="service-sub">{{ s.sub }}</span>
+            </span>
+          </summary>
+          <div class="service-body">
+            <p class="service-lead">{{ s.lead }}</p>
+            <p>{{ s.body }}</p>
+            {%- if s.list -%}
+            <p class="service-list-intro">{{ s.list_intro }}</p>
+            <ul class="service-list">
+              {%- for li in s.list -%}<li>{{ li }}</li>{%- endfor -%}
+            </ul>
+            {%- endif -%}
           </div>
         </details>
-        <details class="faq-item">
-          <summary class="faq-question">Fees</summary>
-          <div class="faq-answer">
-            <div class="faq-pricing">
-              <div class="faq-pricing-block">
-                <h4 class="faq-pricing-heading">Private Paying clients</h4>
-                <ul class="faq-pricing-list">
-                  <li><span>Intake consultation (one-off, 90 minutes)</span><span class="faq-pricing-amount">$255</span></li>
-                  <li><span>Therapy session</span><span class="faq-pricing-amount">$170/h</span></li>
-                  <li><span>Parent Review Meetings</span><span class="faq-pricing-amount">$170/h</span></li>
-                </ul>
-              </div>
-              <div class="faq-pricing-block">
-                <h4 class="faq-pricing-heading">NDIS clients</h4>
-                <ul class="faq-pricing-list">
-                  <li><span>Intake consultation (one-off, 90 minutes)</span><span class="faq-pricing-amount">$290.98</span></li>
-                  <li><span>Therapy session</span><span class="faq-pricing-amount">$193.99/h</span></li>
-                  <li><span>Parent Review Meetings</span><span class="faq-pricing-amount">$193.99/h</span></li>
-                </ul>
-              </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROCESS (4-step timeline) ============ -->
+  <section id="process">
+    <div class="wrap">
+      <div class="section-head center">
+        <p class="eyebrow">{{ site.data.en.sections.process.eyebrow }}</p>
+        <h2>{{ site.data.en.sections.process.title }}</h2>
+        <p>{{ site.data.en.sections.process.lead }}</p>
+      </div>
+      <div class="process">
+        <ol class="steps">
+          {%- for step in site.data.en.sections.process.steps -%}
+          <li class="step reveal" style="--d: {{ forloop.index0 | times: 0.08 }}s">
+            <span class="step-pin" aria-hidden="true">{{ forloop.index }}</span>
+            <div>
+              <span class="step-num">Step {{ forloop.index }}</span>
+              <h3>{{ step.title }}</h3>
+              <p>{{ step.body }}</p>
             </div>
-            <p class="faq-note">For children seen in their home or school environment, travel charges may apply. We will always confirm and agree on travel costs before commencing mobile sessions.</p>
-            <p class="faq-note"><em>Fees are subject to review on 1 July, 2027.</em></p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary class="faq-question">Does my child need a diagnosis or referral?</summary>
-          <div class="faq-answer">
-            <p>Not really.</p>
-            <p>If you have concerns about your child's emotions, behaviour, or social development, feel free to reach out.</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary class="faq-question">Where do sessions happen?</summary>
-          <div class="faq-answer">
-            <p>Sessions are mobile across Metropolitan Adelaide, which means I come to your child. Most often this is your home, where your child is already comfortable. By arrangement, sessions can be held at your child's childcare or school.</p>
-            <p>Parent consultations and parent-child sessions (filial therapy) are held online.</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary class="faq-question">How long does therapy take?</summary>
-          <div class="faq-answer">
-            <p>Most children are in therapy for around 20 sessions. Some settle faster. Some need longer, especially when the difficulties are deeper or have been going on for a while.</p>
-            <p>Progress is reviewed with you regularly. You're not committing to a fixed length of time. You're committing to a process, and we keep checking in together about how it's going.</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary class="faq-question">Do I stay in the room during sessions?</summary>
-          <div class="faq-answer">
-            <p>Whether you stay in the playroom or not, and for how long, depends on your child's needs.</p>
-            <p>Generally, parents are not in the play space during sessions. This matters more than it sounds. Children express themselves differently when the relational dynamics of home aren't in the room. The play space becomes a different kind of space, and that difference is part of what makes the work possible.</p>
-            <p>Some children need a gentler start. If your child is very young, new to therapy, or finding it hard to settle, we can plan for you to be nearby at first and step out gradually. Occasionally, your child may need you to stay in the playroom for a few minutes as a transition. Whatever we decide, it's about attuning to what your child needs in that moment, and we work it out together.</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary class="faq-question">When are sessions available?</summary>
-          <div class="faq-answer">
-            <p>Sessions are available on Wednesdays and Fridays, between 8:30am and 5pm.</p>
-          </div>
-        </details>
-      </div>
-      <p style="text-align: center; margin-top: 32px;"><a href="{{ site.baseurl }}/#contact" class="btn btn-primary">More questions? Get in touch</a></p>
-    </div>
-  </div>
-</section>
-
-<!-- JSON-LD: FAQPage -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How does the play therapy process work?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The process happens in four steps: (1) Intake consultation — a one-off 90-minute meeting to discuss your child's history, your concerns, and what you're hoping for from therapy. (2) Regular therapy sessions — usually weekly, around one hour each. Children do best when therapy is predictable and consistent. (3) Parent review meetings — regular check-ins (every 5 or 6 sessions) to talk about progress and adjust the plan if needed. You're part of the process. (4) Ending therapy — when your child is ready, sessions are gradually spaced out rather than stopping suddenly, so your child has time to adjust."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What are the fees for play therapy?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Private paying clients: $255 for the 90-minute intake consultation, $170 per hour for therapy sessions and parent review meetings. NDIS clients: $290.98 for the intake consultation and $193.99 per hour for sessions and parent reviews. Travel charges may apply for home or school sessions, always confirmed in advance. Fees are subject to review on 1 July 2027."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does my child need a diagnosis or referral to start play therapy?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No diagnosis or referral is required. If you have concerns about your child's emotions, behaviour, or social development, you are welcome to reach out directly."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Where do play therapy sessions happen?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sessions are mobile across Metropolitan Adelaide — I come to your child. Most often this is your home where your child is already comfortable. By arrangement, sessions can be held at your child's childcare or school. Parent consultations and filial therapy sessions are held online."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How long does play therapy take?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Most children are in therapy for around 20 sessions. Some settle faster, others need longer, especially when difficulties are deeper or have been ongoing. Progress is reviewed regularly with you, and there is no fixed commitment — you commit to a process, and we keep checking in together about how it's going."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do I stay in the room during my child's play therapy sessions?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Generally, parents are not in the play space during sessions — children express themselves differently when the relational dynamics of home aren't in the room, and that difference is part of what makes the work possible. For very young children or those new to therapy, we can plan for you to be nearby at first and step out gradually. Whatever we decide is about attuning to what your child needs in that moment."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "When are play therapy sessions available?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sessions are available on Wednesdays and Fridays, between 8:30am and 5pm."
-      }
-    }
-  ]
-}
-</script>
-
----
-
-{% assign featured_posts = site.posts | where: "featured", true | where: "lang", "en" | sort: "featured_order" | slice: 0, 2 %}
-{% if featured_posts.size > 0 %}
-<section id="blog" class="section">
-  <div class="container">
-    <div class="reveal">
-      <div class="section-header">
-        <span class="section-eyebrow">{{ site.data.en.blog.from_the_blog }}</span>
-        <h2 class="section-title">{{ site.data.en.blog.recent_articles }}</h2>
-      </div>
-      <div class="blog-list">
-        {% for post in featured_posts %}
-          <article class="post-card">
-            <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
-            <p class="post-meta">{{ post.date | date: "%B %d, %Y" }}</p>
-            {% if post.excerpt %}
-              <p class="post-excerpt">{{ post.excerpt }}</p>
-            {% endif %}
-            <a href="{{ site.baseurl }}{{ post.url }}" class="post-read-more">{{ site.data.en.blog.read_more | default: "Read more" }} →</a>
-          </article>
-        {% endfor %}
-      </div>
-      <p style="text-align:center; margin-top: 32px;">
-        <a href="{{ site.baseurl }}/blog" class="btn btn-outline">{{ site.data.en.blog.view_all }}</a>
-      </p>
-    </div>
-  </div>
-</section>
-{% endif %}
-
----
-
-<section id="contact" class="section section--alt">
-  <div class="container">
-    <div class="reveal">
-      <div class="section-header" style="text-align: center;">
-        <span class="section-eyebrow">Get in Touch</span>
-        <h2 class="section-title">Let's Talk</h2>
-      </div>
-      <div class="contact-intro" style="text-align: center; max-width: 780px; margin: 0 auto;">
-        <p style="margin-bottom: 16px;"><strong>Interested in play therapy?</strong> If you're considering it is for your child, the first step is to register your interest. Tell me a little about your child and what you're looking for, and I'll be in touch to discuss availability and the next steps.</p>
-        <a href="https://play-therapy-with-alisa-1.splose.com/public-form/04c0af96-beb3-4509-b853-e8d18937b193" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="font-size: 1.1rem; padding: 15px 40px; font-weight: 700;">Register Your Interest</a>
-        <p style="margin-top: 24px; font-style: italic;">Prefer to talk first? <a href="mailto:{{ site.contact_email }}?subject=15-minute%20Discover%20Call" style="color: var(--green);">Book a Free 15-minute Discovery Call</a></p>
-      </div>
-      <div class="contact-methods" style="margin-top: 40px;">
-        <a href="mailto:{{ site.contact_email }}" class="contact-method">
-          <span class="contact-method__icon">
-            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          </span>
-          {{ site.contact_email }}
-        </a>
-        <a href="tel:{{ site.contact_phone }}" class="contact-method">
-          <span class="contact-method__icon">
-            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          </span>
-          {{ site.contact_phone }}
-        </a>
-        <span class="contact-method">
-          <span class="contact-method__icon">
-            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          </span>
-          {{ site.contact_location }}
-        </span>
+          </li>
+          {%- endfor -%}
+        </ol>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <!-- ============ ABOUT (Meet Alisa) ============ -->
+  <section id="about">
+    <div class="wrap">
+      <div class="about-grid">
+        <div class="about-art reveal">
+          <img src="{{ site.baseurl }}/assets/images/alisa.png" alt="Alisa Liao, Registered Play Therapist">
+        </div>
+        <div class="about-copy">
+          <p class="eyebrow">{{ site.data.en.sections.about.eyebrow }}</p>
+          <h2>{{ site.data.en.sections.about.title }}</h2>
+          {{ site.data.en.sections.about.bio_html }}
+          <p><a class="btn btn-ghost" href="{{ site.baseurl }}/about">{{ site.data.en.buttons.read_full_bio }}</a></p>
+          <div class="creds">
+            <p class="creds-title">{{ site.data.en.sections.about.credentials_title }}</p>
+            <ul class="creds-list">
+              {%- for c in site.data.en.sections.about.credentials -%}
+              <li>
+                <strong>{{ c.what }}</strong>
+                {%- if c.where %} <span class="what">{{ c.where }}</span>{%- endif -%}
+              </li>
+              {%- endfor -%}
+            </ul>
+            <div class="memberships">
+              <img src="{{ site.baseurl }}/assets/images/appta-logo.png" alt="APPTA — Australasia Pacific Play Therapy Association">
+              <img src="{{ site.baseurl }}/assets/images/ptpa-logo.png" alt="PTPA — Play Therapy Practitioners Association">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="bg-band" id="faq">
+    <div class="wrap">
+      <div class="section-head center">
+        <p class="eyebrow">{{ site.data.en.sections.faq.eyebrow }}</p>
+        <h2>{{ site.data.en.sections.faq.title }}</h2>
+        <p>{{ site.data.en.sections.faq.lead }}</p>
+      </div>
+      <div class="faq">
+        <ul class="faq-list">
+          {%- for item in site.data.en.sections.faq.items -%}
+          <li class="reveal" {% unless forloop.first %}style="--d: {{ forloop.index0 | times: 0.05 }}s"{% endunless %}>
+            <details>
+              <summary>{{ item.q }}</summary>
+              <div class="answer">
+                {%- if item.a_html -%}
+                  {{ item.a_html }}
+                {%- else -%}
+                  <p>{{ item.a }}</p>
+                {%- endif -%}
+              </div>
+            </details>
+          </li>
+          {%- endfor -%}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEES ============ -->
+  <section id="fees">
+    <div class="wrap">
+      <div class="fees-intro">
+        <p class="eyebrow">{{ site.data.en.sections.fees.eyebrow }}</p>
+        <h2>{{ site.data.en.sections.fees.title }}</h2>
+        <p>{{ site.data.en.sections.fees.lead }}</p>
+      </div>
+      <div class="fees-card reveal">
+        {%- for fee in site.data.en.sections.fees.items -%}
+        <div class="fee-item">
+          <div>
+            <div class="fee-name">{{ fee.name }}</div>
+            <div class="fee-detail">{{ fee.detail }}</div>
+          </div>
+          <div class="fee-price {% if fee.price == 'On application' %}is-words{% endif %}">
+            {{ fee.price }}
+            {%- if fee.unit %}<span class="fee-unit">{{ fee.unit }}</span>{%- endif -%}
+          </div>
+        </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="section-head">
+            <p class="eyebrow">{{ site.data.en.sections.contact.eyebrow }}</p>
+            <h2>{{ site.data.en.sections.contact.title }}</h2>
+          </div>
+          <p class="contact-lead">{{ site.data.en.sections.contact.lead }}</p>
+          <ul class="contact-list">
+            {%- for c in site.data.en.sections.contact.items -%}
+            <li>
+              <span class="contact-ico" aria-hidden="true">
+                {%- case forloop.index -%}
+                  {%- when 1 -%}
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+                  {%- when 2 -%}
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+                  {%- else -%}
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-7-9-12a9 9 0 0 1 18 0c-2 5-9 12-9 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                {%- endcase -%}
+              </span>
+              <div>
+                <span class="label">{{ c.label }}</span>
+                {%- if c.href -%}
+                  <a href="{{ c.href }}">{{ c.value }}</a>
+                {%- else -%}
+                  <span>{{ c.value }}</span>
+                {%- endif -%}
+              </div>
+            </li>
+            {%- endfor -%}
+          </ul>
+        </div>
+
+        <form class="form-card reveal" id="enquiryForm" action="{{ site.formspree_url }}" method="POST" novalidate>
+          <div class="form-row">
+            <div class="field">
+              <label for="f-name">{{ site.data.en.form.name_label }}</label>
+              <input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="err-name">
+              <span class="field-error" id="err-name" hidden></span>
+            </div>
+            <div class="field">
+              <label for="f-phone">{{ site.data.en.form.phone_label }}</label>
+              <input id="f-phone" name="phone" type="tel" autocomplete="tel" aria-describedby="err-phone">
+              <span class="field-error" id="err-phone" hidden></span>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="f-email">{{ site.data.en.form.email_label }}</label>
+              <input id="f-email" name="email" type="email" autocomplete="email" required aria-describedby="err-email">
+              <span class="field-error" id="err-email" hidden></span>
+            </div>
+            <div class="field">
+              <label for="f-age">{{ site.data.en.form.child_age_label }}</label>
+              <input id="f-age" name="child_age" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="2" required aria-describedby="err-age">
+              <span class="field-error" id="err-age" hidden></span>
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-pref">{{ site.data.en.form.preferred_contact_label }}</label>
+            <select id="f-pref" name="preferred_contact" required aria-describedby="err-pref">
+              <option value="">{{ site.data.en.form.preferred_contact_label }}</option>
+              <option value="email">{{ site.data.en.form.preferred_contact_email }}</option>
+              <option value="phone">{{ site.data.en.form.preferred_contact_phone }}</option>
+              <option value="either">{{ site.data.en.form.preferred_contact_either }}</option>
+            </select>
+            <span class="field-error" id="err-pref" hidden></span>
+          </div>
+          <div class="field">
+            <label for="f-msg">{{ site.data.en.form.message_label }}</label>
+            <textarea id="f-msg" name="message" rows="5" required aria-describedby="err-msg" placeholder="{{ site.data.en.form.message_placeholder }}"></textarea>
+            <span class="field-error" id="err-msg" hidden></span>
+          </div>
+          <div class="form-foot">
+            <button type="submit" class="btn btn-primary btn-block" id="submitBtn">{{ site.data.en.form.submit }}</button>
+            <p class="form-status" id="formStatus" role="status"></p>
+          </div>
+        </form>
+
+        <div class="form-card form-success" id="formSuccess" hidden tabindex="-1">
+          <span class="success-tick" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M8 16 14 22 24 10"/></svg>
+          </span>
+          <h3>{{ site.data.en.form.success_title }}</h3>
+          <p>{{ site.data.en.form.success_body }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA BAND ============ -->
+  <section class="cta-band">
+    <div class="wrap">
+      <div>
+        <h2>{{ site.data.en.sections.cta_band.title }}</h2>
+        <p>{{ site.data.en.sections.cta_band.body }}</p>
+      </div>
+      <a class="btn btn-primary btn-sm" href="#contact">{{ site.data.en.sections.cta_band.button }}</a>
+    </div>
+  </section>
+
+</main>

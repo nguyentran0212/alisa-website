@@ -1,312 +1,324 @@
 ---
 layout: default
-title: "阿丽莎游戏治疗 | 阿德莱德3-8岁儿童游戏治疗师"
-title_tag: "阿丽莎游戏治疗 | 阿德莱德3-8岁儿童游戏治疗师"
-description: "阿德莱德儿童游戏治疗，专业支持3-8岁儿童的情绪调节、行为及家庭关系。提供上门服务，覆盖阿德莱德市区及周边，可线上治疗。"
-keywords: "阿德莱德游戏治疗, 儿童游戏治疗师, 阿德莱德儿童心理咨询, 3-8岁儿童治疗, 阿德莱德上门游戏治疗"
+title: "Alisa 游戏治疗 | 阿德莱德 3-8 岁儿童游戏治疗师"
+description: "为3-8岁儿童提供游戏治疗支持，关注情绪调节、行为与亲子联结。阿德莱德市区上门服务及线上治疗。"
 lang: zh
+permalink: /zh/
 ---
 
-<section id="hero" class="section" style="background-image: url('{{ site.hero_image }}');">
-  <div class="container">
-    <div class="reveal">
-      <h1 class="hero-title">{{ site.data.zh.hero.title }}</h1>
-      <p class="hero-subtitle">{{ site.data.zh.hero.subtitle }}</p>
-      <div class="hero-badges">
-        <span class="hero-badge">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-          English &amp; 中文
-        </span>
-        <span class="hero-badge">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          提供上门服务（阿德莱德市区及周边）
-        </span>
+<a class="skip" href="#main">跳至正文</a>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-copy">
+        <p class="eyebrow">{{ site.data.zh.hero.eyebrow }}</p>
+        {%- assign title = site.data.zh.hero.title -%}
+        {%- assign accent_word = site.data.zh.hero.title_accent -%}
+        {%- assign parts = title | split: accent_word -%}
+        <h1>{{ parts[0] }}<span class="accent">{{ accent_word }}</span>{{ parts[1] }}</h1>
+        <p class="lede">{{ site.data.zh.hero.subtitle }}</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contact">{{ site.data.zh.hero.cta_primary }}</a>
+          <a class="btn btn-ghost" href="#approach">{{ site.data.zh.hero.cta_secondary }}</a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-
----
-
-<section id="what-is-play-therapy" class="section section--alt">
-  <div class="container">
-    <div class="reveal">
-      <div class="section-header">
-        <span class="section-eyebrow">{{ site.data.zh.sections.what_is_play_therapy.eyebrow }}</span>
-        <h2 class="section-title">{{ site.data.zh.sections.what_is_play_therapy.title }}</h2>
-        <p class="section-lead">{{ site.data.zh.sections.what_is_play_therapy.lead }}</p>
+    <!-- hero photo: sibling of .wrap so it can bleed to the right edge -->
+    <div class="hero-art reveal" aria-hidden="true">
+      <div class="organic-frame">
+        <img src="{{ site.hero_image }}" alt="">
       </div>
-      <p>你有没有过这种时刻——把一件压在心底的事，说给一个愿意倾听、能够懂你的人。对方可能不会急着给你建议或者帮你"解决"，只是陪着你、留出空间，让你的感受被看见、被接纳。说出口后，你会觉得轻了一些。问题或许还在，但你不再是一个人扛着。当我们感到被接纳、被理解，往往会慢慢生出勇气，找到适合自己的方式往前走。</p>
-      <p>孩子也一样需要这样的体验。只是他们还说不清自己的感受、经历和心事。<strong>所以，他们用自己最熟悉的方式 —玩— 来表达自己。</strong></p>
-      <p class="play-therapy-highlight">游戏是孩子的语言，玩具是他们的词汇。 — Garry Landreth</p>
-      <p>游戏治疗，是一种儿童心理咨询方式。它尊重游戏作为孩子与生俱来的语言——孩子用它来表达、探索、理解自己的世界。在一个安全、被全然接纳的治疗关系里，孩子借助玩具、玩偶、木偶、颜料和各种创意活动，去诉说那些可能太复杂、太混乱、太沉重而难以用语言表达的感受。</p>
-      <p>慢慢地，这个过程会帮孩子长出<strong>更强的情绪觉察，学会和情绪相处，建立起更多的自信，也更踏实地相信自己——相信自己有力量面对生活中的挑战。</strong></p>
     </div>
-  </div>
-</section>
+  </section>
 
----
-
-<section id="is-this-for-my-child" class="section">
-  <div class="container">
-    <div class="reveal">
-      <div class="section-header">
-        <span class="section-eyebrow">游戏治疗适合我的孩子吗？</span>
-        <h2 class="section-title">游戏治疗帮助正在面对以下情况的孩子：</h2>
+  <!-- ============ APPROACH ============ -->
+  <section class="bg-band section-short" id="approach">
+    <div class="wrap">
+      <div class="section-head center">
+        <p class="eyebrow">{{ site.data.zh.sections.approach.eyebrow }}</p>
+        <h2>{{ site.data.zh.sections.approach.title }}</h2>
+        <p>{{ site.data.zh.sections.approach.lead }}</p>
       </div>
-      <div class="signs-grid">
-        <article class="sign-card">
-          <span class="sign-card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-            </svg>
+      <div class="pillars">
+        {%- for p in site.data.zh.sections.approach.pillars -%}
+        <div class="pillar reveal" {% unless forloop.first %}style="--d: {{ forloop.index0 | times: 0.08 }}s"{% endunless %}>
+          <span class="pillar-ico" aria-hidden="true">
+            {%- case forloop.index -%}
+              {%- when 1 -%}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-9.5-9.5C.5 7 5 3 8.5 4.5 10 5 11 6 12 7c1-1 2-2 3.5-2.5C19 3 23.5 7 21.5 11.5 19 16.5 12 21 12 21z"/></svg>
+              {%- when 2 -%}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V6l-8-4z"/><path d="M9 12l2 2 4-4"/></svg>
+              {%- else -%}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2 21v-2a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v2"/><circle cx="17" cy="9" r="2.5"/><path d="M22 19v-1a3.5 3.5 0 0 0-3-3.5"/></svg>
+            {%- endcase -%}
           </span>
-          <h3>情绪波动大，难以平静下来</h3>
-          <p>情绪来得强烈或变化较快，容易大哭，情绪激动时很难自己平复，或者需要较长时间才能恢复平静。</p>
-        </article>
-        <article class="sign-card">
-          <span class="sign-card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
-            </svg>
-          </span>
-          <h3>行为上的挑战</h3>
-          <p>容易抗拒或不愿配合日常安排，遇到困难时容易退缩，或者会通过摔东西、打人等行为表达自己的情绪和需要。</p>
-        </article>
-        <article class="sign-card">
-          <span class="sign-card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
-              <circle cx="9" cy="7" r="4"/>
-              <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
-              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-            </svg>
-          </span>
-          <h3>玩耍和社交中的困难</h3>
-          <p>不太知道如何开始或延续游戏，难以加入同伴的游戏，交朋友有些困难，或在社交场合中容易感到不自在。</p>
-        </article>
-        <article class="sign-card">
-          <span class="sign-card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/>
-            </svg>
-          </span>
-          <h3>焦虑、担忧或正在经历生活变化</h3>
-          <p>表现出担忧、过度黏人、沉默或退缩，或者在面对新的环境或生活变化时难以适应，例如开始上学、家庭结构变化、搬家或失去亲人。</p>
-        </article>
-      </div>
-      <p style="text-align: center; margin-top: 48px;">
-        <a href="{{ site.baseurl }}/2026/07/02/is-play-therapy-right-for-my-child-zh.html" class="btn btn-primary">了解更多</a>
-      </p>
-    </div>
-  </div>
-</section>
-
----
-
-<section id="services" class="section section--alt">
-  <div class="container">
-    <div class="reveal">
-      <div class="section-header">
-        <span class="section-eyebrow">{{ site.data.zh.sections.services.eyebrow }}</span>
-        <h2 class="section-title">{{ site.data.zh.sections.services.title }}</h2>
-      </div>
-      <div class="services-overview">
-        <p class="services-overview__sub">我提供三种游戏治疗方法，支持儿童和家庭。</p>
-      </div>
-      <div class="services-grid-3">
-        <article class="service-tile">
-          <h3>以儿童为中心的游戏治疗</h3>
-          <p class="service-tile__tagline">一个孩子可以慢慢长大的情绪空间。</p>
-          <p>在这里，孩子不需要变成"更好的孩子"，只需要做自己。他们按自己的节奏，在游戏中被稳稳接住——慢慢地，长出更稳的情绪、更强的自信、面对生活的力量。</p>
-          <a href="{{ site.baseurl }}/2026/07/02/what-is-child-centered-play-therapy-zh.html" class="service-tile__more">阅读更多 <span aria-hidden="true">→</span></a>
-        </article>
-        <article class="service-tile">
-          <h3>Learn to Play 游戏治疗</h3>
-          <p class="service-tile__tagline">孩子还没学会玩？不是不想，是还没找到方式。</p>
-          <p>有些孩子还不太会主动玩、不知道怎么加入同伴，或跟别人一起专注地玩。在治疗师的陪伴下，孩子一步步建立起玩耍的能力——从独自探索，到与他人建立联系。</p>
-          <a href="{{ site.baseurl }}/2026/07/02/what-is-learn-to-play-therapy-zh.html" class="service-tile__more">阅读更多 <span aria-hidden="true">→</span></a>
-        </article>
-        <article class="service-tile">
-          <h3>亲子游戏治疗</h3>
-          <p class="service-tile__tagline">父母走进孩子内心，增进亲子关系。</p>
-          <p>治疗师和父母一起，帮助父母更好地理解孩子，在日常的每一个互动里，建立起更稳固、更亲密的联结。</p>
-          <a href="{{ site.baseurl }}/2026/07/02/what-is-filial-therapy-zh.html" class="service-tile__more">阅读更多 <span aria-hidden="true">→</span></a>
-        </article>
+          <h3>{{ p.title }}</h3>
+          <p>{{ p.body }}</p>
+        </div>
+        {%- endfor -%}
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
----
-
-<section id="about" class="section">
-  <div class="container">
-    <div class="reveal about-grid">
-      <img src="{{ site.baseurl }}/assets/images/alisa.png" alt="Alisa" class="about-image">
-      <div class="about-text">
-        <h2>{{ site.data.zh.sections.about.title }}</h2>
-        <p>我是一名游戏治疗师，也是一名早教老师——来自中国，在澳大利亚生活和工作。 2015 年我来到澳洲读早教，之后一直从事幼儿教育的工作。十年来，我的工作一直围绕着 3-8 岁的孩子。</p>
-        <p>我相信，孩子在关系中成长，也在关系中被疗愈。当一个孩子感受到安全、被接纳、被真诚地理解，他就能慢慢找到属于自己的力量。在温暖、稳当的治疗关系里，我给孩子一个空间——去表达、去探索，按自己的节奏，长出属于自己的力量。</p>
-        <p class="about-credentials">游戏治疗硕士 · 教育学硕士（幼儿方向）<br>注册游戏治疗师（APPTA & PTPA） · 注册幼教（南澳大利亚）</p>
-        <a href="{{ site.baseurl }}/zh/about" class="btn btn-primary" style="margin-top: 24px;">{{ site.data.zh.buttons.read_full_bio }}</a>
+  <!-- ============ SERVICES ============ -->
+  <section id="services">
+    <div class="wrap">
+      <div class="section-head center">
+        <p class="eyebrow">{{ site.data.zh.sections.services.eyebrow }}</p>
+        <h2>{{ site.data.zh.sections.services.title }}</h2>
+        <p>{{ site.data.zh.sections.services.lead }}</p>
       </div>
-    </div>
-  </div>
-</section>
-
----
-
-<section id="faq" class="section">
-  <div class="container">
-    <div class="reveal">
-      <div class="section-header">
-        <span class="section-eyebrow">您可能想知道</span>
-        <h2 class="section-title">常见问题</h2>
-      </div>
-      <div class="faq-list">
-        <details class="faq-item">
-          <summary class="faq-question">治疗流程是怎样的？</summary>
-          <div class="faq-answer">
-            <p>整个治疗通常分为四个步骤：</p>
-            <ol>
-              <li><strong>初次咨询</strong> —— 一次 90 分钟的会谈。我们会一起梳理孩子的成长经历，您关心的方向，以及您希望通过治疗达成的目标。</li>
-              <li><strong>常规治疗</strong> —— 通常每周一次，每次一小时。稳定、可预期的节奏，对孩子最有帮助。</li>
-              <li><strong>家长回顾会</strong> —— 每做完 5–6 次治疗后，我们会安排一次回顾，一起看看孩子的进展、聊聊下一步的方向。您不是旁观者——治疗不只是孩子的事，也是您和孩子一起经历的过程。</li>
-              <li><strong>结案</strong> —— 当孩子准备好的时候，我们会一起商量结束的方式。通过最后的几次治疗，给孩子足够的时间去适应和告别。</li>
-            </ol>
+      <div class="service-grid">
+        {%- for s in site.data.zh.sections.services.items -%}
+        <details class="service reveal" {% unless forloop.first %}style="--d: {{ forloop.index0 | times: 0.08 }}s"{% endunless %}>
+          <summary>
+            <span class="service-ico" aria-hidden="true">
+              {%- case forloop.index -%}
+                {%- when 1 -%}
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h6V4l8 8-8 8v-5H4z"/></svg>
+                {%- when 2 -%}
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="10" cy="11" r="1"/><circle cx="14" cy="11" r="1"/><path d="M8.5 15.5c1 1 2 1.5 3.5 1.5s2.5-.5 3.5-1.5"/></svg>
+                {%- else -%}
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11V8a5 5 0 0 1 10 0v3"/><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M12 15v2"/></svg>
+              {%- endcase -%}
+            </span>
+            <span class="service-head">
+              <span class="service-title">{{ s.title }}</span>
+              <span class="service-sub">{{ s.sub }}</span>
+            </span>
+          </summary>
+          <div class="service-body">
+            <p class="service-lead">{{ s.lead }}</p>
+            <p>{{ s.body }}</p>
+            {%- if s.list -%}
+            <p class="service-list-intro">{{ s.list_intro }}</p>
+            <ul class="service-list">
+              {%- for li in s.list -%}<li>{{ li }}</li>{%- endfor -%}
+            </ul>
+            {%- endif -%}
           </div>
         </details>
-        <details class="faq-item">
-          <summary class="faq-question">费用</summary>
-          <div class="faq-answer">
-            <p class="faq-note" style="margin-bottom: 18px;">以下费用均为澳元（AUD）</p>
-            <div class="faq-pricing">
-              <div class="faq-pricing-block">
-                <h4 class="faq-pricing-heading">自费客户</h4>
-                <ul class="faq-pricing-list">
-                  <li><span>初次咨询（一次性，90分钟）</span><span class="faq-pricing-amount">$255</span></li>
-                  <li><span>游戏治疗</span><span class="faq-pricing-amount">$170/小时</span></li>
-                  <li><span>家长回顾会议</span><span class="faq-pricing-amount">$170/小时</span></li>
-                </ul>
-              </div>
-              <div class="faq-pricing-block">
-                <h4 class="faq-pricing-heading">NDIS 客户</h4>
-                <ul class="faq-pricing-list">
-                  <li><span>初次咨询（一次性，90分钟）</span><span class="faq-pricing-amount">$290.98</span></li>
-                  <li><span>游戏治疗</span><span class="faq-pricing-amount">$193.99/小时</span></li>
-                  <li><span>家长回顾会议</span><span class="faq-pricing-amount">$193.99/小时</span></li>
-                </ul>
-              </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROCESS ============ -->
+  <section id="process">
+    <div class="wrap">
+      <div class="section-head center">
+        <p class="eyebrow">{{ site.data.zh.sections.process.eyebrow }}</p>
+        <h2>{{ site.data.zh.sections.process.title }}</h2>
+        <p>{{ site.data.zh.sections.process.lead }}</p>
+      </div>
+      <div class="process">
+        <ol class="steps">
+          {%- for step in site.data.zh.sections.process.steps -%}
+          <li class="step reveal" style="--d: {{ forloop.index0 | times: 0.08 }}s">
+            <span class="step-pin" aria-hidden="true">{{ forloop.index }}</span>
+            <div>
+              <span class="step-num">第 {{ forloop.index }} 步</span>
+              <h3>{{ step.title }}</h3>
+              <p>{{ step.body }}</p>
             </div>
-            <p class="faq-note">上门服务（家中或学校）可能会收取出行费用。</p>
-            <p class="faq-note">费用会在 2027 年 7 月做一次调整。如果有变化，您会提前收到通知。</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary class="faq-question">来之前，孩子需要先被诊断或确诊吗？</summary>
-          <div class="faq-answer">
-            <p>不需要。</p>
-            <p>如果您对孩子的情绪、行为或社交发展有担忧，欢迎随时联系我。</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary class="faq-question">游戏治疗在哪里进行？</summary>
-          <div class="faq-answer">
-            <p>提供上门服务，覆盖阿德莱德市区及周边。游戏治疗通常在您家中进行——熟悉的环境能让孩子更放松。也可以协商在托儿所或学校开展。</p>
-            <p>亲子咨询和亲子游戏治疗在线上进行。</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary class="faq-question">治疗需要多长时间？</summary>
-          <div class="faq-answer">
-            <p>这没有一个标准答案——每个孩子都不一样。大多数孩子需要 20 次左右的治疗。有些孩子更快，有些孩子需要更久，尤其是当困扰已经持续了相当一段时间的时候。我会和你一起定期回顾进展。我们会边走、边看、边调整。</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary class="faq-question">孩子进行游戏治疗时，父母需要在场吗？</summary>
-          <div class="faq-answer">
-            <p>大多数时候，父母是不在游戏室的——当家里那种亲子关系的张力暂时不在场，孩子通常会把平时觉得难以显露的那一面展现出来。游戏室成了一个不同的空间，而这种"不同"，正是变化能发生的地方。</p>
-            <p>每个孩子的节奏不一样。如果孩子还小、刚开始接触治疗、或者一离开你就容易焦虑，我们可以从你在游戏室里陪一段开始，慢慢退出。偶尔，孩子可能需要你陪几分钟作为过渡。</p>
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary class="faq-question">治疗什么时候可以预约？</summary>
-          <div class="faq-answer">
-            <p>目前，游戏治疗在周三和周五开放，时间为上午8点30分至下午5点。</p>
-          </div>
-        </details>
-      </div>
-      <p style="text-align: center; margin-top: 32px;"><a href="{{ site.baseurl }}/zh/#contact" class="btn btn-primary">还有更多问题？欢迎联系我</a></p>
-    </div>
-  </div>
-</section>
-
----
-
-{% assign featured_posts = site.posts | where: "featured", true | where: "lang", "zh" | sort: "featured_order" | slice: 0, 3 %}
-{% if featured_posts.size > 0 %}
-<section id="blog" class="section">
-  <div class="container">
-    <div class="reveal">
-      <div class="section-header">
-        <span class="section-eyebrow">{{ site.data.zh.blog.from_the_blog }}</span>
-        <h2 class="section-title">{{ site.data.zh.blog.recent_articles }}</h2>
-      </div>
-      <div class="blog-list">
-        {% for post in featured_posts %}
-          <article class="post-card">
-            <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
-            <p class="post-meta">{{ post.date | date: "%Y年%m月%d日" }}</p>
-            {% if post.excerpt %}
-              <p class="post-excerpt">{{ post.excerpt }}</p>
-            {% endif %}
-            <a href="{{ site.baseurl }}{{ post.url }}" class="post-read-more">{{ site.data.zh.blog.read_more | default: "阅读更多" }} →</a>
-          </article>
-        {% endfor %}
-      </div>
-      <p style="text-align:center; margin-top: 32px;">
-        <a href="{{ site.baseurl }}/zh/blog" class="btn btn-outline">{{ site.data.zh.blog.view_all }}</a>
-      </p>
-    </div>
-  </div>
-</section>
-{% endif %}
-
----
-
-<section id="contact" class="section section--alt">
-  <div class="container">
-    <div class="reveal">
-      <div class="section-header" style="text-align: center;">
-        <span class="section-eyebrow">{{ site.data.zh.sections.contact.eyebrow }}</span>
-        <h2 class="section-title">{{ site.data.zh.sections.contact.title }}</h2>
-      </div>
-      <div class="contact-intro" style="text-align: center; max-width: 780px; margin: 0 auto;">
-        <p style="margin-bottom: 16px;"><strong>{{ site.data.zh.sections.contact.intro_bold }}</strong> {{ site.data.zh.sections.contact.intro_text }}.</p>
-        <a href="https://play-therapy-with-alisa-1.splose.com/public-form/04c0af96-beb3-4509-b853-e8d18937b193" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="font-size: 1.1rem; padding: 15px 40px; font-weight: 700;">{{ site.data.zh.buttons.register_interest }}</a>
-        <p style="margin-top: 24px; font-style: italic;">{{ site.data.zh.sections.contact.prefer_talk }} <a href="mailto:{{ site.contact_email }}?subject=15-minute%20Discover%20Call" style="color: var(--green);">{{ site.data.zh.buttons.book_discover_call }}</a></p>
-      </div>
-      <div class="contact-methods" style="margin-top: 40px;">
-        <a href="mailto:{{ site.contact_email }}" class="contact-method">
-          <span class="contact-method__icon">
-            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          </span>
-          {{ site.contact_email }}
-        </a>
-        <a href="tel:{{ site.contact_phone }}" class="contact-method">
-          <span class="contact-method__icon">
-            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          </span>
-          {{ site.contact_phone }}
-        </a>
-        <span class="contact-method">
-          <span class="contact-method__icon">
-            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          </span>
-          {{ site.contact_location_zh }}
-        </span>
+          </li>
+          {%- endfor -%}
+        </ol>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about">
+    <div class="wrap">
+      <div class="about-grid">
+        <div class="about-art reveal">
+          <img src="{{ site.baseurl }}/assets/images/alisa.png" alt="Alisa Liao，注册游戏治疗师">
+        </div>
+        <div class="about-copy">
+          <p class="eyebrow">{{ site.data.zh.sections.about.eyebrow }}</p>
+          <h2>{{ site.data.zh.sections.about.title }}</h2>
+          {{ site.data.zh.sections.about.bio_html }}
+          <p><a class="btn btn-ghost" href="{{ site.baseurl }}/zh/about">{{ site.data.zh.buttons.read_full_bio }}</a></p>
+          <div class="creds">
+            <p class="creds-title">{{ site.data.zh.sections.about.credentials_title }}</p>
+            <ul class="creds-list">
+              {%- for c in site.data.zh.sections.about.credentials -%}
+              <li>
+                <strong>{{ c.what }}</strong>
+                {%- if c.where %} <span class="what">{{ c.where }}</span>{%- endif -%}
+              </li>
+              {%- endfor -%}
+            </ul>
+            <div class="memberships">
+              <img src="{{ site.baseurl }}/assets/images/appta-logo.png" alt="APPTA — 澳大拉西亚太平洋游戏治疗协会">
+              <img src="{{ site.baseurl }}/assets/images/ptpa-logo.png" alt="PTPA — 游戏治疗师执业协会">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="bg-band" id="faq">
+    <div class="wrap">
+      <div class="section-head center">
+        <p class="eyebrow">{{ site.data.zh.sections.faq.eyebrow }}</p>
+        <h2>{{ site.data.zh.sections.faq.title }}</h2>
+        <p>{{ site.data.zh.sections.faq.lead }}</p>
+      </div>
+      <div class="faq">
+        <ul class="faq-list">
+          {%- for item in site.data.zh.sections.faq.items -%}
+          <li class="reveal" {% unless forloop.first %}style="--d: {{ forloop.index0 | times: 0.05 }}s"{% endunless %}>
+            <details>
+              <summary>{{ item.q }}</summary>
+              <div class="answer">
+                {%- if item.a_html -%}
+                  {{ item.a_html }}
+                {%- else -%}
+                  <p>{{ item.a }}</p>
+                {%- endif -%}
+              </div>
+            </details>
+          </li>
+          {%- endfor -%}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEES ============ -->
+  <section id="fees">
+    <div class="wrap">
+      <div class="fees-intro">
+        <p class="eyebrow">{{ site.data.zh.sections.fees.eyebrow }}</p>
+        <h2>{{ site.data.zh.sections.fees.title }}</h2>
+        <p>{{ site.data.zh.sections.fees.lead }}</p>
+      </div>
+      <div class="fees-card reveal">
+        {%- for fee in site.data.zh.sections.fees.items -%}
+        <div class="fee-item">
+          <div>
+            <div class="fee-name">{{ fee.name }}</div>
+            <div class="fee-detail">{{ fee.detail }}</div>
+          </div>
+          <div class="fee-price {% if fee.price == '面议' %}is-words{% endif %}">
+            {{ fee.price }}
+            {%- if fee.unit %}<span class="fee-unit">{{ fee.unit }}</span>{%- endif -%}
+          </div>
+        </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="section-head">
+            <p class="eyebrow">{{ site.data.zh.sections.contact.eyebrow }}</p>
+            <h2>{{ site.data.zh.sections.contact.title }}</h2>
+          </div>
+          <p class="contact-lead">{{ site.data.zh.sections.contact.lead }}</p>
+          <ul class="contact-list">
+            {%- for c in site.data.zh.sections.contact.items -%}
+            <li>
+              <span class="contact-ico" aria-hidden="true">
+                {%- case forloop.index -%}
+                  {%- when 1 -%}
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+                  {%- when 2 -%}
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+                  {%- else -%}
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-7-9-12a9 9 0 0 1 18 0c-2 5-9 12-9 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                {%- endcase -%}
+              </span>
+              <div>
+                <span class="label">{{ c.label }}</span>
+                {%- if c.href -%}
+                  <a href="{{ c.href }}">{{ c.value }}</a>
+                {%- else -%}
+                  <span>{{ c.value }}</span>
+                {%- endif -%}
+              </div>
+            </li>
+            {%- endfor -%}
+          </ul>
+        </div>
+
+        <form class="form-card reveal" id="enquiryForm" action="{{ site.formspree_url }}" method="POST" novalidate>
+          <div class="form-row">
+            <div class="field">
+              <label for="f-name">{{ site.data.zh.form.name_label }}</label>
+              <input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="err-name">
+              <span class="field-error" id="err-name" hidden></span>
+            </div>
+            <div class="field">
+              <label for="f-phone">{{ site.data.zh.form.phone_label }}</label>
+              <input id="f-phone" name="phone" type="tel" autocomplete="tel" aria-describedby="err-phone">
+              <span class="field-error" id="err-phone" hidden></span>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="f-email">{{ site.data.zh.form.email_label }}</label>
+              <input id="f-email" name="email" type="email" autocomplete="email" required aria-describedby="err-email">
+              <span class="field-error" id="err-email" hidden></span>
+            </div>
+            <div class="field">
+              <label for="f-age">{{ site.data.zh.form.child_age_label }}</label>
+              <input id="f-age" name="child_age" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="2" required aria-describedby="err-age">
+              <span class="field-error" id="err-age" hidden></span>
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-pref">{{ site.data.zh.form.preferred_contact_label }}</label>
+            <select id="f-pref" name="preferred_contact" required aria-describedby="err-pref">
+              <option value="">{{ site.data.zh.form.preferred_contact_label }}</option>
+              <option value="email">{{ site.data.zh.form.preferred_contact_email }}</option>
+              <option value="phone">{{ site.data.zh.form.preferred_contact_phone }}</option>
+              <option value="either">{{ site.data.zh.form.preferred_contact_either }}</option>
+            </select>
+            <span class="field-error" id="err-pref" hidden></span>
+          </div>
+          <div class="field">
+            <label for="f-msg">{{ site.data.zh.form.message_label }}</label>
+            <textarea id="f-msg" name="message" rows="5" required aria-describedby="err-msg" placeholder="{{ site.data.zh.form.message_placeholder }}"></textarea>
+            <span class="field-error" id="err-msg" hidden></span>
+          </div>
+          <div class="form-foot">
+            <button type="submit" class="btn btn-primary btn-block" id="submitBtn">{{ site.data.zh.form.submit }}</button>
+            <p class="form-status" id="formStatus" role="status"></p>
+          </div>
+        </form>
+
+        <div class="form-card form-success" id="formSuccess" hidden tabindex="-1">
+          <span class="success-tick" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M8 16 14 22 24 10"/></svg>
+          </span>
+          <h3>{{ site.data.zh.form.success_title }}</h3>
+          <p>{{ site.data.zh.form.success_body }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA BAND ============ -->
+  <section class="cta-band">
+    <div class="wrap">
+      <div>
+        <h2>{{ site.data.zh.sections.cta_band.title }}</h2>
+        <p>{{ site.data.zh.sections.cta_band.body }}</p>
+      </div>
+      <a class="btn btn-primary btn-sm" href="#contact">{{ site.data.zh.sections.cta_band.button }}</a>
+    </div>
+  </section>
+
+</main>

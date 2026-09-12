@@ -3,6 +3,7 @@ layout: post
 title: "亲子游戏治疗"
 date: 2026-07-02
 lang: zh
+permalink: /zh/blog/what-is-filial-therapy/
 excerpt: "亲子游戏治疗是一种以父母为中心的方式。父母，是改变的主导者。"
 featured: true
 featured_order: 1
@@ -61,7 +62,3 @@ tags:
 
 ---
 
-<p style="text-align: center; margin-top: 32px;">
-  <a href="{{ site.baseurl }}/zh/#contact" class="btn btn-primary" style="margin: 0 8px;">联系我</a>
-  <a href="{{ site.baseurl }}/zh/#services" class="btn btn-outline" style="margin: 0 8px;">回到服务项目</a>
-</p>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76 48" width="76" height="48" role="img" aria-label="Progress Pride Flag">
+  <!-- Rainbow stripes (top to bottom) -->
+  <rect width="76" height="8"  fill="#E40303"/>
+  <rect y="8"  width="76" height="8"  fill="#FF8C00"/>
+  <rect y="16" width="76" height="8"  fill="#FFED00"/>
+  <rect y="24" width="76" height="8"  fill="#008026"/>
+  <rect y="32" width="76" height="8"  fill="#004CFF"/>
+  <rect y="40" width="76" height="8"  fill="#732982"/>
+  <!-- Progress chevron (transgender / people of colour / HIV) -->
+  <polygon points="0,0 30,24 0,48" fill="#5BCEFA"/>
+  <polygon points="0,5 24,24 0,43" fill="#F5A9B8"/>
+  <polygon points="0,10 18,24 0,38" fill="#FFFFFF"/>
+  <polygon points="0,15 12,24 0,33" fill="#613915"/>
+</svg>

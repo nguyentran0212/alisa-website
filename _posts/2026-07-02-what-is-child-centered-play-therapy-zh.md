@@ -3,6 +3,7 @@ layout: post
 title: "以儿童为中心的游戏治疗"
 date: 2026-07-02
 lang: zh
+permalink: /zh/blog/what-is-child-centered-play-therapy/
 excerpt: "以儿童为中心的游戏治疗是一种温和的方式，在游戏中与孩子相遇。"
 featured: true
 featured_order: 3
@@ -57,7 +58,3 @@ CCPT 特别适合正在经历这些的孩子：
 
 ---
 
-<p style="text-align: center; margin-top: 32px;">
-  <a href="{{ site.baseurl }}/zh/#contact" class="btn btn-primary" style="margin: 0 8px;">联系我</a>
-  <a href="{{ site.baseurl }}/zh/#services" class="btn btn-outline" style="margin: 0 8px;">回到服务项目</a>
-</p>

@@ -1,16 +1,61 @@
-<footer id="site-footer">
-  <div class="footer-inner">
-    <p class="acknowledgement">Play Therapy With Alisa acknowledges the Traditional Custodians of the lands on which we live, work and play, and pays respect to Elders past and present.</p>
-    <p>
-      &copy; {{ site.time | date: "%Y" }} Alisa Play Therapy.
-      {% assign current_lang = page.lang | default: 'en' %}
-    {% if current_lang == 'zh' %}
-        {{ site.data.zh.footer.copyright_line }}
-        | <a href="{{ site.baseurl }}/zh/privacy/">{{ site.data.zh.footer.privacy_policy }}</a>
-      {% else %}
-        {{ site.data.en.footer.copyright_line }}
-        | <a href="{{ site.baseurl }}/privacy/">{{ site.data.en.footer.privacy_policy }}</a>
-      {% endif %}
-    </p>
+{%- assign current_lang = page.lang | default: 'en' -%}
+<footer class="site-footer">
+  <div class="wrap">
+    <!-- Top strip: identity (name + location) on the left, contact details
+         on the right. The two halves are spread apart with justify-content
+         so they sit at opposite edges. -->
+    <div class="footer-strip">
+      <div class="footer-id">
+        <p class="footer-name">{{ site.title }}</p>
+        <p class="footer-loc">{% if current_lang == 'zh' %}{{ site.contact_location_zh }}{% else %}{{ site.contact_location }}{% endif %}</p>
+      </div>
+      <div class="footer-contact">
+        <a href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a>
+        <a href="tel:{{ site.contact_phone_e164 }}">{{ site.contact_phone }}</a>
+      </div>
+    </div>
+
+    <!-- Notices: 2-column grid on desktop, 1 on mobile. -->
+    <div class="notices">
+      {%- if current_lang == 'zh' -%}
+      <section class="notice" aria-labelledby="ack-title-zh">
+        <h2 class="sr-only" id="ack-title-zh">Acknowledgement of Country</h2>
+        <div class="notice-flags">
+          <img src="{{ site.baseurl }}/assets/images/aboriginal-flag.svg" alt="Australian Aboriginal Flag" width="38" height="24">
+        </div>
+        <p>{{ site.data.zh.footer.acknowledgement }}</p>
+      </section>
+      <section class="notice" aria-labelledby="inclusion-title-zh">
+        <h2 class="sr-only" id="inclusion-title-zh">Inclusion statement</h2>
+        <div class="notice-flags">
+          <img src="{{ site.baseurl }}/assets/images/progress-pride-flag.svg" alt="Progress Pride Flag" width="38" height="24">
+          <img src="{{ site.baseurl }}/assets/images/disability-pride-flag.svg" alt="Disability Pride Flag" width="38" height="24">
+        </div>
+        <p>{{ site.data.zh.footer.inclusion }}</p>
+      </section>
+      {%- else -%}
+      <section class="notice" aria-labelledby="ack-title">
+        <h2 class="sr-only" id="ack-title">Acknowledgement of Country</h2>
+        <div class="notice-flags">
+          <img src="{{ site.baseurl }}/assets/images/aboriginal-flag.svg" alt="Australian Aboriginal Flag" width="38" height="24">
+        </div>
+        <p>{{ site.data.en.footer.acknowledgement }}</p>
+      </section>
+      <section class="notice" aria-labelledby="inclusion-title">
+        <h2 class="sr-only" id="inclusion-title">Inclusion statement</h2>
+        <div class="notice-flags">
+          <img src="{{ site.baseurl }}/assets/images/progress-pride-flag.svg" alt="Progress Pride Flag" width="38" height="24">
+          <img src="{{ site.baseurl }}/assets/images/disability-pride-flag.svg" alt="Disability Pride Flag" width="38" height="24">
+        </div>
+        <p>{{ site.data.en.footer.inclusion }}</p>
+      </section>
+      {%- endif -%}
+    </div>
+
+    <!-- Bottom row: copyright on the left, privacy link on the right. -->
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> {{ site.title }}</p>
+      <p><a href="{% if current_lang == 'zh' %}{{ site.baseurl }}/zh/privacy{% else %}{{ site.baseurl }}/privacy{% endif %}">{{ site.data[current_lang].footer.privacy_policy }}</a></p>
+    </div>
   </div>
 </footer>

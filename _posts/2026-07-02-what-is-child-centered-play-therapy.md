@@ -55,7 +55,3 @@ While your child attends sessions, you remain central to the work. I keep you in
 
 ---
 
-<p style="text-align: center; margin-top: 32px;">
-  <a href="{{ site.baseurl }}/#contact" class="btn btn-primary" style="margin: 0 8px;">Get In Touch</a>
-  <a href="{{ site.baseurl }}/#services" class="btn btn-outline" style="margin: 0 8px;">Back to Services</a>
-</p>

@@ -1,41 +1,202 @@
 nav:
-  what_is_play_therapy: "Play Therapy"
-  is_this_for_my_child: "Is This for My Child"
+  approach: "Approach"
   services: "Services"
+  process: "The Process"
   about: "About"
-  contact: "Contact"
+  faq: "FAQ"
+  fees: "Fees"
   blog: "Blog"
+  contact: "Contact"
+
 buttons:
   get_in_touch: "Get in Touch"
   learn_more: "Learn More"
-  send_message: "Send Message"
+  send_message: "Send Enquiry"
   read_full_bio: "Read Full Bio"
+  register_interest: "Register Your Interest"
+  book_discover_call: "Book a Free 15-min Call"
+  send_enquiry: "Send Enquiry"
+
 footer:
   privacy_policy: "Privacy Policy"
   copyright_line: "All rights reserved. All content on this site is protected and may not be reproduced without written permission."
+  # TODO(alisa): please review wording — adapted from freetobeplay.
+  acknowledgement: "Alisa Play Therapy acknowledges the Kaurna people as the Traditional Custodians of the land on which we work. We pay our respects to Elders past, present and emerging, and acknowledge that sovereignty has never been ceded."
+  inclusion: "At Alisa Play Therapy, we are committed to providing services that are inclusive and accessible for all children and families, regardless of ethnicity, gender, gender identity and expression, disability, neurodivergence, religion or sexual orientation."
+
 hero:
+  eyebrow: "Adelaide · Telehealth"
   title: "Healing Through Play"
+  title_accent: "Play"           # which word gets the clay accent colour
   subtitle: "A safe, nurturing space where children can express themselves, work through difficult feelings, and build resilience — guided by a trained and compassionate therapist."
-  cta: "Learn More About My Approach"
+  cta_primary: "Book a Free 15-min Call"
+  cta_secondary: "Learn More About Play Therapy"
+
 sections:
-  what_is_play_therapy:
-    eyebrow: "Understanding Play Therapy"
-    title: "What is Play Therapy?"
-    lead: "Play is children's natural language. Before they have words for complex emotions, they play them out."
+  approach:
+    eyebrow: "Our Approach"
+    title: "Supportive, holistic, child-centred"
+    lead: "Three principles shape every session — and the relationship we build with you and your child."
+    pillars:
+      - title: "Child-led"
+        body: "Your child chooses what to play with and how. We follow their lead so the work happens at their pace, in their language — the one they already speak fluently."
+      - title: "Trauma-informed"
+        body: "We understand how big feelings, transitions and stress show up in play and behaviour. The playroom is built to feel safe enough for all of them."
+      - title: "Family-connected"
+        body: "Parents are part of the work. We meet with you regularly, share what we're noticing, and help you carry the approach into the rest of your child's week."
+
   services:
     eyebrow: "What I Offer"
     title: "Services"
+    lead: "Three approaches I draw on depending on what your child needs. Tap a card to read more."
+    items:
+      - title: "Learn to Play Therapy"
+        sub: "Building pretend play skills"
+        lead: "For children who haven't yet developed the kind of pretend play that comes naturally to many of their peers."
+        body: "Some children find pretend play difficult. They may get frustrated during play, or lose interest quickly. Learn to Play Therapy focuses on six core pretend-play skills and is particularly helpful for children experiencing speech or language delays, autism, or social communication differences."
+        list_intro: "It may help if your child:"
+        list:
+          - "Struggles with imaginative play"
+          - "Has speech or language delays"
+          - "Finds peer play hard to follow or join"
+          - "Has been described as 'playing alone' or 'on the edges'"
+
+      - title: "Child-Centred Play Therapy"
+        sub: "A developmental counselling approach"
+        lead: "A non-directive, child-led space for children aged 3–8 to process feelings and develop new coping skills through play."
+        body: "In the playroom your child chooses what to do and how. We provide a warm, accepting relationship and a carefully chosen set of toys that express a wide range of feelings. Over time, children begin to use the room to work through what's on their mind."
+        list_intro: "It may help if your child is experiencing:"
+        list:
+          - "Big feelings that feel overwhelming"
+          - "Anxiety, low mood, or withdrawal"
+          - "Family changes — separation, a new sibling, a move"
+          - "Grief or loss"
+          - "Difficulty making or keeping friends"
+
+      - title: "Filial Therapy"
+        sub: "Parent–child play sessions at home"
+        lead: "A short training so you can run 30-minute therapeutic play sessions with your child at home, supported by me."
+        body: "Filial Therapy recognises that parents are the most important people in a child's life. After a short training (usually weekly for several weeks), you run structured play sessions at home while I support you in supervision. Many families describe it as the most connecting thing they've done with their child."
+        list_intro: "Families often tell me:"
+        list:
+          - "They understand their child in a new way"
+          - "Behaviour that's been stuck begins to shift"
+          - "Daily routines feel calmer"
+          - "They feel more confident as a parent"
+
+  process:
+    eyebrow: "The Process"
+    title: "What to expect"
+    lead: "Four steps from first contact to the first review. Most of the work happens in the playroom — these are the shape of how we get there."
+    steps:
+      - title: "Get in Touch"
+        body: "Fill in the enquiry form below. I'll reply within three business days with a time for a free 15-minute phone call."
+      - title: "Parent Intake"
+        body: "We meet at the playroom without your child to talk through their history and your hopes. Allow about 90 minutes."
+      - title: "Sessions Begin"
+        body: "Your child attends weekly. The first three or four sessions focus on building trust and getting a clear picture of what they need."
+      - title: "Parent Review"
+        body: "After three or four sessions we meet again to share what we've noticed and set goals together. Reviews continue every five weeks."
+
   about:
-    title: "About Alisa"
+    eyebrow: "Meet Alisa"
+    title: "Alisa Liao — Registered Play Therapist"
+    bio_html: >
+      <p>Alisa is a Registered Play Therapist supporting children aged 3–8 and their families across Metropolitan Adelaide and via telehealth. She trained at the University of South Australia and is a member of the Australasia Pacific Play Therapy Association (APPTA) and the Play Therapy Practitioners Association (PTPA).</p>
+      <p>Before opening her practice, Alisa spent several years working in child and family services, supporting families through big transitions and the everyday challenges of raising small people. She brings that grounding — practical, warm, never performative — into every playroom session.</p>
+    credentials_title: "Qualifications & Registration"
+    credentials:
+      - what: "Graduate Diploma in Child Play Therapy"
+        where: "University of South Australia"
+      - what: "Bachelor of Social Work"
+        where: "University of Adelaide"
+      - what: "Member, Australasia Pacific Play Therapy Association (APPTA)"
+      - what: "Member, Play Therapy Practitioners Association (PTPA)"
+      - what: "Registered with the Australian Association of Social Workers"
+
+  faq:
+    eyebrow: "Common Questions"
+    title: "FAQ"
+    lead: "A few of the things parents most often ask. If yours isn't here, send it through with the enquiry form and I'll answer when I reply."
+    items:
+      - q: "What is Play Therapy?"
+        a_html: >
+          <p>Play Therapy is a developmentally informed counselling approach that uses a child's natural language — play — to help them process feelings, build skills, and work through difficult experiences.</p>
+          <p>Children don't need words for everything. A trained play therapist can read what your child is telling them through the way they play, and use that to support them.</p>
+      - q: "How long does my child need to attend?"
+        a: "Most children attend weekly for around 12–20 sessions. We'll have a clearer picture after the first review at session 4."
+      - q: "Do you offer telehealth?"
+        a: "Yes — for parent consultations and Filial Therapy. Child sessions are in person because so much of the work happens through the toys and the playroom itself."
+      - q: "What ages do you work with?"
+        a: "Children aged 3–8. Some approaches work outside this range; if your child is older, send me a message and we can talk about whether we're the right fit."
+      - q: "Do you take NDIS clients?"
+        a: "Yes — both self-managed and plan-managed. Play Therapy can be claimed under Capacity Building — Improved Daily Living."
+      - q: "What if my child doesn't want to come?"
+        a: "That's very common at first, and usually settles after a few sessions. We'll talk through anything that comes up at the parent review."
+
+  fees:
+    eyebrow: "Fees"
+    title: "Fees for 2026"
+    lead: "NDIS (self- and plan-managed), private health rebates and Medicare are not currently available for Play Therapy. Private-paying clients are welcome."
+    items:
+      - name: "Parent Intake Session"
+        detail: "90 minutes. We meet without your child to talk through their history and your hopes."
+        price: "$180"
+        unit: "per session"
+      - name: "Individual Play Therapy Session"
+        detail: "50 minutes with your child, plus 10 minutes for clinical notes and room reset."
+        price: "$180"
+        unit: "per session"
+      - name: "Parent Review Meeting"
+        detail: "50 minutes, held without your child every five weeks."
+        price: "$180"
+        unit: "per session"
+      - name: "Filial Therapy Training"
+        detail: "Weekly parent training sessions, six per course."
+        price: "$180"
+        unit: "per session"
+      - name: "Community Observation"
+        detail: "At kindergarten, school or early learning. Travel may incur an extra fee."
+        price: "On application"
+      - name: "Reports and Letters"
+        detail: "Including NDIS progress reports. Tailored to your needs."
+        price: "On application"
+
   contact:
     eyebrow: "Get in Touch"
-    title: "Let's Talk"
-    lead: "If you'd like to find out whether Play Therapy might be right for your child, or if you have any questions, reach out. A brief conversation can help us figure out if we're the right fit."
+    title: "Let's talk"
+    lead: "Send a message and I'll reply within three business days. If it's urgent, you're welcome to call or text directly."
+    items:
+      - label: "Email"
+        value: "hello@alisaplaytherapy.com"
+        href: "mailto:hello@alisaplaytherapy.com"
+      - label: "Phone"
+        value: "0405 491 343"
+        href: "tel:+61405491343"
+      - label: "Service Area"
+        value: "Metropolitan Adelaide · Telehealth"
+
+  cta_band:
+    title: "Let's support your child's journey together."
+    body: "A free 15-minute call is the easiest way to find out whether we're the right fit — for you, and for your child."
+    button: "Book a Free Call"
+
 form:
-  name_label: "Your Name"
-  email_label: "Email Address"
-  message_label: "Message"
-  message_placeholder: "Tell me a little about your child and what you're hoping to explore..."
+  name_label: "Your name"
+  email_label: "Email"
+  phone_label: "Phone (optional)"
+  child_age_label: "Child's age"
+  preferred_contact_label: "Preferred contact"
+  preferred_contact_email: "Email"
+  preferred_contact_phone: "Phone call"
+  preferred_contact_either: "Either is fine"
+  message_label: "Tell me a little about your child and what you're hoping for"
+  message_placeholder: "Anything you'd like me to know before we speak — your child's age, what's been happening, what you've already tried…"
+  submit: "Send Enquiry"
+  sending: "Sending…"
+  success_title: "Thanks for your message"
+  success_body: "I'll be in touch within three business days. If it's urgent, you're welcome to call or text on 0405 491 343."
+
 blog:
   from_the_blog: "From the Blog"
   recent_articles: "Recent Articles"

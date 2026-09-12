@@ -2,24 +2,44 @@
 layout: default
 ---
 {%- assign canonical_url = site.url | append: page.url -%}
-<article class="post">
-  <header class="post-header">
-    <div class="container">
-      <h1>{{ page.title }}</h1>
-      <p class="post-meta">
-        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
-        {% if page.tags.size > 0 %}
-          <span class="post-tags">{{ page.tags | join: " / " }}</span>
-        {% endif %}
-      </p>
+{%- assign current_lang = page.lang | default: 'en' -%}
+
+<main id="main">
+  <section>
+    <div class="wrap">
+      <article>
+        <header class="article-header reveal">
+          <p class="eyebrow">{% if current_lang == 'zh' %}{{ site.data.zh.nav.blog }}{% else %}{{ site.data.en.nav.blog }}{% endif %}</p>
+          <h1>{{ page.title }}</h1>
+          <div class="article-meta">
+            <time datetime="{{ page.date | date_to_xmlschema }}">{% if current_lang == 'zh' %}{{ page.date | date: "%Y 年 %m 月 %d 日" }}{% else %}{{ page.date | date: "%B %d, %Y" }}{% endif %}</time>
+            {%- if page.tags and page.tags.size > 0 %}
+            <div class="tags">
+              {%- for tag in page.tags -%}
+              <span class="tag">{{ tag | replace: '-', ' ' }}</span>
+              {%- endfor -%}
+            </div>
+            {%- endif %}
+          </div>
+        </header>
+
+        <div class="prose reveal" style="--d: 0.05s">
+          {{ content }}
+        </div>
+
+        <div class="article-actions reveal">
+          {%- if current_lang == 'zh' -%}
+          <a class="btn btn-primary" href="{{ site.baseurl }}/zh/#contact">{{ site.data.zh.buttons.get_in_touch }}</a>
+          <a class="btn btn-ghost" href="{{ site.baseurl }}/zh/#services">回到服务项目</a>
+          {%- else -%}
+          <a class="btn btn-primary" href="{{ site.baseurl }}/#contact">{{ site.data.en.buttons.get_in_touch }}</a>
+          <a class="btn btn-ghost" href="{{ site.baseurl }}/#services">Back to Services</a>
+          {%- endif -%}
+        </div>
+      </article>
     </div>
-  </header>
-  <div class="post-content">
-    <div class="container container--narrow">
-      {{ content }}
-    </div>
-  </div>
-</article>
+  </section>
+</main>
 
 <!-- JSON-LD: BlogPosting -->
 <script type="application/ld+json">
