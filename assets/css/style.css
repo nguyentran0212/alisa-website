@@ -780,9 +780,7 @@ section { position: relative; }
   min-width: 0;
 }
 .about-home-bio h2 {
-  font-size: var(--fs-h1);
   margin-bottom: var(--s-6);
-  text-wrap: balance;
 }
 .about-home-bio p + p { margin-top: var(--s-4); }
 .about-home-credentials {
@@ -828,12 +826,23 @@ section { position: relative; }
 .what-is-text { min-width: 0; }
 .what-is-text .eyebrow { margin-bottom: var(--s-3); }
 .what-is-text h2 {
-  font-size: var(--fs-h1);
   margin-bottom: var(--s-6);
-  text-wrap: balance;
 }
 .what-is-text .prose { margin-inline: 0; max-width: 38rem; }
 .what-is-text .prose p + p { margin-top: var(--s-4); }
+
+/* Standfirst — pull-out thesis line in the What is Play Therapy section.
+   Anchors the page with a single italic serif sentence. */
+.what-is-text .prose p.standfirst {
+  font-family: 'Lora', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: var(--fs-lg);
+  line-height: 1.5;
+  color: var(--sage-darker);
+  margin-top: var(--s-5);
+  margin-bottom: var(--s-5);
+}
 .what-is-text .prose blockquote {
   margin: var(--s-6) 0;
   /* Keep the Garry Landreth quote snug against the surrounding copy
@@ -956,25 +965,48 @@ section { position: relative; }
 }
 .faq .answer p + p { margin-top: var(--s-3); }
 
-/* Lists inside FAQ answers. The global reset wipes out the default
-   <ol>/<ul> padding-left, so without these rules the markers ("1.",
-   bullets) sit flush against the card edge. Also style the markers in
-   clay so they pop, mirroring .prose. */
-.faq .answer ol,
+/* Lists inside FAQ answers.
+   <ol>: custom counter so the number doesn't sit in its own column.
+   Native <ol> markers are 'outside' the text box, so when a sentence
+   wraps, wrapped lines align under the marker — wasting a column. By
+   drawing the number via ::before (absolute-positioned) and giving the
+   <li> a padding-left, the text wraps under the START of the sentence
+   instead, filling the textbox more naturally.
+   <ul>: kept on default disc bullets (visible inline next to text). */
+.faq .answer ol {
+  margin-top: var(--s-3);
+  margin-bottom: var(--s-4);
+  padding-left: 0;
+  list-style: none;            /* hide native marker; ::before draws it */
+  counter-reset: faq-ol;
+}
+.faq .answer ol > li {
+  position: relative;
+  counter-increment: faq-ol;
+  padding-left: 1.75rem;       /* reserve a marker column */
+  margin-bottom: var(--s-3);
+}
+.faq .answer ol > li:last-child { margin-bottom: 0; }
+.faq .answer ol > li::before {
+  content: counter(faq-ol) ".";
+  position: absolute;
+  left: 0;
+  color: var(--clay);
+  font-weight: 700;
+}
+
 .faq .answer ul {
   margin-top: var(--s-3);
   margin-bottom: var(--s-4);
-  padding-left: 1.5rem;        /* restore indentation the reset wiped */
+  padding-left: 1.5rem;        /* restore indent the global reset wiped */
+  list-style: disc;
 }
-.faq .answer ol { list-style: decimal; }
-.faq .answer ul { list-style: disc; }
-.faq .answer li {
+.faq .answer ul li {
   margin-bottom: var(--s-3);
-  padding-left: 0.4rem;        /* gap between marker and text */
+  padding-left: 0.4rem;        /* gap between bullet and text */
 }
-.faq .answer li:last-child { margin-bottom: 0; }
-.faq .answer li::marker { color: var(--clay); font-weight: 700; }
-.faq .answer ul li::marker { color: var(--clay); }   /* no bold on bullets */
+.faq .answer ul li:last-child { margin-bottom: 0; }
+.faq .answer ul li::marker { color: var(--clay); }   /* bullets match <ol> colour, no bold */
 
 .faq .answer-links {
   margin-top: var(--s-3);
@@ -1317,8 +1349,8 @@ section { position: relative; }
   font-size: var(--fs-h2);
   color: var(--sage-darker);
   line-height: 1.2;
-  text-wrap: balance;
   margin: 0;
+  white-space: nowrap;
 }
 .cta-divider {
   width: 1px;
@@ -1669,7 +1701,7 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
 }
 .about-page-grid .about-art img { width: 100%; height: 100%; object-fit: cover; }
 .about-page-grid .about-bio h1 {
-  font-size: var(--fs-h1);
+  font-size: var(--fs-h2);
   margin-bottom: var(--s-6);
   text-wrap: balance;
 }
@@ -1686,19 +1718,37 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
   margin-bottom: var(--s-4);
 }
 .qualifications ul { list-style: none; padding: 0; display: grid; gap: var(--s-3); }
-.qualifications li {
-  position: relative;
-  padding-left: var(--s-6);
+.qualifications ul ul {
+  list-style: disc;
+  padding-left: var(--s-8);
+  margin-top: var(--s-2);
+  gap: var(--s-1);
+  color: var(--sage-darker);
 }
-.qualifications li::before {
+.qualifications ul ul li { padding-left: var(--s-2); }
+.qualifications strong { color: var(--sage-darker); display: block; margin-bottom: var(--s-1); }
+
+/* Side-by-side qualifications with a thin vertical line divider. */
+.qualifications li.qual-pair {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: var(--s-3);
+}
+.qualifications li.qual-pair strong {
+  display: inline-block;
+  margin-bottom: 0;
+}
+.qualifications li.qual-pair strong + strong::before {
   content: '';
-  position: absolute;
-  left: 0.15rem; top: 0.6em;
-  width: 6px; height: 6px;
-  border-radius: 50%;
-  background: var(--clay);
+  display: inline-block;
+  width: 1px;
+  height: 0.95em;
+  background: var(--sage-darker);
+  opacity: 0.35;
+  margin-right: var(--s-3);
+  vertical-align: middle;
 }
-.qualifications strong { color: var(--sage-darker); display: block; }
 
 @media (max-width: 960px) {
   .about-page-grid { grid-template-columns: 1fr; }

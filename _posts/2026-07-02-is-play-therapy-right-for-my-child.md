@@ -12,32 +12,52 @@ tags:
   - parents
 ---
 
-**Big Emotions and Meltdowns**  
-Does your child have frequent tantrums, emotional outbursts, or difficulty calming down when upset? Play Therapy can help children express and make sense of overwhelming feelings in a safe and supportive way.
+Every child has difficult moments as they grow. Big feelings, worries, friendship difficulties, struggles with transitions, and moments of low confidence can all be part of childhood.
 
-**Behavioural Challenges**  
-Aggression, defiance, withdrawal, or difficulty following routines can sometimes be a child's way of communicating distress. Play Therapy helps explore the feelings and experiences behind the behaviour.
+Experiencing these challenges from time to time does not necessarily mean a child needs therapy. What can be helpful to consider is whether a difficulty is **persistent, particularly intense, or having a significant impact** on your child or family.
 
-**Difficulty with Play and Friendships**  
-Play is how young children learn, communicate, express themselves, and build relationships. If your child struggles with play skills, has difficulty engaging in pretend play, finds it hard to join in with peers, or experiences challenges making and maintaining friendships, Play Therapy can support the development of play skills, strengthen confidence and social competence, and foster meaningful connections with others.
+You might consider seeking support if a difficulty continues over time, seems overwhelming for your child, affects everyday life or relationships, or becomes increasingly difficult for your family to manage.
 
-**Difficulty with Life Changes**  
-Children can find transitions challenging, such as starting school, welcoming a new sibling, moving house, parental separation, or experiencing loss. Play Therapy provides a space to process these changes at their own pace.
+Here are some areas where children may experience ongoing challenges:
 
-**Anxiety, Worries, or Withdrawal**  
-If your child seems unusually anxious, quiet, clingy, or has lost interest in activities they previously enjoyed, Play Therapy can help them express feelings that may be difficult to put into words.
+**Big Emotions That Feel Hard to Manage**
 
-**Low Confidence or Self-Esteem**  
-Children who frequently doubt themselves, avoid challenges, or become easily discouraged may benefit from support to build confidence, resilience, and a stronger sense of self.
+All children experience big emotions. If your child is frequently overwhelmed by their feelings, has intense emotional outbursts, struggles to calm or recover after becoming upset, or their emotions are significantly affecting everyday life, Play Therapy can provide a safe space to express and make sense of what they are experiencing.
 
-**Relationship Difficulties**  
-Whether your child struggles with friendships, sibling relationships, or family conflict, Play Therapy can support the development of healthy emotional expression and stronger relationships.
+**Behavioural Challenges**
 
-**Experiences of Trauma or Stress**  
-Children may be affected by difficult experiences such as accidents, grief, family conflict, bullying, medical procedures, or other distressing events. Play Therapy offers a developmentally appropriate way to process these experiences.
+Children sometimes communicate distress through their behaviour. If aggression, defiance, withdrawal, or difficulties with everyday routines are persistent, intense, or becoming difficult to manage, Play Therapy can help explore the feelings and experiences that may be underlying the behaviour.
 
-Every child experiences challenges differently. You don't need to wait until difficulties become severe before seeking support. If you're concerned about your child's emotional wellbeing, social development, or ability to cope with life's challenges, Play Therapy provides a safe and supportive space where children can feel understood, express themselves, and develop new ways to navigate their experiences.
+**Difficulty With Play and Friendships**
 
----
+Play is how young children learn, communicate, express themselves, and build relationships. If your child consistently struggles with play skills, finds pretend play difficult, has difficulty joining in with peers, or experiences ongoing challenges making and maintaining friendships, Play Therapy can support the development of play skills, confidence, social competence, and meaningful connections with others.
+
+**Struggling With Changes or Transitions**
+
+Changes such as starting school, welcoming a new sibling, moving house, parental separation, or experiencing loss can be difficult for children. Some adjustment is natural. If your child's distress continues or becomes significantly disruptive to their everyday life, Play Therapy can provide a space to process these experiences at their own pace.
+
+**Anxiety, Worries, or Withdrawal**
+
+Children can have worries and moments when they feel unsure or clingy. If your child seems persistently anxious, unusually withdrawn, increasingly reluctant to participate, or has lost interest in activities they previously enjoyed, Play Therapy can help them express and explore feelings that may be difficult to put into words.
+
+**Low Confidence or Self-Esteem**
+
+Children naturally experience moments of self-doubt and frustration. If your child frequently doubts themselves, avoids challenges, becomes easily discouraged, or seems to have a persistent negative view of themselves, Play Therapy can support the development of confidence, resilience, and a stronger sense of self.
+
+**Relationship Difficulties**
+
+Friendships, sibling relationships, and family relationships can all have difficult moments. If conflict or disconnection becomes ongoing and is affecting your child's wellbeing or relationships with others, Play Therapy can support emotional expression, understanding, and healthier ways of relating.
+
+**Experiences of Trauma or Significant Stress**
+
+Children can be affected by difficult or distressing experiences such as accidents, grief, family conflict, bullying, medical procedures, or other significant events. Play Therapy offers a developmentally appropriate space where children can express and process experiences that may be difficult to talk about directly.
+
+**You Know Your Child Best**
+
+There is no single point at which a child is considered to need Play Therapy. Every child and family is different.
+
+If something about your child's behaviour, emotions, relationships, or ability to cope has been **persistently concerning or overwhelming**, you don't have to wait until things reach a crisis point before seeking support.
+
+Play Therapy can provide children with a safe, supportive space to feel understood, express what may be difficult to put into words, make sense of their experiences, and develop new ways of navigating life's challenges.
 
 

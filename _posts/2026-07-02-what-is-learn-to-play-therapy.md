@@ -12,7 +12,7 @@ tags:
   - child-development
 ---
 
-Some children struggle to engage in make-believe, take turns, or share attention with another person. This isn't a reflection of your child or your parenting. They just need extra support to develop the foundational skills that play requires. **Learn to Play Therapy** offers that support in a gentle, structured, and playful way.
+**Play doesn't always come naturally to every child.** Some children need a little extra support to join in, use their imagination, take turns, share attention, or build play with another person. Learn to Play Therapy helps children develop these foundational play skills through gentle, structured and enjoyable experiences.
 
 ## When play doesn't come easily
 

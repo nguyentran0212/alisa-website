@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "关于 Alisa — 阿德莱德游戏治疗师"
-title_tag: "关于 Alisa | 阿德莱德游戏治疗师 | 游戏治疗硕士"
+title: "认识 Alisa — 阿德莱德游戏治疗师"
+title_tag: "认识 Alisa | 阿德莱德游戏治疗师 | 游戏治疗硕士"
 description: "Alisa 是澳大利亚太平洋游戏治疗协会（APPTA）与游戏治疗师协会（PTPA）的注册游戏治疗师、幼教老师，在阿德莱德为3-8岁儿童及其家庭提供专业支持。"
 lang: zh
 permalink: /zh/about/
@@ -17,25 +17,29 @@ permalink: /zh/about/
         <div class="about-bio">
           <p class="eyebrow">{{ site.data.zh.sections.about.eyebrow }}</p>
           <h1>{{ site.data.zh.sections.about.title }}</h1>
-          <p>我是一名游戏治疗师，也是一名早教老师——来自中国，在澳大利亚生活和工作。 2015 年我来到澳洲读早教，之后一直从事幼儿教育的工作。十年来，我的工作一直围绕着 3-8 岁的孩子和他们的家庭。</p>
-          <p>我常常被那些"卡住"的孩子吸引——卡在大的情绪里、卡在激烈的反应里、卡在一些看似难以打破的模式里。在从事早教的头几年，我尝试了各种方法去了解和帮助这些孩子。我慢慢意识到：<strong>行为，从来不是故事的全部</strong>。 我们肉眼看到的，常常是孩子在用他仅知道的方式，努力传达一些他还说不出的话。</p>
-          <p>在继续寻找答案的过程中，我遇见了游戏治疗。它把我之前学到的很多东西串在了一起，提供了一种走进孩子内心世界的方式。早教这些年，让我对幼儿发展有了扎实的理解，也让我学会了一件事——当孩子的玩耍、情绪、关系或反应有些"不一样"的时候，往往是他需要支持的信号。这种觉察，一直支撑着我今天的工作。而无论看到什么，我始终把孩子本身，而不是他的行为，放在我工作的中心。</p>
-          <p>我相信，孩子在关系中成长，也在关系中被疗愈。当一个孩子感受到安全、被接纳、被真诚地理解，他就能慢慢找到属于自己的力量。在温暖、稳当的治疗关系里，我给孩子一个空间——去表达、去探索，按自己的节奏，长出属于自己的力量。</p>
-          <p>在这段旅程里，我也很看重和父母的协作。你们是孩子身边最近的人——那些日常的瞬间、孩子一路走来的故事、和只有你们才看得见的细节，是我在这里看不到、却最想听见的东西。我的工作，是和你们一起去听见孩子在玩耍和行为背后的声音，看看我们能怎样最好地支持他情绪上的成长。</p>
-          <p>当我们一起看见表面之下藏着的东西，改变，就有了发生的可能。</p>
+          <p>我是一名游戏治疗师，也是一名早教老师——来自中国。2015 年来到澳洲学习早教，此后整个职业生涯都在陪伴 3-8 岁的孩子与他们的家庭。</p>
+          <p>我的早教背景，加上专业的游戏治疗训练，让我能在孩子的发展与经历的脉络中，去理解他们的行为，并在他们当下的位置上，与他／她在一起。</p>
+          <p>我相信，孩子在安全、被接纳、被真正理解的关系中成长。我营造一个温暖、有支持的环境，让孩子能表达自己、探索自己的经历，并按自己的节奏慢慢发现自己内在的力量。</p>
+          <p>我也非常重视在这段旅程中与父母和照护者的合作。您了解孩子日常的点滴、过往的经历、以及许多在咨询中无法看见的小细节。我的角色，是和您站在一起，温和地探索孩子可能在通过游戏与行为诉说的事情，并一同寻找最能支持他们情绪成长与身心健康的方式。</p>
 
           <div class="qualifications">
             <h2>资格认证</h2>
             <ul>
-              <li><strong>游戏治疗硕士</strong></li>
-              <li><strong>教育学硕士（幼儿方向）</strong></li>
-              <li><strong>注册游戏治疗师</strong>APPTA &amp; PTPA</li>
-              <li><strong>注册幼教</strong>南澳大利亚（SA）</li>
+              <li class="qual-pair">
+                <strong>游戏治疗硕士</strong>
+                <strong>教育学硕士（幼儿方向）</strong>
+              </li>
+              <li><strong>注册游戏治疗师</strong>
+                <ul>
+                  <li>APPTA（澳大拉西亚太平洋游戏治疗协会）</li>
+                  <li>PTPA（游戏治疗师从业者协会）</li>
+                </ul>
+              </li>
             </ul>
           </div>
 
           <div class="memberships" style="margin-top: var(--s-8);">
-            <a href="https://appta.org.au" target="_blank" rel="noopener" aria-label="APPTA">
+            <a href="https://appta.org.au/member-directory/#!biz/id/690804f90c14a6a502038664" target="_blank" rel="noopener" aria-label="APPTA">
               <img src="{{ site.baseurl }}/assets/images/appta-logo.png" alt="APPTA">
             </a>
             <a href="https://www.ptpa.org.au/adelaide/registered-play-therapist/chunxiao-liao?from=badge" target="_blank" rel="noopener" aria-label="PTPA">

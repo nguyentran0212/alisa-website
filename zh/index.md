@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "在游戏中，遇见孩子 | 阿德莱德 3-8 岁儿童游戏治疗"
+title: "Alisa Play Therapy"
 description: "为3-8岁的孩子与家庭提供游戏治疗支持。在游戏中，帮助孩子学会调节情绪、建立自信、掌握社交技巧，并与父母一起建立更安全、更温暖的亲子联结。"
 lang: zh
 permalink: /zh/
@@ -18,7 +18,7 @@ permalink: /zh/
     <div class="wrap">
       <div class="hero-copy reveal">
         <p class="eyebrow">{{ site.data.zh.hero.eyebrow }}</p>
-        <h1>{{ site.data.zh.hero.title }}</h1>
+        <h1>{{ site.data.zh.hero.title | newline_to_br }}{% if site.data.zh.hero.title_accent and site.data.zh.hero.title_accent != "" %} <span class="accent">{{ site.data.zh.hero.title_accent }}</span>{% endif %}{% if site.data.zh.hero.title_after_accent and site.data.zh.hero.title_after_accent != "" %}<br>{{ site.data.zh.hero.title_after_accent }}{% endif %}</h1>
         <p class="lede">{{ site.data.zh.hero.subtitle }}</p>
         <p class="hero-meta-text">{{ site.data.zh.hero.meta }}</p>
         <div class="hero-actions">

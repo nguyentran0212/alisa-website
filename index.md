@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Held in Play | Play Therapy in Adelaide for Ages 3-8"
-description: "Play therapy in Adelaide for children aged 3-8 and their families. Supporting emotional regulation, confidence, social skills, and stronger family connections."
+title: "Alisa Play Therapy"
+description: "Play therapy for children aged 3-8 and their families. Supporting emotional regulation, confidence, social skills, and connections."
 lang: en
 permalink: /
 ---
@@ -21,7 +21,7 @@ permalink: /
     <div class="wrap">
       <div class="hero-copy reveal">
         <p class="eyebrow">{{ site.data.en.hero.eyebrow }}</p>
-        <h1>{{ site.data.en.hero.title }}</h1>
+        <h1>{{ site.data.en.hero.title | newline_to_br }}{% if site.data.en.hero.title_accent and site.data.en.hero.title_accent != "" %} <span class="accent">{{ site.data.en.hero.title_accent }}</span>{% endif %}{% if site.data.en.hero.title_after_accent and site.data.en.hero.title_after_accent != "" %}<br>{{ site.data.en.hero.title_after_accent }}{% endif %}</h1>
         <p class="lede">{{ site.data.en.hero.subtitle }}</p>
         <p class="hero-meta-text">{{ site.data.en.hero.meta }}</p>
         <div class="hero-actions">

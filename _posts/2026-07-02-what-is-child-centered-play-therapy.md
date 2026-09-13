@@ -51,7 +51,7 @@ This approach gently fosters:
 
 ## A note on parents
 
-While your child attends sessions, you remain central to the work. I keep you informed of how things are going, and we meet periodically (usually every 5 or 6 child sessions) to reflect together. The most meaningful change happens when home and therapy are connected.
+While your child attends sessions, you remain central to the work. I keep you informed of how things are going, and we meet periodically (usually every 5 child sessions) to reflect together. The most meaningful change happens when home and therapy are connected.
 
 ---
 
