@@ -44,7 +44,7 @@ permalink: /
           </div>
         </div>
         <div class="what-is-art reveal" style="--d: 0.08s">
-          <img src="{{ site.baseurl }}/assets/images/what-is-play-therapy.jpg" alt="A child joyfully running through a field of wildflowers">
+          <img src="{{ site.baseurl }}/assets/images/what-is-play-therapy.jpg" alt="A child sitting in a sunlit meadow of daisies, viewed from behind">
         </div>
       </div>
     </div>
