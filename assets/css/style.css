@@ -298,8 +298,7 @@ section { position: relative; }
 
 .nav {
   position: relative;
-  max-width: var(--maxw);
-  margin: 0 auto;
+  width: 100%;
   padding: 0.95rem clamp(1.5rem, 4vw, 3rem);
   display: flex;
   align-items: center;
