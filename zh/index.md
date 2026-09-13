@@ -29,7 +29,7 @@ permalink: /zh/
     </div>
   </section>
 
-  <!-- ============ WHAT IS PLAY THERAPY ============ -->
+  <!-- ============ 什么是游戏治疗 (bright) ============ -->
   <section id="what-is-play-therapy">
     <div class="wrap">
       <div class="section-head center">
@@ -42,7 +42,7 @@ permalink: /zh/
     </div>
   </section>
 
-  <!-- ============ IS THIS FOR MY CHILD ============ -->
+  <!-- ============ 游戏治疗适合我的孩子吗？(bright) ============ -->
   <section id="is-this-for-my-child">
     <div class="wrap">
       <div class="section-head center">
@@ -62,8 +62,28 @@ permalink: /zh/
     </div>
   </section>
 
-  <!-- ============ SERVICES ============ -->
-  <section id="services" class="bg-band">
+  <!-- ============ 关于 Alisa (dark) ============ -->
+  <section id="about" class="bg-band">
+    <div class="wrap">
+      <div class="about-home-grid">
+        <div class="about-home-art reveal">
+          <img src="{{ site.baseurl }}/assets/images/alisa.png" alt="Alisa Liao，注册游戏治疗师">
+        </div>
+        <div class="about-home-bio reveal" style="--d: 0.08s">
+          <p class="eyebrow">{{ site.data.zh.sections.about.eyebrow }}</p>
+          <h2>{{ site.data.zh.sections.about.title }}</h2>
+          {{ site.data.zh.sections.about.bio_html }}
+          <p class="about-home-credentials"><strong>{{ site.data.zh.sections.about.credentials }}</strong></p>
+          <div class="section-actions" style="justify-content: flex-start; margin-top: var(--s-8);">
+            <a class="btn btn-ghost" href="{{ site.baseurl }}{{ site.data.zh.sections.about.cta_url }}">{{ site.data.zh.sections.about.cta }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 服务项目 (bright) ============ -->
+  <section id="services">
     <div class="wrap">
       <div class="section-head center">
         <p class="eyebrow">{{ site.data.zh.sections.services.eyebrow }}</p>
@@ -100,28 +120,41 @@ permalink: /zh/
     </div>
   </section>
 
-  <!-- ============ ABOUT ============ -->
-  <section id="about">
+  <!-- ============ 费用 (bright) ============ -->
+  <section id="fees">
     <div class="wrap">
-      <div class="about-home-grid">
-        <div class="about-home-art reveal">
-          <img src="{{ site.baseurl }}/assets/images/alisa.png" alt="Alisa Liao，注册游戏治疗师">
-        </div>
-        <div class="about-home-bio reveal" style="--d: 0.08s">
-          <p class="eyebrow">{{ site.data.zh.sections.about.eyebrow }}</p>
-          <h2>{{ site.data.zh.sections.about.title }}</h2>
-          {{ site.data.zh.sections.about.bio_html }}
-          <p class="about-home-credentials"><strong>{{ site.data.zh.sections.about.credentials }}</strong></p>
-          <div class="section-actions" style="justify-content: flex-start; margin-top: var(--s-8);">
-            <a class="btn btn-ghost" href="{{ site.baseurl }}{{ site.data.zh.sections.about.cta_url }}">{{ site.data.zh.sections.about.cta }}</a>
+      <div class="fees-intro">
+        <p class="eyebrow">{{ site.data.zh.sections.fees.eyebrow }}</p>
+        <h2>{{ site.data.zh.sections.fees.title }}</h2>
+        <p>{{ site.data.zh.sections.fees.lead }}</p>
+      </div>
+      <div class="fees-card reveal">
+        <h3 class="fees-group-title">{{ site.data.zh.sections.fees.private_title }}</h3>
+        {%- for fee in site.data.zh.sections.fees.private -%}
+        <div class="fee-item">
+          <div class="fee-name">{{ fee.name }}</div>
+          <div class="fee-price {% if fee.unit == '' %}is-words{% endif %}">
+            {{ fee.price }}{% if fee.unit != '' %}<span class="fee-unit">{{ fee.unit }}</span>{% endif %}
           </div>
         </div>
+        {%- endfor -%}
+        <h3 class="fees-group-title fees-group-title-second">{{ site.data.zh.sections.fees.ndis_title }}</h3>
+        {%- for fee in site.data.zh.sections.fees.ndis -%}
+        <div class="fee-item">
+          <div class="fee-name">{{ fee.name }}</div>
+          <div class="fee-price {% if fee.unit == '' %}is-words{% endif %}">
+            {{ fee.price }}{% if fee.unit != '' %}<span class="fee-unit">{{ fee.unit }}</span>{% endif %}
+          </div>
+        </div>
+        {%- endfor -%}
+        <p class="fees-note">{{ site.data.zh.sections.fees.note }}</p>
+        <p class="fees-note">{{ site.data.zh.sections.fees.note_2 }}</p>
       </div>
     </div>
   </section>
 
-  <!-- ============ FAQ ============ -->
-  <section id="faq">
+  <!-- ============ 常见问题 (dark) ============ -->
+  <section id="faq" class="bg-band">
     <div class="wrap">
       <div class="section-head center">
         <p class="eyebrow">{{ site.data.zh.sections.faq.eyebrow }}</p>
@@ -144,45 +177,12 @@ permalink: /zh/
           </li>
           {%- endfor -%}
         </ul>
-        <p class="faq-lead"><a href="{{ site.data.zh.sections.faq.lead_url }}">{{ site.data.zh.sections.faq.lead }}</a></p>
+        <p class="faq-lead"><a href="{{ site.data.zh.sections.faq.lead_url }}" class="faq-lead-link">{{ site.data.zh.sections.faq.lead }}</a></p>
       </div>
     </div>
   </section>
 
-  <!-- ============ FEES ============ -->
-  <section id="fees" class="bg-band">
-    <div class="wrap">
-      <div class="section-head center">
-        <p class="eyebrow">{{ site.data.zh.sections.fees.eyebrow }}</p>
-        <h2>{{ site.data.zh.sections.fees.title }}</h2>
-        <p>{{ site.data.zh.sections.fees.lead }}</p>
-      </div>
-      <div class="fees-card reveal">
-        <h3 class="fees-group-title">{{ site.data.zh.sections.fees.private_title }}</h3>
-        {%- for fee in site.data.zh.sections.fees.private -%}
-        <div class="fee-item">
-          <div class="fee-name">{{ fee.name }}</div>
-          <div class="fee-price {% if fee.unit == '' %}is-words{% endif %}">
-            {{ fee.price }}{% if fee.unit != '' %}<span class="fee-unit">{{ fee.unit }}</span>{% endif %}
-          </div>
-        </div>
-        {%- endfor -%}
-        <h3 class="fees-group-title">{{ site.data.zh.sections.fees.ndis_title }}</h3>
-        {%- for fee in site.data.zh.sections.fees.ndis -%}
-        <div class="fee-item">
-          <div class="fee-name">{{ fee.name }}</div>
-          <div class="fee-price {% if fee.unit == '' %}is-words{% endif %}">
-            {{ fee.price }}{% if fee.unit != '' %}<span class="fee-unit">{{ fee.unit }}</span>{% endif %}
-          </div>
-        </div>
-        {%- endfor -%}
-        <p class="fees-note">{{ site.data.zh.sections.fees.note }}</p>
-        <p class="fees-note">{{ site.data.zh.sections.fees.note_2 }}</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ BLOG ============ -->
+  <!-- ============ 博客精选 (bright) ============ -->
   <section id="blog">
     <div class="wrap">
       <div class="section-head center">
@@ -208,8 +208,8 @@ permalink: /zh/
     </div>
   </section>
 
-  <!-- ============ CONTACT ============ -->
-  <section id="contact">
+  <!-- ============ 联系我 (dark) ============ -->
+  <section id="contact" class="bg-band">
     <div class="wrap">
       <div class="contact-grid">
         <div class="contact-info reveal">

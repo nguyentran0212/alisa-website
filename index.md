@@ -32,7 +32,7 @@ permalink: /
     </div>
   </section>
 
-  <!-- ============ WHAT IS PLAY THERAPY ============ -->
+  <!-- ============ WHAT IS PLAY THERAPY (bright) ============ -->
   <section id="what-is-play-therapy">
     <div class="wrap">
       <div class="section-head center">
@@ -45,7 +45,7 @@ permalink: /
     </div>
   </section>
 
-  <!-- ============ IS THIS FOR MY CHILD ============ -->
+  <!-- ============ IS THIS FOR MY CHILD (bright) ============ -->
   <section id="is-this-for-my-child">
     <div class="wrap">
       <div class="section-head center">
@@ -65,8 +65,28 @@ permalink: /
     </div>
   </section>
 
-  <!-- ============ SERVICES ============ -->
-  <section id="services" class="bg-band">
+  <!-- ============ ABOUT ALISA (dark) ============ -->
+  <section id="about" class="bg-band">
+    <div class="wrap">
+      <div class="about-home-grid">
+        <div class="about-home-art reveal">
+          <img src="{{ site.baseurl }}/assets/images/alisa.png" alt="Alisa Liao, Registered Play Therapist">
+        </div>
+        <div class="about-home-bio reveal" style="--d: 0.08s">
+          <p class="eyebrow">{{ site.data.en.sections.about.eyebrow }}</p>
+          <h2>{{ site.data.en.sections.about.title }}</h2>
+          {{ site.data.en.sections.about.bio_html }}
+          <p class="about-home-credentials"><strong>{{ site.data.en.sections.about.credentials }}</strong></p>
+          <div class="section-actions" style="justify-content: flex-start; margin-top: var(--s-8);">
+            <a class="btn btn-ghost" href="{{ site.baseurl }}{{ site.data.en.sections.about.cta_url }}">{{ site.data.en.sections.about.cta }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES (bright) ============ -->
+  <section id="services">
     <div class="wrap">
       <div class="section-head center">
         <p class="eyebrow">{{ site.data.en.sections.services.eyebrow }}</p>
@@ -103,28 +123,40 @@ permalink: /
     </div>
   </section>
 
-  <!-- ============ ABOUT (brief, on home) ============ -->
-  <section id="about">
+  <!-- ============ FEES (bright) ============ -->
+  <section id="fees">
     <div class="wrap">
-      <div class="about-home-grid">
-        <div class="about-home-art reveal">
-          <img src="{{ site.baseurl }}/assets/images/alisa.png" alt="Alisa Liao, Registered Play Therapist">
-        </div>
-        <div class="about-home-bio reveal" style="--d: 0.08s">
-          <p class="eyebrow">{{ site.data.en.sections.about.eyebrow }}</p>
-          <h2>{{ site.data.en.sections.about.title }}</h2>
-          {{ site.data.en.sections.about.bio_html }}
-          <p class="about-home-credentials"><strong>{{ site.data.en.sections.about.credentials }}</strong></p>
-          <div class="section-actions" style="justify-content: flex-start; margin-top: var(--s-8);">
-            <a class="btn btn-ghost" href="{{ site.baseurl }}{{ site.data.en.sections.about.cta_url }}">{{ site.data.en.sections.about.cta }}</a>
+      <div class="fees-intro">
+        <p class="eyebrow">{{ site.data.en.sections.fees.eyebrow }}</p>
+        <h2>{{ site.data.en.sections.fees.title }}</h2>
+        <p>{{ site.data.en.sections.fees.lead }}</p>
+      </div>
+      <div class="fees-card reveal">
+        <h3 class="fees-group-title">{{ site.data.en.sections.fees.private_title }}</h3>
+        {%- for fee in site.data.en.sections.fees.private -%}
+        <div class="fee-item">
+          <div class="fee-name">{{ fee.name }}</div>
+          <div class="fee-price {% if fee.unit == '' %}is-words{% endif %}">
+            {{ fee.price }}{% if fee.unit != '' %}<span class="fee-unit">{{ fee.unit }}</span>{% endif %}
           </div>
         </div>
+        {%- endfor -%}
+        <h3 class="fees-group-title fees-group-title-second">{{ site.data.en.sections.fees.ndis_title }}</h3>
+        {%- for fee in site.data.en.sections.fees.ndis -%}
+        <div class="fee-item">
+          <div class="fee-name">{{ fee.name }}</div>
+          <div class="fee-price {% if fee.unit == '' %}is-words{% endif %}">
+            {{ fee.price }}{% if fee.unit != '' %}<span class="fee-unit">{{ fee.unit }}</span>{% endif %}
+          </div>
+        </div>
+        {%- endfor -%}
+        <p class="fees-note">{{ site.data.en.sections.fees.note }}</p>
       </div>
     </div>
   </section>
 
-  <!-- ============ FAQ ============ -->
-  <section id="faq">
+  <!-- ============ FAQ (dark) ============ -->
+  <section id="faq" class="bg-band">
     <div class="wrap">
       <div class="section-head center">
         <p class="eyebrow">{{ site.data.en.sections.faq.eyebrow }}</p>
@@ -147,44 +179,12 @@ permalink: /
           </li>
           {%- endfor -%}
         </ul>
-        <p class="faq-lead"><a href="{{ site.data.en.sections.faq.lead_url }}">{{ site.data.en.sections.faq.lead }}</a></p>
+        <p class="faq-lead"><a href="{{ site.data.en.sections.faq.lead_url }}" class="faq-lead-link">{{ site.data.en.sections.faq.lead }}</a></p>
       </div>
     </div>
   </section>
 
-  <!-- ============ FEES ============ -->
-  <section id="fees" class="bg-band">
-    <div class="wrap">
-      <div class="section-head center">
-        <p class="eyebrow">{{ site.data.en.sections.fees.eyebrow }}</p>
-        <h2>{{ site.data.en.sections.fees.title }}</h2>
-        <p>{{ site.data.en.sections.fees.lead }}</p>
-      </div>
-      <div class="fees-card reveal">
-        <h3 class="fees-group-title">{{ site.data.en.sections.fees.private_title }}</h3>
-        {%- for fee in site.data.en.sections.fees.private -%}
-        <div class="fee-item">
-          <div class="fee-name">{{ fee.name }}</div>
-          <div class="fee-price {% if fee.unit == '' %}is-words{% endif %}">
-            {{ fee.price }}{% if fee.unit != '' %}<span class="fee-unit">{{ fee.unit }}</span>{% endif %}
-          </div>
-        </div>
-        {%- endfor -%}
-        <h3 class="fees-group-title">{{ site.data.en.sections.fees.ndis_title }}</h3>
-        {%- for fee in site.data.en.sections.fees.ndis -%}
-        <div class="fee-item">
-          <div class="fee-name">{{ fee.name }}</div>
-          <div class="fee-price {% if fee.unit == '' %}is-words{% endif %}">
-            {{ fee.price }}{% if fee.unit != '' %}<span class="fee-unit">{{ fee.unit }}</span>{% endif %}
-          </div>
-        </div>
-        {%- endfor -%}
-        <p class="fees-note">{{ site.data.en.sections.fees.note }}</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ BLOG (teaser, 2 most recent posts) ============ -->
+  <!-- ============ BLOG TEASER (bright) ============ -->
   <section id="blog">
     <div class="wrap">
       <div class="section-head center">
@@ -210,8 +210,8 @@ permalink: /
     </div>
   </section>
 
-  <!-- ============ CONTACT ============ -->
-  <section id="contact">
+  <!-- ============ CONTACT (dark) ============ -->
+  <section id="contact" class="bg-band">
     <div class="wrap">
       <div class="contact-grid">
         <div class="contact-info reveal">

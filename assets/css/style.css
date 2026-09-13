@@ -617,7 +617,9 @@ section { position: relative; }
   cursor: pointer;
   position: relative;
   display: flex;
-  align-items: center;
+  /* Align icons to the top, not center. With center the icon shifts down
+     when a title wraps to 2 lines, making the 3 cards visibly uneven. */
+  align-items: flex-start;
   gap: var(--s-4);
   padding: var(--s-5) 3.5rem var(--s-5) var(--s-6);
   /* Lock the summary height so the 3 service cards line up regardless of
@@ -978,6 +980,37 @@ section { position: relative; }
 }
 .faq .answer-links a { color: var(--sage-deep); }
 
+/* Bottom-of-section link ('More questions? Get in touch.'). Was rendering
+   as just an underlined link inside a centered paragraph. Wrap it in a
+   button-like treatment so it reads as a call-to-action, not body copy. */
+.faq-lead {
+  margin-top: var(--s-6);
+  text-align: center;
+}
+.faq-lead-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 700;
+  font-size: var(--fs-base);
+  color: var(--clay-dark);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+  transition: color var(--t-fast) var(--ease), border-color var(--t-fast) var(--ease);
+}
+@media (hover: hover) {
+.faq-lead-link:hover { color: var(--sage-darker); border-bottom-color: var(--sage-darker); }
+}
+.faq-lead-link::after {
+  content: '→';
+  font-weight: 400;
+  transition: transform var(--t-fast) var(--ease);
+}
+@media (hover: hover) {
+.faq-lead-link:hover::after { transform: translateX(3px); }
+}
+
 .faq details::details-content {
   block-size: 0;
   overflow: hidden;
@@ -1064,6 +1097,13 @@ section { position: relative; }
   letter-spacing: 0;
 }
 .fee-price.is-words { font-size: var(--fs-md); font-style: italic; }
+
+/* The second fees group heading (NDIS clients) needs visual separation
+   from the first group's last row. Larger top margin + thicker rule. */
+.fees-group-title.fees-group-title-second {
+  margin-top: var(--s-12);
+  padding-top: var(--s-4);
+}
 
 /* ============ contact ============
  *
