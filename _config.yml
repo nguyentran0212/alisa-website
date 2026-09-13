@@ -37,6 +37,16 @@ practice_services:
   - "Parent Consultation"
   - "Telehealth Play Therapy"
 hero_image: "/assets/images/hero.jpg"
+# Mobile-only crop of the hero. The desktop hero is composed so the left
+# ~third is intentionally empty (white curtain + adult's sleeve) — that
+# empty space is where the desktop copy overlays via the horizontal
+# gradient. On a portrait phone that composition doesn't work (the empty
+# side becomes visible dead space when shown without text on top), so we
+# serve a tight crop of just the subject (hands + wooden toys + fence +
+# grass playscape) on screens ≤960px wide. Generated from hero.jpg via:
+#   convert assets/images/hero.jpg -crop 1020x510+900+150 +repage \
+#     -strip -quality 85 assets/images/hero-mobile.jpg
+hero_image_mobile: "/assets/images/hero-mobile.jpg"
 og_image: "https://alisaplaytherapy.com/assets/images/logo_vertical.png"
 twitter_handle: ""
 

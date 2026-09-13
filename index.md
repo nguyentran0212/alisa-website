@@ -14,7 +14,13 @@ permalink: /
        readable without a hard edge. The image is bleed to both edges. -->
   <section class="hero">
     <div class="hero-art" aria-hidden="true">
-      <img src="{{ site.hero_image }}" alt="">
+      <!-- Desktop: full landscape photo (intentional empty left side for
+           the copy overlay). Mobile (≤960px): tight crop of just the
+           subject — hands, wooden toys, fence, grass playscape. -->
+      <picture>
+        <source media="(max-width: 960px)" srcset="{{ site.hero_image_mobile }}">
+        <img src="{{ site.hero_image }}" alt="">
+      </picture>
     </div>
     <div class="hero-gradient" aria-hidden="true"></div>
 

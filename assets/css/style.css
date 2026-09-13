@@ -1373,6 +1373,16 @@ section { position: relative; }
     text-align: center;
     gap: var(--s-5);
   }
+  .cta-text h2 {
+    /* The desktop rule forces this heading onto a single line
+       (`white-space: nowrap`) so it lines up with the button on the
+       right. On a phone that single line is wider than the viewport and
+       the heading overflows past the cream band's right edge. Allow it
+       to wrap and drop the size a touch so the wrapped lines don't
+       feel oversized compared to the section h2s above it. */
+    white-space: normal;
+    font-size: clamp(1.5rem, 7vw, 1.85rem);
+  }
   .cta-divider {
     width: 64px;
     height: 1px;
@@ -1402,15 +1412,19 @@ section { position: relative; }
   margin-inline: auto;
 }
 .footer-ack {
-  font-size: var(--fs-sm);
+  /* Acknowledgement and copyright sit at ~12px desktop / ~11.2px
+     mobile — about 14–20% smaller than the previous 14px. The
+     --fs-sm the site uses for form footnotes reads as body copy
+     here, not as footer micro. */
+  font-size: clamp(0.7rem, 1.5vw, 0.78rem);
   color: var(--muted);
-  line-height: 1.65;
+  line-height: 1.5;
   margin-bottom: var(--s-6);
 }
 .footer-meta {
-  font-size: var(--fs-sm);
+  font-size: clamp(0.7rem, 1.5vw, 0.78rem);
   color: var(--muted);
-  line-height: 1.65;
+  line-height: 1.5;
 }
 .footer-meta a {
   color: var(--sage-deep);
@@ -1503,19 +1517,45 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
 @media (max-width: 960px) {
   .hero .wrap,
   .about-grid { grid-template-columns: 1fr; }
-  .hero .wrap { min-height: 0; }
-  /* On mobile, give the hero more height so the image + copy both fit. */
-  .hero { min-height: 70vh; }
-  .hero-gradient {
-    /* Stronger wash on mobile so the copy reads over a busy photo. */
-    background: linear-gradient(
-      to right,
-      var(--canvas) 0%,
-      rgba(245, 239, 227, 0.92) 50%,
-      rgba(245, 239, 227, 0.5) 75%,
-      rgba(245, 239, 227, 0) 90%
-    );
+  /* On mobile, restructure the hero. The desktop version relies on a
+     landscape photo being faded to canvas on the LEFT half so the copy
+     reads on a wash — clever, but it depends on the photo being wide.
+     On a portrait phone, that same landscape photo gets scaled to
+     cover the (much taller than wide) hero and cropped into a narrow
+     vertical slice; the subject (hands + toys, on the right of the
+     original frame) falls off the edge. Stack the hero instead: copy
+     on solid canvas in the top row, image in its own row below with
+     the subject properly framed. Desktop layout (image behind copy
+     with horizontal wash) above this breakpoint is untouched. */
+  .hero {
+    display: grid;
+    grid-template-rows: auto 32vh;
+    min-height: 0;
   }
+  .hero .wrap {
+    grid-row: 1;
+    min-height: 0;
+    background: var(--canvas);
+    align-items: flex-start;
+    /* Tighter bottom padding — the image sits in the row right below,
+       so this just provides the visual breathing room between copy
+       and photo. */
+    padding-bottom: clamp(1.5rem, 3vw, 2rem);
+  }
+  /* Image is now a grid row, not absolutely positioned behind the copy.
+     Same DOM, just a different layout context on mobile. */
+  .hero-art {
+    grid-row: 2;
+    position: relative;
+    inset: auto;
+    z-index: 0;
+  }
+  /* No object-position override here on purpose: the mobile <picture>
+     source (hero_image_mobile) is already cropped to the subject, so
+     default centering from the desktop rule is correct. */
+  /* Gradient overlay is no longer needed — the image is in its own row,
+     not behind the copy. */
+  .hero-gradient { display: none; }
   .about-art { max-width: 26rem; margin-inline: auto; width: 100%; }
   .about-copy p { max-width: 33rem; }
   .notices { grid-template-columns: 1fr; }
