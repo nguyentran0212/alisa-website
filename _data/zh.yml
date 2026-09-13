@@ -130,35 +130,44 @@ sections:
         a: '大多数时候，父母是不在游戏室的——当家里那种亲子关系的张力暂时不在场，孩子通常会把平时觉得难以显露的那一面展现出来。游戏室成了一个不同的空间，而这种“不同”，正是变化能发生的地方。每个孩子的节奏不一样。如果孩子还小、刚开始接触治疗、或者一离开你就容易焦虑，我们可以从你在游戏室里陪一段开始，慢慢退出。偶尔，孩子可能需要你陪几分钟作为过渡。'
       - q: "治疗什么时候可以预约？"
         a: "目前，游戏治疗在周三和周五开放，时间为上午8点30分至下午5点。"
-
-  fees:
-    eyebrow: "费用"
-    title: "费用"
-    lead: "以下费用均为澳元（AUD）"
-    private_title: "自费客户"
-    private:
-      - name: "初次咨询（一次性，90分钟）"
-        price: "$255"
-        unit: ""
-      - name: "游戏治疗"
-        price: "$170"
-        unit: "/小时"
-      - name: "家长回顾会议"
-        price: "$170"
-        unit: "/小时"
-    ndis_title: "NDIS 客户"
-    ndis:
-      - name: "初次咨询（一次性，90分钟）"
-        price: "$290.98"
-        unit: ""
-      - name: "游戏治疗"
-        price: "$193.99"
-        unit: "/小时"
-      - name: "家长回顾会议"
-        price: "$193.99"
-        unit: "/小时"
-    note: "上门服务（家中或学校）可能会收取出行费用。"
-    note_2: "费用会在 2027 年 7 月做一次调整。如果有变化，您会提前收到通知。"
+      - q: "费用"
+        # 双栏（自费 / NDIS），薄荷绿面板。
+        # 默认折叠，和其他 FAQ 条目一样点击展开。
+        a_html: >
+          <div class="fees-faq-grid">
+            <div class="fees-faq-panel">
+              <h4 class="fees-faq-panel-title">自费客户</h4>
+              <div class="fee-line">
+                <span class="fee-line-name">初次咨询（一次性，90分钟）</span>
+                <span class="fee-line-price">$255</span>
+              </div>
+              <div class="fee-line">
+                <span class="fee-line-name">游戏治疗</span>
+                <span class="fee-line-price">$170<span class="fee-line-unit">/小时</span></span>
+              </div>
+              <div class="fee-line">
+                <span class="fee-line-name">家长回顾会议</span>
+                <span class="fee-line-price">$170<span class="fee-line-unit">/小时</span></span>
+              </div>
+            </div>
+            <div class="fees-faq-panel">
+              <h4 class="fees-faq-panel-title">NDIS 客户</h4>
+              <div class="fee-line">
+                <span class="fee-line-name">初次咨询（一次性，90分钟）</span>
+                <span class="fee-line-price">$290.98</span>
+              </div>
+              <div class="fee-line">
+                <span class="fee-line-name">游戏治疗</span>
+                <span class="fee-line-price">$193.99<span class="fee-line-unit">/小时</span></span>
+              </div>
+              <div class="fee-line">
+                <span class="fee-line-name">家长回顾会议</span>
+                <span class="fee-line-price">$193.99<span class="fee-line-unit">/小时</span></span>
+              </div>
+            </div>
+          </div>
+          <p class="fees-faq-note">上门服务（家中或学校）可能会收取出行费用。</p>
+          <p class="fees-faq-disclaimer"><em>费用会在 2027 年 7 月做一次调整。如果有变化，您会提前收到通知。</em></p>
 
   contact:
     eyebrow: "联系我"

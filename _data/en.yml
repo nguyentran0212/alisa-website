@@ -135,34 +135,44 @@ sections:
         a: "Whether you stay in the playroom or not, and for how long, depends on your child's needs. Generally, parents are not in the play space during sessions. This matters more than it sounds. Children express themselves differently when the relational dynamics of home aren't in the room. The play space becomes a different kind of space, and that difference is part of what makes the work possible. Some children need a gentler start. If your child is very young, new to therapy, or finding it hard to settle, we can plan for you to be nearby at first and step out gradually. Occasionally, your child may need you to stay in the playroom for a few minutes as a transition. Whatever we decide, it's about attuning to what your child needs in that moment, and we work it out together."
       - q: "When are sessions available?"
         a: "Sessions are available on Wednesdays and Fridays, between 8:30am and 5pm."
-
-  fees:
-    eyebrow: "Fees"
-    title: "Fees"
-    lead: "Fees are subject to review on 1 July, 2027."
-    private_title: "Private Paying clients"
-    private:
-      - name: "Intake consultation (one-off, 90 minutes)"
-        price: "$255"
-        unit: ""
-      - name: "Therapy session"
-        price: "$170"
-        unit: "/h"
-      - name: "Parent Review Meetings"
-        price: "$170"
-        unit: "/h"
-    ndis_title: "NDIS clients"
-    ndis:
-      - name: "Intake consultation (one-off, 90 minutes)"
-        price: "$290.98"
-        unit: ""
-      - name: "Therapy session"
-        price: "$193.99"
-        unit: "/h"
-      - name: "Parent Review Meetings"
-        price: "$193.99"
-        unit: "/h"
-    note: "For children seen in their home or school environment, travel charges may apply. We will always confirm and agree on travel costs before commencing mobile sessions."
+      - q: "Fees"
+        # Two columns (Private Paying / NDIS) with sage-tinted panels.
+        # Closed by default — opens on click like every other FAQ item.
+        a_html: >
+          <div class="fees-faq-grid">
+            <div class="fees-faq-panel">
+              <h4 class="fees-faq-panel-title">Private Paying clients</h4>
+              <div class="fee-line">
+                <span class="fee-line-name">Intake consultation (one-off, 90 minutes)</span>
+                <span class="fee-line-price">$255</span>
+              </div>
+              <div class="fee-line">
+                <span class="fee-line-name">Therapy session</span>
+                <span class="fee-line-price">$170<span class="fee-line-unit">/h</span></span>
+              </div>
+              <div class="fee-line">
+                <span class="fee-line-name">Parent Review Meetings</span>
+                <span class="fee-line-price">$170<span class="fee-line-unit">/h</span></span>
+              </div>
+            </div>
+            <div class="fees-faq-panel">
+              <h4 class="fees-faq-panel-title">NDIS clients</h4>
+              <div class="fee-line">
+                <span class="fee-line-name">Intake consultation (one-off, 90 minutes)</span>
+                <span class="fee-line-price">$290.98</span>
+              </div>
+              <div class="fee-line">
+                <span class="fee-line-name">Therapy session</span>
+                <span class="fee-line-price">$193.99<span class="fee-line-unit">/h</span></span>
+              </div>
+              <div class="fee-line">
+                <span class="fee-line-name">Parent Review Meetings</span>
+                <span class="fee-line-price">$193.99<span class="fee-line-unit">/h</span></span>
+              </div>
+            </div>
+          </div>
+          <p class="fees-faq-note">For children seen in their home or school environment, travel charges may apply. We will always confirm and agree on travel costs before commencing mobile sessions.</p>
+          <p class="fees-faq-disclaimer"><em>Fees are subject to review on 1 July, 2027.</em></p>
 
   contact:
     eyebrow: "Get in Touch"

@@ -88,77 +88,32 @@ permalink: /zh/
   </section>
 
   <!-- ============ 服务项目 (bright) ============ -->
+  <!-- ============ 服务项目 (bright) ============ -->
+  <!-- Static info cards — no click-to-open. Each card shows title, italic
+       tagline, divider, and description + Read More link. -->
   <section id="services">
     <div class="wrap">
       <div class="section-head center">
-        <p class="eyebrow">{{ site.data.zh.sections.services.eyebrow }}</p>
         <h2>{{ site.data.zh.sections.services.title }}</h2>
         <p>{{ site.data.zh.sections.services.lead }}</p>
       </div>
       <div class="service-grid">
         {%- for s in site.data.zh.sections.services.items -%}
-        <details class="service reveal" style="--d: {{ forloop.index0 | times: 0.08 }}s">
-          <summary>
-            <span class="service-ico" aria-hidden="true">
-              {%- case forloop.index -%}
-                {%- when 1 -%}
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="10" cy="11" r="1"/><circle cx="14" cy="11" r="1"/><path d="M8.5 15.5c1 1 2 1.5 3.5 1.5s2.5-.5 3.5-1.5"/></svg>
-                {%- when 2 -%}
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h6V4l8 8-8 8v-5H4z"/></svg>
-                {%- else -%}
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11V8a5 5 0 0 1 10 0v3"/><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M12 15v2"/></svg>
-              {%- endcase -%}
-            </span>
-            <span class="service-head">
-              <span class="service-title">{{ s.title }}</span>
-              <span class="service-sub">{{ s.sub }}</span>
-            </span>
-          </summary>
-          <div class="service-body">
-            <p class="service-lead">{{ s.lead }}</p>
-            <p>{{ s.body }}</p>
-            <a class="service-cta" href="{{ site.baseurl }}{{ s.cta_url }}">{{ s.cta }} →</a>
-          </div>
-        </details>
+        <article class="service-card reveal" style="--d: {{ forloop.index0 | times: 0.08 }}s">
+          <h3 class="service-card-title">{{ s.title }}</h3>
+          <div class="service-card-divider" aria-hidden="true"></div>
+          <p class="service-card-lead">{{ s.lead }}</p>
+          <p class="service-card-body">{{ s.body }}</p>
+          <a class="service-card-cta" href="{{ site.baseurl }}{{ s.cta_url }}">{{ s.cta }} →</a>
+        </article>
         {%- endfor -%}
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ 费用 (bright) ============ -->
-  <section id="fees">
-    <div class="wrap">
-      <div class="fees-intro">
-        <p class="eyebrow">{{ site.data.zh.sections.fees.eyebrow }}</p>
-        <h2>{{ site.data.zh.sections.fees.title }}</h2>
-        <p>{{ site.data.zh.sections.fees.lead }}</p>
-      </div>
-      <div class="fees-card reveal">
-        <h3 class="fees-group-title">{{ site.data.zh.sections.fees.private_title }}</h3>
-        {%- for fee in site.data.zh.sections.fees.private -%}
-        <div class="fee-item">
-          <div class="fee-name">{{ fee.name }}</div>
-          <div class="fee-price {% if fee.unit == '' %}is-words{% endif %}">
-            {{ fee.price }}{% if fee.unit != '' %}<span class="fee-unit">{{ fee.unit }}</span>{% endif %}
-          </div>
-        </div>
-        {%- endfor -%}
-        <h3 class="fees-group-title fees-group-title-second">{{ site.data.zh.sections.fees.ndis_title }}</h3>
-        {%- for fee in site.data.zh.sections.fees.ndis -%}
-        <div class="fee-item">
-          <div class="fee-name">{{ fee.name }}</div>
-          <div class="fee-price {% if fee.unit == '' %}is-words{% endif %}">
-            {{ fee.price }}{% if fee.unit != '' %}<span class="fee-unit">{{ fee.unit }}</span>{% endif %}
-          </div>
-        </div>
-        {%- endfor -%}
-        <p class="fees-note">{{ site.data.zh.sections.fees.note }}</p>
-        <p class="fees-note">{{ site.data.zh.sections.fees.note_2 }}</p>
       </div>
     </div>
   </section>
 
   <!-- ============ 常见问题 (dark) ============ -->
+  <!-- 费用信息原本在一个独立的版块里，Alisa 担心会让人感觉她只关心钱。
+       现在合并到 FAQ 里作为一个默认展开的条目。 -->
   <section id="faq" class="bg-band">
     <div class="wrap">
       <div class="section-head center">
@@ -169,7 +124,7 @@ permalink: /zh/
         <ul class="faq-list">
           {%- for item in site.data.zh.sections.faq.items -%}
           <li class="reveal" style="--d: {{ forloop.index0 | times: 0.05 }}s">
-            <details>
+            <details {% if item.open %}open{% endif %}>
               <summary>{{ item.q }}</summary>
               <div class="answer">
                 {%- if item.a_html -%}

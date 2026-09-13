@@ -70,8 +70,21 @@
   --shadow-ring: 0 0 0 6px var(--canvas);   /* the milestone's own device */
   --glow-cta:    0 6px 18px rgba(201, 123, 92, 0.22);
 
-  /* ===== widths ===== */
-  --maxw:        80rem;
+  /* ===== widths =====
+     Single source of truth for content widths. Every single-column block
+     (FAQ, article cards, contact card, form card) MUST use one of these.
+     Never hardcode a max-width anywhere else — add or adjust a token here
+     instead.
+
+     --maxw       section wrap, full-width grids (services, etc.)
+     --w-narrow   single-column content blocks (FAQ, blog cards, contact,
+                  form card). All four share this so they all line up.
+     --w-column   centered section heads (eyebrow + title + lead)
+     --w-text     narrow body text (single-column prose, hero copy) */
+  --maxw:        80rem;            /* 1280px */
+  --w-narrow:    60rem;            /*  960px */
+  --w-column:    48rem;            /*  768px */
+  --w-text:      36rem;            /*  576px */
 
   /* ===== header height ===== */
   /* Sticky <header class="site-header"> sits above the hero. Subtracting
@@ -80,8 +93,6 @@
      value matches the rendered header (0.95rem padding-top + logo height
      + 0.95rem padding-bottom) — update if the nav padding changes. */
   --header-h:    4.875rem;          /* 78px */
-  --w-column:    48rem;            /* section heads, FAQ column */
-  --w-panel:     52rem;            /* fees card, form card */
 
   /* ===== section pacing ===== */
   --section-pad:        clamp(4.5rem, 9vw, 7.5rem);
@@ -579,184 +590,102 @@ section { position: relative; }
   margin-inline: auto;
 }
 
-/* ============ services — expanding <details> cards ============
+/* ============ services — static info cards ============
  *
- * Three collapsed cards by default; tapping the summary expands one to full
- * width, overlaying the other two. The +/− toggle rotates to become an X.
- * The animation uses ::details-content with block-size (gated by
- * interpolate-size: allow-keywords, with a snap-open fallback).
+ * Three side-by-side cards. Each shows a sage accent bar at the top, the
+ * service title (multi-line allowed), an italic tagline, a hairline
+ * divider, a lead paragraph, the body paragraph, and a "Read More →" link.
  *
- * Alisa's wording is short, so the expanded body has space to breathe —
- * each card holds title, subtitle, a one-line lead, the body paragraph,
- * a bullet list, and a "Read more →" link to the blog post. */
+ * Replaced the previous click-to-expand <details> design — Alisa found
+ * the click-to-reveal pattern off-putting ("feels like a pill I have to
+ * unlock"). Static info is what her old prod site had and what she wants
+ * back, just laid out with our new sage + clay palette. */
 
 .service-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   --grid-gap: clamp(1.25rem, 2.5vw, 2rem);
   gap: var(--grid-gap);
-  /* align-items: stretch (default) — all 3 cards in the row match the
-     tallest sibling so the closed-state heights stay balanced even when
-     one title wraps to 2 lines. */
+  align-items: stretch;          /* rows match tallest card */
 }
 
-.service {
+.service-card {
+  position: relative;
   background: var(--paper);
   border: 1px solid var(--hairline);
   border-radius: var(--radius);
   box-shadow: var(--shadow-soft);
-  overflow: hidden;
+  padding: var(--s-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
   transition: box-shadow var(--t-base) var(--ease), transform var(--t-base) var(--ease);
 }
-.service[open] { box-shadow: var(--shadow-lift); }
 
-/* An open card covers its siblings: pinned to row 1, allowed to span. */
-@media (min-width: 881px) {
-  .service { grid-row: 1; }
-  .service:nth-child(1) { grid-column: 1; }
-  .service:nth-child(2) { grid-column: 2; }
-  .service:nth-child(3) { grid-column: 3; }
-  .service[open] { grid-column: 1 / -1; z-index: 5; }
-  .service[open] .service-body {
-    max-width: none;
-    columns: 2;
-    column-gap: 3rem;
-  }
-  .service[open] .service-lead { column-span: all; max-width: none; }
-  .service[open] .service-body p,
-  .service[open] .service-body li { break-inside: avoid; }
-}
+/* (Sage accent strip at the top of each card was removed — Alisa didn't
+   like the green line; just a plain rounded card now.) */
 
-.service summary {
-  list-style: none;
-  cursor: pointer;
-  position: relative;
-  display: flex;
-  /* Align icons to the top, not center. With center the icon shifts down
-     when a title wraps to 2 lines, making the 3 cards visibly uneven. */
-  align-items: center;
-  gap: var(--s-4);
-  padding: var(--s-5) 3.5rem var(--s-5) var(--s-6);
-  /* Lock the summary height so the 3 service cards line up regardless of
-     how each title wraps. ~2 lines of Lora at fs-md + 2 lines of Open Sans
-     at fs-sm + padding. 9rem fits the tallest case (Child-Centered Play
-     Therapy wraps to 2 lines). */
-  min-height: 9rem;
-}
-.service summary::-webkit-details-marker { display: none; }
-
-.service-ico {
-  flex: 0 0 auto;
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  background: var(--clay-tint);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--clay-dark);
-  transition: transform var(--t-base) var(--ease-spring),
-              width var(--t-base) var(--ease), height var(--t-base) var(--ease);
-}
-.service-ico svg { width: 60%; height: 60%; }
-@media (hover: hover) {
-.service:hover .service-ico { transform: rotate(-5deg) scale(1.06); }
-}
-.service[open] .service-ico { transform: rotate(4deg) scale(1.04); width: 60px; height: 60px; }
-
-.service-head { display: block; flex: 1; min-width: 0; }
-.service-title {
-  display: block;
+.service-card-title {
   font-family: 'Lora', Georgia, serif;
-  font-size: var(--fs-md);
-  font-weight: 600;
-  line-height: 1.3;
-  color: var(--sage-darker);
-  transition: font-size var(--t-base) var(--ease);
-}
-.service-sub {
-  display: block;
-  font-size: var(--fs-sm);
-  line-height: 1.5;
-  color: var(--muted);
-  margin-top: var(--s-1);
-}
-.service[open] .service-title { font-size: var(--fs-xl); }
-
-/* + / − toggle — second bar rotates to become an X when open. */
-.service summary::before,
-.service summary::after {
-  content: '';
-  position: absolute;
-  right: var(--s-6);
-  top: 50%;
-  width: 15px;
-  height: 2.5px;
-  border-radius: 2px;
-  background: var(--clay);
-  transform: translateY(-50%);
-  transition: transform var(--t-base) var(--ease);
-}
-.service summary::after { transform: translateY(-50%) rotate(90deg); }
-.service[open] summary::after { transform: translateY(-50%) rotate(0deg); }
-
-/* <details> hides content when closed; ::details-content is the level that
-   lets block-size animate. interpolate-size: allow-keywords (above) is
-   what makes auto animatable; unsupported browsers snap open. */
-.service::details-content {
-  block-size: 0;
-  overflow: hidden;
-  transition: block-size var(--t-slow) var(--ease-spring),
-              content-visibility var(--t-slow) var(--ease-spring);
-  transition-behavior: allow-discrete;
-}
-.service[open]::details-content { block-size: auto; }
-
-@keyframes panel-body-in {
-  from { opacity: 0; transform: translateY(-8px); }
-  to   { opacity: 1; transform: none; }
-}
-@supports (interpolate-size: allow-keywords) {
-  .service[open] .service-body { animation: panel-body-in var(--t-slow) var(--ease) both; }
-}
-
-.service-body {
-  padding: 0 var(--s-6) var(--s-6);
-  transform-origin: top left;
-  max-width: 58ch;
-}
-.service-body p + p { margin-top: var(--s-4); }
-
-.service-body .service-lead {
   font-size: var(--fs-lg);
   font-weight: 600;
-  line-height: 1.4;
-  letter-spacing: -0.01em;
+  line-height: 1.25;
   color: var(--sage-darker);
-  padding-top: var(--s-1);
-  padding-bottom: var(--s-4);
-  margin-bottom: var(--s-5);
-  border-bottom: 1px solid var(--hairline);
+  margin: 0;            /* h3 default margin pulls down */
+  letter-spacing: -0.01em;
 }
 
-.service-cta {
+.service-card-divider {
+  height: 1px;
+  background: var(--hairline);
+  margin-top: var(--s-1);
+  margin-bottom: var(--s-1);
+}
+
+.service-card-lead {
+  font-size: var(--fs-base);
+  line-height: 1.55;
+  color: var(--text);
+  margin: 0;
+}
+
+.service-card-body {
+  font-size: var(--fs-sm);
+  line-height: 1.55;
+  color: var(--muted);
+  margin: 0;
+}
+
+.service-card-cta {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  margin-top: var(--s-4);
+  margin-top: auto;             /* pin to bottom so 3 cards' CTAs line up */
+  padding-top: var(--s-3);
   font-weight: 700;
   font-size: var(--fs-sm);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
   color: var(--clay-dark);
   text-decoration: none;
   transition: color var(--t-fast) var(--ease);
 }
 @media (hover: hover) {
-.service-cta:hover { color: var(--sage-darker); }
+.service-card-cta:hover { color: var(--sage-darker); }
 }
 
-/* One lift for the two expanders, only on devices that hover. */
+/* Lift on hover only on devices that hover. */
 @media (hover: hover) {
-  .service:not([open]):hover,
+  .service-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-lift); }
+}
+
+/* Stack the 3 cards vertically on narrow viewports. */
+@media (max-width: 880px) {
+  .service-grid { grid-template-columns: 1fr; }
+}
+
+/* One lift for the FAQ expander cards on hover. */
+@media (hover: hover) {
   .faq details:not([open]):hover { transform: translateY(-2px); box-shadow: var(--shadow-lift); }
   .nav-links .btn:hover { transform: none; }
 }
@@ -899,7 +828,7 @@ section { position: relative; }
   display: grid;
   grid-template-columns: minmax(0, 1.25fr) 0.85fr;
   gap: clamp(1.25rem, 2vw, 2rem);
-  align-items: center;
+  align-items: flex-start;
   max-width: var(--maxw);
   margin-inline: auto;
 }
@@ -971,7 +900,9 @@ section { position: relative; }
 /* ============ FAQ ============ */
 
 .faq {
-  max-width: var(--w-column);
+  /* Same width as .post-list / .form-card / contact card so the
+     accordion items line up with everything else. */
+  max-width: var(--w-narrow);
   margin-inline: auto;
 }
 .faq-list {
@@ -1024,10 +955,34 @@ section { position: relative; }
 
 .faq .answer {
   padding: 0 var(--s-6) var(--s-6);
-  max-width: 58ch;
+  /* Widened from 58ch to 72ch so prose fills the now-wider FAQ card
+     instead of sitting in a narrow column inside it. 72ch is still
+     within the readable-comfort range (~50–75 chars per line). */
+  max-width: 72ch;
   color: var(--text);
 }
 .faq .answer p + p { margin-top: var(--s-3); }
+
+/* Lists inside FAQ answers. The global reset wipes out the default
+   <ol>/<ul> padding-left, so without these rules the markers ("1.",
+   bullets) sit flush against the card edge. Also style the markers in
+   clay so they pop, mirroring .prose. */
+.faq .answer ol,
+.faq .answer ul {
+  margin-top: var(--s-3);
+  margin-bottom: var(--s-4);
+  padding-left: 1.5rem;        /* restore indentation the reset wiped */
+}
+.faq .answer ol { list-style: decimal; }
+.faq .answer ul { list-style: disc; }
+.faq .answer li {
+  margin-bottom: var(--s-3);
+  padding-left: 0.4rem;        /* gap between marker and text */
+}
+.faq .answer li:last-child { margin-bottom: 0; }
+.faq .answer li::marker { color: var(--clay); font-weight: 700; }
+.faq .answer ul li::marker { color: var(--clay); }   /* no bold on bullets */
+
 .faq .answer-links {
   margin-top: var(--s-3);
   display: grid;
@@ -1080,87 +1035,89 @@ section { position: relative; }
   .faq details[open] .answer { animation: panel-body-in var(--t-slow) var(--ease) both; }
 }
 
-/* ============ fees ============
+/* ============ fees (inside the FAQ item) ============
  *
- * The card sits below a centered section-head. Centered with margin-inline:
- * auto so it lines up visually with the heading above. */
+ * Fees used to be a stand-alone section. Alisa was worried the dedicated
+ * block read as "all about money", so the content now lives inside a
+ * default-open FAQ accordion item. Two columns on desktop (Private / NDIS),
+ * each panel tinted sage-light, with the line items below. */
 
-.fees-intro {
-  text-align: center;
-  max-width: var(--w-column);
-  margin: 0 auto var(--s-12);
-}
-.fees-intro .eyebrow { color: var(--sage-deep); }
-
-.fees-card {
-  background: var(--paper);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-soft);
-  padding: clamp(1.5rem, 4vw, 2.5rem);
-  max-width: var(--w-panel);
-  width: 100%;
-  margin-inline: auto;
-}
-.fees-intro {
-  text-align: center;
-  margin-bottom: var(--s-8);
-}
-.fees-note {
-  font-size: var(--fs-sm);
-  color: var(--muted);
-  margin-top: var(--s-3);
-  text-wrap: pretty;
-}
-.fee-item {
+.fees-faq-grid {
   display: grid;
-  grid-template-columns: 1fr auto;
-  gap: var(--s-4);
-  padding: var(--s-5) 0;
-  border-top: 1px solid var(--hairline);
-  align-items: center;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(0.75rem, 1.5vw, 1.25rem);
+  margin-top: var(--s-2);
+  margin-bottom: var(--s-4);
 }
-.fee-item:last-child { border-bottom: 1px solid var(--hairline); }
-.fee-name {
+@media (max-width: 640px) {
+  .fees-faq-grid { grid-template-columns: 1fr; }
+}
+
+.fees-faq-panel {
+  background: var(--sage-light);
+  border-radius: var(--radius);
+  padding: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+.fees-faq-panel-title {
   font-family: 'Lora', Georgia, serif;
   font-size: var(--fs-md);
   font-weight: 600;
   color: var(--sage-darker);
-  /* Without min-width:0 the grid column won't shrink and the longest
-     fee-name stretches the whole card past its max-width. */
-  min-width: 0;
+  margin: 0 0 var(--s-3);
+  letter-spacing: -0.005em;
 }
-.fee-detail {
-  margin-top: var(--s-1);
-  font-size: var(--fs-sm);
-  color: var(--muted);
-  line-height: 1.5;
+
+/* One row = one fee line: name on the left, price pinned to the right. */
+.fee-line {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: var(--s-3);
+  padding: var(--s-3) 0;
+  border-top: 1px solid rgba(110, 154, 122, 0.25);  /* sage at 25% */
+  align-items: baseline;
 }
-.fee-price {
+.fee-line:first-of-type { border-top: none; padding-top: 0; }
+
+.fee-line-name {
   font-family: 'Lora', Georgia, serif;
-  font-size: var(--fs-lg);
+  font-size: var(--fs-base);
+  font-weight: 600;
+  color: var(--sage-darker);
+  line-height: 1.35;
+  min-width: 0;     /* let long names wrap instead of pushing the price off */
+}
+.fee-line-price {
+  font-family: 'Lora', Georgia, serif;
+  font-size: var(--fs-base);
   font-weight: 700;
   color: var(--clay-dark);
   text-align: right;
   white-space: nowrap;
   display: inline-flex;
   align-items: baseline;
-  gap: 0.3rem;
+  gap: 0.15rem;
 }
-.fee-price .fee-unit {
+.fee-line-unit {
   font-family: 'Open Sans', sans-serif;
   font-size: var(--fs-sm);
   font-weight: 600;
   color: var(--muted);
-  letter-spacing: 0;
 }
-.fee-price.is-words { font-size: var(--fs-md); font-style: italic; }
 
-/* The second fees group heading (NDIS clients) needs visual separation
-   from the first group's last row. Larger top margin + thicker rule. */
-.fees-group-title.fees-group-title-second {
-  margin-top: var(--s-12);
-  padding-top: var(--s-4);
+.fees-faq-note {
+  font-size: var(--fs-sm);
+  color: var(--muted);
+  margin-top: var(--s-3);
+  margin-bottom: var(--s-2);
+  text-wrap: pretty;
 }
+.fees-faq-disclaimer {
+  font-size: var(--fs-sm);
+  color: var(--muted);
+  margin: 0;
+}
+.fees-faq-disclaimer em { font-style: italic; }
 
 /* ============ contact ============
  *
@@ -1227,7 +1184,7 @@ section { position: relative; }
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-soft);
   padding: clamp(1.5rem, 4vw, 2.5rem);
-  max-width: var(--w-panel);
+  max-width: var(--w-narrow);
 }
 .form-row {
   display: grid;
@@ -1618,7 +1575,7 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
 
 /* Blog listing */
 .post-list {
-  max-width: 60rem;
+  max-width: var(--w-narrow);
   margin-inline: auto;
   display: grid;
   gap: var(--s-6);
