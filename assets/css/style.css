@@ -71,7 +71,7 @@
   --glow-cta:    0 6px 18px rgba(201, 123, 92, 0.22);
 
   /* ===== widths ===== */
-  --maxw:        88rem;
+  --maxw:        80rem;
   --w-column:    48rem;            /* section heads, FAQ column */
   --w-panel:     52rem;            /* fees card, form card */
 
@@ -889,7 +889,7 @@ section { position: relative; }
 .what-is-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.25fr) 0.85fr;
-  gap: clamp(2rem, 4vw, 3.5rem);
+  gap: clamp(1.25rem, 2vw, 2rem);
   align-items: center;
   max-width: var(--maxw);
   margin-inline: auto;
