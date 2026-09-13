@@ -901,6 +901,7 @@ section { position: relative; }
   margin-bottom: var(--s-6);
   text-wrap: balance;
 }
+.what-is-text .prose { margin-inline: 0; max-width: 38rem; }
 .what-is-text .prose p + p { margin-top: var(--s-4); }
 .what-is-text .prose blockquote {
   margin: var(--s-6) 0;
