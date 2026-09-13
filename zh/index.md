@@ -22,8 +22,8 @@ permalink: /zh/
         <p class="lede">{{ site.data.zh.hero.subtitle }}</p>
         <p class="hero-meta-text">{{ site.data.zh.hero.meta }}</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="{{ site.data.zh.splose_form_url }}" target="_blank" rel="noopener">{{ site.data.zh.hero.cta_primary }}</a>
-          <a class="btn btn-ghost" href="{{ site.data.zh.discovery_call_url }}">{{ site.data.zh.hero.cta_secondary }}</a>
+          <a class="btn btn-primary" href="{{ site.baseurl }}/zh/#contact">{{ site.data.zh.hero.cta_primary }}</a>
+          <a class="btn btn-ghost" href="{{ site.baseurl }}/zh/{{ site.data.zh.hero.cta_secondary_url }}">{{ site.data.zh.hero.cta_secondary }}</a>
         </div>
       </div>
     </div>
@@ -177,37 +177,108 @@ permalink: /zh/
             <p class="eyebrow">{{ site.data.zh.sections.contact.eyebrow }}</p>
             <h2>{{ site.data.zh.sections.contact.title }}</h2>
           </div>
-          <div class="contact-lead-html">{{ site.data.zh.sections.contact.lead_html }}</div>
-          <div class="contact-cta-row">
-            <a class="btn btn-primary" href="{{ site.data.zh.splose_form_url }}" target="_blank" rel="noopener">{{ site.data.zh.sections.contact.primary_cta }}</a>
-            <a class="btn btn-ghost" href="{{ site.data.zh.discovery_call_url }}">{{ site.data.zh.sections.contact.secondary_cta }}</a>
-          </div>
+
+          <ul class="contact-list reveal" style="--d: 0.08s">
+            {%- for c in site.data.zh.sections.contact.items -%}
+            <li>
+              <span class="contact-ico" aria-hidden="true">
+                {%- case forloop.index -%}
+                  {%- when 1 -%}
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+                  {%- when 2 -%}
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+                  {%- else -%}
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-7-9-12a9 9 0 0 1 18 0c-2 5-9 12-9 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                {%- endcase -%}
+              </span>
+              <div>
+                <span class="label">{{ c.label }}</span>
+                {%- if c.href -%}
+                  <a href="{{ c.href }}">{{ c.value }}</a>
+                {%- else -%}
+                  <span>{{ c.value }}</span>
+                {%- endif -%}
+              </div>
+            </li>
+            {%- endfor -%}
+          </ul>
         </div>
 
-        <ul class="contact-list reveal" style="--d: 0.08s">
-          {%- for c in site.data.zh.sections.contact.items -%}
-          <li>
-            <span class="contact-ico" aria-hidden="true">
-              {%- case forloop.index -%}
-                {%- when 1 -%}
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
-                {%- when 2 -%}
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
-                {%- else -%}
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-7-9-12a9 9 0 0 1 18 0c-2 5-9 12-9 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
-              {%- endcase -%}
-            </span>
-            <div>
-              <span class="label">{{ c.label }}</span>
-              {%- if c.href -%}
-                <a href="{{ c.href }}">{{ c.value }}</a>
-              {%- else -%}
-                <span>{{ c.value }}</span>
-              {%- endif -%}
+        <!-- Enquiry form (Formspree). Right column. -->
+        <form class="form-card reveal" id="enquiryForm" method="POST" action="{{ site.formspree_url }}" data-fallback-email="{{ site.contact_email }}" style="--d: 0.08s">
+          <!-- Honeypot — bots fill it, humans never see it. -->
+          <div class="form-field" style="display:none;" aria-hidden="true">
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="f-name">{{ site.data.zh.form.name_label }}</label>
+              <input type="text" id="f-name" name="name" autocomplete="name"
+                     placeholder="{{ site.data.zh.form.name_placeholder }}" required aria-describedby="err-name">
+              <p class="field-error" id="err-name" hidden></p>
             </div>
-          </li>
-          {%- endfor -%}
-        </ul>
+            <div class="field">
+              <label for="f-phone">{{ site.data.zh.form.phone_label }} <span class="opt">{{ site.data.zh.form.phone_optional }}</span></label>
+              <input type="tel" id="f-phone" name="phone" autocomplete="tel"
+                     placeholder="{{ site.data.zh.form.phone_placeholder }}" aria-describedby="err-phone">
+              <p class="field-error" id="err-phone" hidden></p>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="f-email">{{ site.data.zh.form.email_label }}</label>
+            <input type="email" id="f-email" name="email" autocomplete="email"
+                   placeholder="{{ site.data.zh.form.email_placeholder }}" required aria-describedby="err-email">
+            <p class="field-error" id="err-email" hidden></p>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="f-age">{{ site.data.zh.form.child_age_label }}</label>
+              <input type="text" id="f-age" name="childAge" inputmode="numeric"
+                     placeholder="{{ site.data.zh.form.child_age_placeholder }}" required aria-describedby="err-age">
+              <p class="field-error" id="err-age" hidden></p>
+            </div>
+            <div class="field">
+              <label for="f-pref">{{ site.data.zh.form.preferred_contact_label }}</label>
+              <select id="f-pref" name="preferredContact" aria-describedby="err-pref">
+                {%- for opt in site.data.zh.form.preferred_contact_options -%}
+                  {%- if forloop.first -%}
+                    <option selected>{{ opt }}</option>
+                  {%- else -%}
+                    <option>{{ opt }}</option>
+                  {%- endif -%}
+                {%- endfor -%}
+              </select>
+              <p class="field-error" id="err-pref" hidden></p>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="f-msg">{{ site.data.zh.form.message_label }}</label>
+            <textarea id="f-msg" name="message" rows="5"
+                      placeholder="{{ site.data.zh.form.message_placeholder }}" required aria-describedby="err-msg"></textarea>
+            <p class="field-error" id="err-msg" hidden></p>
+          </div>
+
+          <div class="form-foot">
+            <button type="submit" class="btn btn-primary btn-block" id="submitBtn">{{ site.data.zh.form.submit }}</button>
+            <p class="form-foot-note">{{ site.data.zh.form.confidential }}</p>
+          </div>
+
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="form-success" id="formSuccess" hidden tabindex="-1">
+          <div class="success-tick" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12l5 5L20 7"/>
+            </svg>
+          </div>
+          <h3>{{ site.data.zh.form.success_heading }}</h3>
+          <p>{{ site.data.zh.form.success_body }}</p>
+        </div>
       </div>
     </div>
   </section>

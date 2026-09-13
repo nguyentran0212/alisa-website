@@ -1,10 +1,8 @@
 nav:
   what_is_play_therapy: "游戏治疗"
-  is_this_for_my_child: "游戏治疗适合我的孩子吗？"
   services: "服务项目"
   about: "关于"
   faq: "常见问题"
-  fees: "费用"
   blog: "博客"
   contact: "联系方式"
 
@@ -19,9 +17,32 @@ buttons:
   read_more: "阅读更多"
   find_out_more: "了解更多"
 
+form:
+  name_label: "您的姓名"
+  name_placeholder: "李妈妈"
+  phone_label: "电话"
+  phone_optional: "（选填）"
+  phone_placeholder: "0400 000 000"
+  email_label: "电子邮件"
+  email_placeholder: "jane@example.com"
+  child_age_label: "孩子的年龄"
+  child_age_placeholder: "例如 6 岁"
+  preferred_contact_label: "首选联系方式"
+  preferred_contact_options:
+    - "任何方式都可以"
+    - "邮件"
+    - "电话"
+  message_label: "留言"
+  message_placeholder: "请分享您想说的，多少都可以。"
+  submit: "发送咨询"
+  confidential: "您的咨询将被保密。"
+  status_error: "抱歉，消息发送失败。请重试或直接发邮件给我。"
+  success_heading: "感谢您的留言"
+  success_body: "您的消息已发送，我会尽快与您联系。"
+
 footer:
   privacy_policy: "隐私政策"
-  copyright_line: "© 2026 Alisa 游戏治疗。保留所有权利。本网站所有内容受法律保护，未经书面许可不得复制或转载。"
+  copyright_line: "保留所有权利。本网站所有内容受法律保护，未经书面许可不得复制或转载。"
   # Alisa's exact wording from prod.
   acknowledgement: "Play Therapy With Alisa acknowledges the Traditional Custodians of the lands on which we live, work and play, and pays respect to Elders past and present."
   inclusion: "Alisa 游戏治疗致力于为所有儿童和家庭提供包容且可及的服务，不分族裔、性别、性别认同与表达、残障情况、神经多样性、宗教或性取向。"
@@ -35,10 +56,9 @@ hero:
   title: "在游戏中，遇见孩子"
   title_accent: ""
   subtitle: "为3-8岁的孩子与家庭提供游戏治疗支持。在游戏中，帮助孩子学会调节情绪、建立自信、掌握社交技巧，并与父母一起建立更安全、更温暖的亲子联结。"
-  cta_primary: "注册您的兴趣"
-  cta_primary_url: "splose"
-  cta_secondary: "预约15分钟免费咨询"
-  cta_secondary_url: "discovery_call"
+  cta_primary: "在线咨询"
+  cta_secondary: "查看服务"
+  cta_secondary_url: "#services"
 
 sections:
 
@@ -171,14 +191,7 @@ sections:
 
   contact:
     eyebrow: "联系我"
-    title: "聊聊吧"
-    lead_html: >
-      <p><strong>对游戏治疗感兴趣？</strong> 如果您正在考虑让孩子接受游戏治疗，第一步就是注册您的兴趣。请告诉我您孩子的情况和您的需求，我会与您联系讨论时间和后续安排。</p>
-      <p><strong>想先聊聊？</strong> 预约一次免费的15分钟咨询。</p>
-    primary_cta: "注册您的兴趣"
-    primary_cta_url: "splose"
-    secondary_cta: "预约15分钟免费咨询"
-    secondary_cta_url: "discovery_call"
+    title: "在线咨询"
     items:
       - label: "邮箱"
         value: "hello@alisaplaytherapy.com"

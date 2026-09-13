@@ -7,30 +7,24 @@
 
     <ul class="nav-links" id="navLinks">
       {%- if current_lang == 'zh' -%}
-        <li><a href="{{ site.baseurl }}/zh/#approach">{{ site.data.zh.nav.approach }}</a></li>
+        <li><a href="{{ site.baseurl }}/zh/#what-is-play-therapy">{{ site.data.zh.nav.what_is_play_therapy }}</a></li>
         <li><a href="{{ site.baseurl }}/zh/#services">{{ site.data.zh.nav.services }}</a></li>
-        <li><a href="{{ site.baseurl }}/zh/#process">{{ site.data.zh.nav.process }}</a></li>
-        <li><a href="{{ site.baseurl }}/zh/#about">{{ site.data.zh.nav.about }}</a></li>
+        <li><a href="{{ site.baseurl }}/zh/about">{{ site.data.zh.nav.about }}</a></li>
         <li><a href="{{ site.baseurl }}/zh/#faq">{{ site.data.zh.nav.faq }}</a></li>
-        <!-- Fees used to be its own section; now lives inside the FAQ item. -->
-        <li><a href="{{ site.baseurl }}/zh/#faq">{{ site.data.zh.nav.fees }}</a></li>
         <li><a href="{{ site.baseurl }}/zh/blog">{{ site.data.zh.nav.blog }}</a></li>
-        <li><a class="btn btn-primary btn-sm" href="{{ site.baseurl }}/zh/#contact">{{ site.data.zh.buttons.get_in_touch }}</a></li>
+        <li><a href="{{ site.baseurl }}/zh/#contact">{{ site.data.zh.nav.contact }}</a></li>
         <li class="lang-toggle-mobile">
           <a href="{{ site.baseurl }}/" class="lang-link">EN</a>
           <span class="lang-sep">|</span>
           <a href="{{ site.baseurl }}/zh/" class="lang-link active">中文</a>
         </li>
       {%- else -%}
-        <li><a href="{{ site.baseurl }}/#approach">{{ site.data.en.nav.approach }}</a></li>
+        <li><a href="{{ site.baseurl }}/#what-is-play-therapy">{{ site.data.en.nav.what_is_play_therapy }}</a></li>
         <li><a href="{{ site.baseurl }}/#services">{{ site.data.en.nav.services }}</a></li>
-        <li><a href="{{ site.baseurl }}/#process">{{ site.data.en.nav.process }}</a></li>
         <li><a href="{{ site.baseurl }}/about">{{ site.data.en.nav.about }}</a></li>
         <li><a href="{{ site.baseurl }}/#faq">{{ site.data.en.nav.faq }}</a></li>
-        <!-- Fees used to be its own section; now lives inside the FAQ item. -->
-        <li><a href="{{ site.baseurl }}/#faq">{{ site.data.en.nav.fees }}</a></li>
         <li><a href="{{ site.baseurl }}/blog">{{ site.data.en.nav.blog }}</a></li>
-        <li><a class="btn btn-primary btn-sm" href="{{ site.baseurl }}/#contact">{{ site.data.en.buttons.get_in_touch }}</a></li>
+        <li><a href="{{ site.baseurl }}/#contact">{{ site.data.en.nav.contact }}</a></li>
         <li class="lang-toggle-mobile">
           <a href="{{ site.baseurl }}/" class="lang-link active">EN</a>
           <span class="lang-sep">|</span>
@@ -39,13 +33,11 @@
       {%- endif -%}
     </ul>
 
-    {%- unless current_lang == 'zh' -%}
     <div class="lang-toggle">
-      <a href="{{ site.baseurl }}/" class="lang-link active">EN</a>
+      <a href="{{ site.baseurl }}/" class="lang-link {% if current_lang == 'en' %}active{% endif %}">EN</a>
       <span class="lang-sep">|</span>
-      <a href="{{ site.baseurl }}/zh/" class="lang-link">中文</a>
+      <a href="{{ site.baseurl }}/zh/" class="lang-link {% if current_lang == 'zh' %}active{% endif %}">中文</a>
     </div>
-    {%- endunless -%}
 
     <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true">

@@ -43,15 +43,11 @@
   // --------------------------------------------------------------------
   // 2. Header hairline on scroll
   // --------------------------------------------------------------------
-  function initHeader() {
-    var header = document.getElementById('siteHeader');
-    if (!header) return;
-    var onScroll = function () {
-      header.classList.toggle('scrolled', window.scrollY > 12);
-    };
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
-  }
+  // The header now wears its "scrolled" look from page load (translucent
+  // background, soft shadow, hairline) — no JS toggling needed. The
+  // function stays as a hook in case future tweaks want to react to
+  // scroll position.
+  function initHeader() {}
 
   // --------------------------------------------------------------------
   // 3. Mobile nav
@@ -140,6 +136,12 @@
     var status = document.getElementById('formStatus');
     var success = document.getElementById('formSuccess');
     var button = document.getElementById('submitBtn');
+    // Capture the localised button text so we can restore it after an error.
+    // Hardcoding 'Send enquiry' here would clobber the Chinese version.
+    var buttonLabel = button.textContent;
+    // Fallback email for the error message — comes from a data-attribute
+    // rendered by Liquid (main.js itself isn't a Liquid template).
+    var fallbackEmail = form.getAttribute('data-fallback-email') || '';
 
     var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[A-Za-z]{2,}$/;
 
@@ -266,11 +268,14 @@
         success.hidden = false;
         success.focus();
       }).catch(function (err) {
-        status.textContent = err.message || 'Sorry, the message could not be sent. Please email ' + '{{ site.contact_email }}' + ' directly.';
+        var fallback = fallbackEmail
+          ? 'Sorry, the message could not be sent. Please email ' + fallbackEmail + ' directly.'
+          : 'Sorry, the message could not be sent.';
+        status.textContent = err.message || fallback;
         status.classList.add('show', 'is-error');
         button.removeAttribute('aria-busy');
         button.disabled = false;
-        button.textContent = 'Send enquiry';
+        button.textContent = buttonLabel;
       });
     });
 
@@ -286,7 +291,7 @@
       status.classList.remove('show', 'is-error');
       button.disabled = false;
       button.removeAttribute('aria-busy');
-      button.textContent = 'Send enquiry';
+      button.textContent = buttonLabel;
     });
   }
 

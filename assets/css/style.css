@@ -41,11 +41,6 @@
   --text:        #2C3A2E;          /* body — deep green-grey */
   --muted:       #657066;          /* secondary text, labels */
 
-  /* ===== footer ===== */
-  --footer-bg:   #2C3A2E;          /* dark sage, matches --text for cohesion */
-  --footer-text:#CDD4C9;          /* softened from text for warmth */
-  --footer-muted:#9CA89E;
-
   /* ===== validation ===== */
   --error:       #B5523E;          /* warm clay, not alarm red */
   --error-tint:  #FBEEEA;
@@ -186,16 +181,8 @@ h3 { font-size: var(--fs-lg); line-height: 1.3; text-wrap: balance; }
 p { text-wrap: pretty; }
 
 .eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.55rem;
+  display: inline-block;
   margin-bottom: 1rem;
-}
-.eyebrow::after {
-  content: '';
-  width: 7px; height: 7px;
-  border-radius: 50%;
-  background: var(--clay);
 }
 
 /* One label voice — small-caps, bold, tracked. Colour set per context. */
@@ -300,18 +287,18 @@ section { position: relative; }
 
 /* ============ header ============ */
 
+/* Alisa wants the top bar to always look slightly transparent with a
+   soft shadow + hairline below — not just after scrolling. So the
+   "scrolled" look is the default look. The .scrolled modifier is kept
+   as a hook for any future tweaks but no longer drives base styling. */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 60;
-  background: rgba(250, 250, 247, 0.92);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid transparent;
-  transition: border-color var(--t-base) var(--ease), box-shadow var(--t-base) var(--ease);
-}
-.site-header.scrolled {
-  border-bottom-color: var(--hairline);
+  background: rgba(250, 250, 247, 0.78);
+  backdrop-filter: blur(12px) saturate(140%);
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+  border-bottom: 1px solid var(--hairline);
   box-shadow: var(--shadow-soft);
 }
 
@@ -1128,54 +1115,57 @@ section { position: relative; }
 .contact-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-  gap: clamp(2rem, 5vw, 4rem);
+  /* Tighter gap than other section grids — the form column is dense and
+     the left column is sparse (just a list), so a narrower gap keeps
+     them visually linked rather than floating apart. */
+  gap: clamp(1.5rem, 3vw, 2.5rem);
   align-items: start;
 }
 .contact-info { min-width: 0; }
-.contact-info .section-head { margin-bottom: var(--s-4); }
-.contact-info .section-head.center { margin-bottom: var(--s-6); }
-.contact-lead-html {
-  color: var(--text);
-  margin-bottom: var(--s-6);
-  max-width: 32rem;
-}
-.contact-lead-html p + p { margin-top: var(--s-3); }
-.contact-lead-html strong { color: var(--sage-darker); }
+.contact-info .section-head { margin-bottom: var(--s-6); }
 
-.contact-cta-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--s-3);
-  margin-bottom: var(--s-8);
-}
-.contact-cta-row .btn { width: auto; }
+/* Form sits in the right column of .contact-grid. Drop the .form-card
+   default max-width (60rem) so it fills the grid column instead of
+   capping out and leaving blank space next to the list. */
+.contact-grid .form-card { max-width: none; }
 
 .contact-list {
   list-style: none;
-  padding: var(--s-6);
+  padding: 0;
   margin: 0;
   display: grid;
-  gap: var(--s-5);
-  background: var(--band);
-  border-radius: var(--radius-lg);
+  gap: var(--s-6);
 }
-.contact-list li { display: grid; grid-template-columns: auto 1fr; gap: var(--s-3); align-items: start; }
+.contact-list li { display: grid; grid-template-columns: auto 1fr; gap: var(--s-4); align-items: center; }
 .contact-ico {
-  width: 36px;
-  height: 36px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  background: var(--paper);
+  background: var(--sage-light);
   color: var(--sage-deep);
   display: flex;
   align-items: center;
   justify-content: center;
   flex: 0 0 auto;
 }
-.contact-ico svg { width: 18px; height: 18px; }
-.contact-list a { color: var(--sage-deep); font-weight: 600; text-decoration: none; }
-@media (hover: hover) {
-.contact-list a:hover { text-decoration: underline; text-decoration-color: var(--clay); }
+.contact-ico svg { width: 20px; height: 20px; }
+/* Third icon (location) gets a clay tint so the list has some visual
+   variety, matching the freetobeplay reference. */
+.contact-list li:nth-child(3) .contact-ico {
+  background: var(--clay-tint);
+  color: var(--clay-dark);
 }
+.contact-list .label {
+  display: block;
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: var(--s-1);
+}
+.contact-list a { color: var(--sage-deep); font-weight: 700; text-decoration: none; }
+.contact-list a:hover { text-decoration: underline; text-decoration-color: var(--clay); }
 
 /* ============ form ============ */
 
@@ -1185,14 +1175,17 @@ section { position: relative; }
   box-shadow: var(--shadow-soft);
   padding: clamp(1.5rem, 4vw, 2.5rem);
   max-width: var(--w-narrow);
+  /* Safari: stop form controls with intrinsic widths (input, select) from
+     blowing out the form-card past its grid column. */
+  min-width: 0;
 }
 .form-row {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);   /* Safari needs minmax(0, ...) so form inputs can shrink */
   gap: var(--s-4);
   margin-bottom: var(--s-4);
 }
-.field { display: flex; flex-direction: column; gap: var(--s-2); margin-bottom: var(--s-4); }
+.field { display: flex; flex-direction: column; gap: var(--s-2); margin-bottom: var(--s-4); min-width: 0; }
 .field label, .field .label {
   font-size: var(--fs-ui);
   font-weight: 700;
@@ -1209,6 +1202,8 @@ section { position: relative; }
   border-radius: var(--radius-sm);
   padding: 0.75rem 1rem;
   min-height: 48px;
+  width: 100%;          /* fill the field */
+  min-width: 0;         /* Safari: shrink instead of overflow */
   transition: border-color var(--t-fast) var(--ease), box-shadow var(--t-fast) var(--ease);
 }
 .field textarea { min-height: 140px; resize: vertical; line-height: 1.5; }
@@ -1242,8 +1237,22 @@ section { position: relative; }
 .form-status.is-error { background: var(--error-tint); color: var(--error); }
 .form-status:not(.show) { display: none; }
 
-.form-foot { margin-top: var(--s-2); }
+.form-foot { margin-top: var(--s-2); text-align: center; }
 .form-foot .btn { width: 100%; }
+.form-foot-note {
+  font-size: var(--fs-sm);
+  color: var(--muted);
+  margin-top: var(--s-3);
+}
+
+/* "(optional)" inline tag next to a label. Smaller, muted, sits flush
+   against the label text. */
+.opt {
+  font-size: var(--fs-sm);
+  font-weight: 400;
+  color: var(--muted);
+  margin-left: 0.25rem;
+}
 
 /* Success state — swap the form for a thank-you panel with an animated tick. */
 .form-success {
@@ -1273,105 +1282,49 @@ section { position: relative; }
 }
 .form-success p { color: var(--muted); max-width: 36rem; margin-inline: auto; }
 
-/* ============ footer ============ */
+/* ============ footer ============
+ *
+ * Master-style: a single centred column with the Acknowledgement of
+ * Country above the copyright + privacy link. No identity strip, no
+ * inclusion statement, no flag icons — Alisa asked for the simpler
+ * master design. Width matches --maxw so the long sentences fit on
+ * one line at typical desktop widths (was 42rem / 672px — too narrow,
+ * forced both the acknowledgement and copyright to wrap). */
 
 .site-footer {
-  background: var(--footer-bg);
-  color: var(--footer-text);
-  padding: var(--s-16) clamp(1.5rem, 4vw, 3rem) var(--s-8);
+  padding: var(--s-12) clamp(1.5rem, 4vw, 3rem) var(--s-10);
+  border-top: 1px solid var(--hairline);
+  background: var(--canvas);
+  text-align: center;
 }
 .site-footer .wrap {
   padding: 0;
   max-width: var(--maxw);
   margin-inline: auto;
 }
-
-/* Top strip: identity on the left, contact details on the right, with a
-   hairline divider below. The two halves are spread apart. */
-.footer-strip {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: var(--s-6);
-  padding-bottom: var(--s-8);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-.footer-name {
-  font-family: 'Lora', Georgia, serif;
-  font-size: var(--fs-md);
-  font-weight: 600;
-  color: var(--paper);
-  margin-bottom: var(--s-1);
-}
-.footer-loc {
+.footer-ack {
   font-size: var(--fs-sm);
-  color: var(--footer-muted);
-}
-.footer-contact {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: var(--s-1);
-  text-align: right;
-}
-.footer-contact a {
-  color: var(--footer-text);
-  text-decoration: none;
-  font-size: var(--fs-sm);
-}
-@media (hover: hover) {
-.footer-contact a:hover { color: var(--rose); }
-}
-
-.notices {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--s-10);
-  padding: var(--s-10) 0 var(--s-12);
-}
-.notice p {
-  font-size: var(--fs-sm);
-  color: var(--footer-muted);
+  color: var(--muted);
   line-height: 1.65;
-  max-width: 28rem;
+  margin-bottom: var(--s-6);
 }
-.notice-flags {
-  display: flex;
-  gap: var(--s-3);
-  margin-bottom: var(--s-3);
-}
-.notice-flags img {
-  height: 24px;
-  width: auto;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 2px;
-}
-
-.footer-bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: var(--s-3);
-  padding-top: var(--s-6);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+.footer-meta {
   font-size: var(--fs-sm);
-  color: var(--footer-muted);
+  color: var(--muted);
+  line-height: 1.65;
 }
-
-.site-footer a {
-  color: var(--footer-text);
-  text-decoration-color: rgba(255, 255, 255, 0.3);
+.footer-meta a {
+  color: var(--sage-deep);
+  text-decoration: none;
 }
 @media (hover: hover) {
-.site-footer a:hover { color: var(--rose); text-decoration-color: currentColor; }
+.footer-meta a:hover { color: var(--clay-dark); text-decoration: underline; text-decoration-color: var(--clay); }
 }
-
-@media (max-width: 760px) {
-  .footer-strip { flex-direction: column; align-items: center; gap: var(--s-4); }
-  .footer-contact { align-items: center; text-align: left; }
-  .notices { grid-template-columns: 1fr; gap: var(--s-8); padding: var(--s-8) 0; }
-  .footer-bottom { justify-content: center; text-align: center; }
+.footer-sep {
+  display: inline-block;
+  margin: 0 0.5rem;
+  color: var(--muted);
+  opacity: 0.6;
 }
 
 /* Skip link — slides in from the left on focus. */
@@ -1503,6 +1456,10 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
      better with standard wrap. */
   text-align: left;
 }
+/* Wider variant for blog posts, where 38rem leaves huge blank margins
+   either side and feels pinched. 64rem fills the wrap content area
+   much closer to the homepage's reading width. */
+.prose-wide { max-width: 64rem; }
 .prose > * + * { margin-top: var(--s-4); }
 .prose h2 {
   font-size: var(--fs-h2);
@@ -1530,9 +1487,10 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
 .prose strong { color: var(--sage-darker); font-weight: 700; }
 .prose em { color: var(--muted); }
 
-/* Article header — used by blog posts */
+/* Article header — used by blog posts. Width matches .prose-wide
+   so the title sits flush with the prose column edges below it. */
 .article-header {
-  max-width: 38rem;
+  max-width: 64rem;
   margin: 0 auto var(--s-12);
   text-align: left;
 }
@@ -1678,6 +1636,7 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
 @media (max-width: 960px) {
   .about-page-grid { grid-template-columns: 1fr; }
   .about-page-grid .about-art { max-width: 26rem; margin-inline: auto; }
+  .contact-grid { grid-template-columns: 1fr; }
 }
 
 /* Page-level header (privacy, about top of page) */
