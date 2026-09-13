@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76 48" width="76" height="48" role="img" aria-label="Disability Pride Flag">
+  <!-- Five coloured stripes representing different disabilities -->
+  <rect width="76" height="9.6" fill="#7A0000"/>
+  <rect y="9.6"  width="76" height="9.6" fill="#F8E10C"/>
+  <rect y="19.2" width="76" height="9.6" fill="#FFFFFF"/>
+  <rect y="28.8" width="76" height="9.6" fill="#009FE3"/>
+  <rect y="38.4" width="76" height="9.6" fill="#3A6329"/>
+  <!-- Charcoal lightning-bolt-like symbol (simplified) -->
+  <path d="M28 8 L42 24 L34 24 L46 40 L32 28 L40 28 Z" fill="#000000" opacity="0.85"/>
+</svg>

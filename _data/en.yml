@@ -1,43 +1,221 @@
 nav:
   what_is_play_therapy: "Play Therapy"
-  is_this_for_my_child: "Is This for My Child"
   services: "Services"
   about: "About"
-  contact: "Contact"
+  faq: "FAQ"
   blog: "Blog"
+  contact: "Contact"
+
 buttons:
   get_in_touch: "Get in Touch"
   learn_more: "Learn More"
-  send_message: "Send Message"
-  read_full_bio: "Read Full Bio"
+  send_message: "Send Enquiry"
+  read_full_bio: "Read More About Me"
+  register_interest: "Register Your Interest"
+  book_discover_call: "Book a Free 15-minute Discovery Call"
+  view_all_articles: "View All Articles"
+  read_more: "Read more"
+  find_out_more: "Find out More"
+
+form:
+  name_label: "Your name"
+  name_placeholder: "Jane Smith"
+  phone_label: "Phone"
+  phone_optional: "(optional)"
+  phone_placeholder: "0400 000 000"
+  email_label: "Email"
+  email_placeholder: "jane@example.com"
+  child_age_label: "Child’s age"
+  child_age_placeholder: "e.g. 6"
+  preferred_contact_label: "Preferred contact"
+  preferred_contact_options:
+    - "Either is fine"
+    - "Email"
+    - "Phone call"
+  message_label: "Your message"
+  message_placeholder: "Share as much or as little as you’d like."
+  submit: "Send enquiry"
+  confidential: "Your enquiry is confidential."
+  status_error: "Sorry, the message could not be sent. Please try again or email me directly."
+  success_heading: "Thank you"
+  success_body: "Your message has been sent. I'll be in touch soon."
+
 footer:
   privacy_policy: "Privacy Policy"
   copyright_line: "All rights reserved. All content on this site is protected and may not be reproduced without written permission."
+  # Alisa's exact wording from prod.
+  acknowledgement: "Play Therapy With Alisa acknowledges the Traditional Custodians of the lands on which we live, work and play, and pays respect to Elders past and present."
+  inclusion: "At Alisa Play Therapy, we are committed to providing services that are inclusive and accessible for all children and families, regardless of ethnicity, gender, gender identity and expression, disability, neurodivergence, religion or sexual orientation."
+
+# Splose external form — Alisa uses this instead of an inline contact form.
+splose_form_url: "https://play-therapy-with-alisa-1.splose.com/public-form/04c0af96-beb3-4509-b853-e8d18937b193"
+discovery_call_url: "mailto:hello@alisaplaytherapy.com?subject=15-minute%20Discover%20Call"
+
 hero:
-  title: "Healing Through Play"
-  subtitle: "A safe, nurturing space where children can express themselves, work through difficult feelings, and build resilience — guided by a trained and compassionate therapist."
-  cta: "Learn More About My Approach"
+  eyebrow: "English & Mandarin"
+  meta: "Mobile service available"
+  title: "Held in Play"
+  title_accent: ""             # no accent word — title is plain
+  subtitle: "Play therapy in Adelaide for children aged 3-8 and their families. Supporting emotional regulation, confidence, social skills, and stronger family connections."
+  cta_primary: "Make an Enquiry"
+  cta_secondary: "View services"
+  cta_secondary_url: "#services"
+
 sections:
+
   what_is_play_therapy:
     eyebrow: "Understanding Play Therapy"
     title: "What is Play Therapy?"
-    lead: "Play is children's natural language. Before they have words for complex emotions, they play them out."
+    # Alisa's 4-paragraph intro, with the Garry Landreth quote in the middle.
+    # Kept as raw HTML so the <strong> and the blockquote render correctly.
+    body_html: >
+      <p>Have you ever felt lighter after sharing something with someone who truly listened and understood? Not someone who rushes to fix things, but someone who stays with you, makes space for what you are feeling, and helps you feel less alone. When we feel accepted and understood, we are often better able to make sense of our experiences and find our own ways forward.</p>
+
+      <p>Children need this experience too. The difference is that young children often find it difficult to put their feelings, experiences, and worries into words. <strong>Instead, they communicate through the language they know best — play.</strong></p>
+
+      <blockquote><strong>Play is children's language. Toys are their words.</strong> — Garry Landreth</blockquote>
+
+      <p>Play Therapy is a form of child counselling that honours play as children's natural way of expressing, exploring, and making sense of their world. Within a safe and accepting therapeutic relationship, children use toys, dolls, puppets, art materials, and creative activities to communicate feelings and experiences that may be too complex, confusing, or overwhelming to put into words.</p>
+
+      <p>Over time, this process gently supports children to develop <strong>greater emotional awareness, learn ways to manage big feelings, build confidence, and strengthen trust in their own ability to navigate life's challenges.</strong></p>
+
+  is_this_for_my_child:
+    eyebrow: ""
+    title: "Play Therapy supports children who are navigating:"
+    items:
+      - title: "Big Emotions and Meltdowns"
+        body: "Frequent tantrums, emotional outbursts, or difficulty calming down."
+      - title: "Behavioural Challenges"
+        body: "Aggression, defiance, withdrawal, or struggles with everyday routines."
+      - title: "Play and Social Difficulties"
+        body: "Struggles with play skills, joining in with peers, making friends, or feeling confident in social situations."
+      - title: "Anxiety, Worries, or Big Life Changes"
+        body: "Worries, clinginess, withdrawal, or difficulty adjusting to changes such as starting school, family changes, or loss."
+    cta: "Find out More"
+    cta_url: "/2026/07/02/is-play-therapy-right-for-my-child.html"
+
   services:
     eyebrow: "What I Offer"
     title: "Services"
+    lead: "I offer three specialised play-based approaches to support children and families."
+    items:
+      - title: "Child-Centered Play Therapy"
+        sub: "A child-led space for emotional growth"
+        lead: "A calm, accepting space where your child leads the process through play."
+        body: "Within a consistent therapeutic relationship, children are supported to explore their inner world, build emotional understanding, and grow in resilience."
+        cta: "Read More"
+        cta_url: "/2026/07/02/what-is-child-centered-play-therapy.html"
+      - title: "Learn to Play Therapy"
+        sub: "Developing the foundations of play and connection"
+        lead: "A structured, play-based approach for children who need support with engagement, flexibility, and imagination."
+        body: "Sessions gently build the skills needed for learning, relationships, and reciprocal play."
+        cta: "Read More"
+        cta_url: "/2026/07/02/what-is-learn-to-play-therapy.html"
+      - title: "Filial Therapy"
+        sub: "Strengthening connection through guided play"
+        lead: "A parent-focused approach that teaches essential therapeutic skills to use at home."
+        body: "This work deepens the parent-child relationship and supports emotional connection through intentional shared playtimes."
+        cta: "Read More"
+        cta_url: "/2026/07/02/what-is-filial-therapy.html"
+
   about:
+    eyebrow: "About Alisa"
     title: "About Alisa"
+    bio_html: >
+      <p>I am a play therapist and early childhood teacher, originally from China. I came to Australia in 2015 to study Teaching, and since then my work has centred around young children aged 3-8.</p>
+      <p>I believe children grow and heal within relationships where they feel safe, accepted, and genuinely understood. Through a warm and supportive therapeutic relationship, I provide children with a space where they can express themselves, explore their experiences, and discover their own strengths at their own pace.</p>
+    credentials: "Master of Play Therapy · Master of Teaching (Early Childhood) / Registered Play Therapist (APPTA & PTPA) · Registered Teacher, Early Childhood (SA)"
+    cta: "Read More About Me"
+    cta_url: "/about"
+
+  faq:
+    eyebrow: "You Might Wonder"
+    title: "Frequently Asked Questions"
+    lead: "More questions? Get in touch."
+    lead_url: "#contact"
+    items:
+      - q: "How does the process look like?"
+        # Q1's answer contains the 4-step process (intake / sessions / reviews / ending).
+        # Rendered as HTML so the <ol> shows.
+        a_html: >
+          <p>The process usually happens in four steps:</p>
+          <ol>
+            <li><strong>Intake consultation</strong> — a one-off 90-minute meeting to talk through your child's history, your concerns, and what you're hoping for from therapy.</li>
+            <li><strong>Regular therapy sessions</strong> — usually weekly, around one hour each. Children do best when therapy is predictable and consistent, and weekly rhythm gives that.</li>
+            <li><strong>Parent review meetings</strong> — regular check-ins (every 5 or 6 sessions) to talk about progress and adjust the plan if needed. You're part of the process, not on the outside of it.</li>
+            <li><strong>Ending therapy</strong> — when your child is ready, we plan the ending together. Countdown sessions will be discussed and arranged ahead rather than stopping suddenly, so your child has time to adjust.</li>
+          </ol>
+      - q: "Does my child need a diagnosis or referral?"
+        a: "Not really. If you have concerns about your child's emotions, behaviour, or social development, feel free to reach out."
+      - q: "Where do sessions happen?"
+        a: "Sessions are mobile across Metropolitan Adelaide, which means I come to your child. Most often this is your home, where your child is already comfortable. By arrangement, sessions can be held at your child's childcare or school. Parent consultations and parent-child sessions (filial therapy) are held online."
+      - q: "How long does therapy take?"
+        a: "Most children are in therapy for around 20 sessions. Some settle faster. Some need longer, especially when the difficulties are deeper or have been going on for a while. Progress is reviewed with you regularly. You're not committing to a fixed length of time. You're committing to a process, and we keep checking in together about how it's going."
+      - q: "Do I stay in the room during sessions?"
+        a: "Whether you stay in the playroom or not, and for how long, depends on your child's needs. Generally, parents are not in the play space during sessions. This matters more than it sounds. Children express themselves differently when the relational dynamics of home aren't in the room. The play space becomes a different kind of space, and that difference is part of what makes the work possible. Some children need a gentler start. If your child is very young, new to therapy, or finding it hard to settle, we can plan for you to be nearby at first and step out gradually. Occasionally, your child may need you to stay in the playroom for a few minutes as a transition. Whatever we decide, it's about attuning to what your child needs in that moment, and we work it out together."
+      - q: "When are sessions available?"
+        a: "Sessions are available on Wednesdays and Fridays, between 8:30am and 5pm."
+      - q: "Fees"
+        # Two columns (Private Paying / NDIS) with sage-tinted panels.
+        # Closed by default — opens on click like every other FAQ item.
+        a_html: >
+          <div class="fees-faq-grid">
+            <div class="fees-faq-panel">
+              <h4 class="fees-faq-panel-title">Private Paying clients</h4>
+              <div class="fee-line">
+                <span class="fee-line-name">Intake consultation (one-off, 90 minutes)</span>
+                <span class="fee-line-price">$255</span>
+              </div>
+              <div class="fee-line">
+                <span class="fee-line-name">Therapy session</span>
+                <span class="fee-line-price">$170<span class="fee-line-unit">/h</span></span>
+              </div>
+              <div class="fee-line">
+                <span class="fee-line-name">Parent Review Meetings</span>
+                <span class="fee-line-price">$170<span class="fee-line-unit">/h</span></span>
+              </div>
+            </div>
+            <div class="fees-faq-panel">
+              <h4 class="fees-faq-panel-title">NDIS clients</h4>
+              <div class="fee-line">
+                <span class="fee-line-name">Intake consultation (one-off, 90 minutes)</span>
+                <span class="fee-line-price">$290.98</span>
+              </div>
+              <div class="fee-line">
+                <span class="fee-line-name">Therapy session</span>
+                <span class="fee-line-price">$193.99<span class="fee-line-unit">/h</span></span>
+              </div>
+              <div class="fee-line">
+                <span class="fee-line-name">Parent Review Meetings</span>
+                <span class="fee-line-price">$193.99<span class="fee-line-unit">/h</span></span>
+              </div>
+            </div>
+          </div>
+          <p class="fees-faq-note">For children seen in their home or school environment, travel charges may apply. We will always confirm and agree on travel costs before commencing mobile sessions.</p>
+          <p class="fees-faq-disclaimer"><em>Fees are subject to review on 1 July, 2027.</em></p>
+
   contact:
     eyebrow: "Get in Touch"
-    title: "Let's Talk"
-    lead: "If you'd like to find out whether Play Therapy might be right for your child, or if you have any questions, reach out. A brief conversation can help us figure out if we're the right fit."
-form:
-  name_label: "Your Name"
-  email_label: "Email Address"
-  message_label: "Message"
-  message_placeholder: "Tell me a little about your child and what you're hoping to explore..."
+    title: "Make an enquiry"
+    items:
+      - label: "Email"
+        value: "hello@alisaplaytherapy.com"
+        href: "mailto:hello@alisaplaytherapy.com"
+      - label: "Phone"
+        value: "0405 491 343"
+        href: "tel:+61405491343"
+      - label: "Service Area"
+        value: "Metropolitan Adelaide · Telehealth"
+
+  cta:
+    heading: "Let's support your child's journey together."
+    cta: "Register Your Interest"
+    cta_url: "splose"
+
 blog:
   from_the_blog: "From the Blog"
   recent_articles: "Recent Articles"
   view_all: "View All Articles"
   read_more: "Read more"
+  home_intro: "Articles on play therapy, child development, and more."
+  home_cta: "View All Articles"

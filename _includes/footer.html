@@ -1,16 +1,11 @@
-<footer id="site-footer">
-  <div class="footer-inner">
-    <p class="acknowledgement">Play Therapy With Alisa acknowledges the Traditional Custodians of the lands on which we live, work and play, and pays respect to Elders past and present.</p>
-    <p>
-      &copy; {{ site.time | date: "%Y" }} Alisa Play Therapy.
-      {% assign current_lang = page.lang | default: 'en' %}
-    {% if current_lang == 'zh' %}
-        {{ site.data.zh.footer.copyright_line }}
-        | <a href="{{ site.baseurl }}/zh/privacy/">{{ site.data.zh.footer.privacy_policy }}</a>
-      {% else %}
-        {{ site.data.en.footer.copyright_line }}
-        | <a href="{{ site.baseurl }}/privacy/">{{ site.data.en.footer.privacy_policy }}</a>
-      {% endif %}
+{%- assign current_lang = page.lang | default: 'en' -%}
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="footer-ack">{{ site.data[current_lang].footer.acknowledgement }}</p>
+    <p class="footer-meta">
+      &copy; <span id="year"></span> {{ site.title }}. {{ site.data[current_lang].footer.copyright_line }}
+      <span class="footer-sep" aria-hidden="true">|</span>
+      <a href="{% if current_lang == 'zh' %}{{ site.baseurl }}/zh/privacy{% else %}{{ site.baseurl }}/privacy{% endif %}">{{ site.data[current_lang].footer.privacy_policy }}</a>
     </p>
   </div>
 </footer>

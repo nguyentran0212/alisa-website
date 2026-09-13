@@ -3,6 +3,7 @@ layout: post
 title: "Learn to Play 游戏治疗"
 date: 2026-07-02
 lang: zh
+permalink: /zh/blog/what-is-learn-to-play-therapy/
 excerpt: "Learn to Play 游戏治疗支持那些在假装、轮流、共享注意力上有困难的孩子。"
 featured: true
 featured_order: 2
@@ -60,7 +61,3 @@ Learn to Play 游戏治疗帮助孩子在以下这些方面慢慢成长：
 
 ---
 
-<p style="text-align: center; margin-top: 32px;">
-  <a href="{{ site.baseurl }}/zh/#contact" class="btn btn-primary" style="margin: 0 8px;">联系我</a>
-  <a href="{{ site.baseurl }}/zh/#services" class="btn btn-outline" style="margin: 0 8px;">回到服务项目</a>
-</p>

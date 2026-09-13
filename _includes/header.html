@@ -1,41 +1,50 @@
-<nav id="site-nav">
-  <div class="nav-inner">
-    <a href="{{ site.baseurl }}/" class="nav-logo">
-      <img src="{{ site.baseurl }}/assets/images/logo_horizontal.png" alt="Alisa Play Therapy" height="36">
+{%- assign current_lang = page.lang | default: 'en' -%}
+<header class="site-header" id="siteHeader">
+  <nav class="nav" aria-label="Primary">
+    <a class="brand-link" href="{% if current_lang == 'zh' %}{{ site.baseurl }}/zh/{% else %}{{ site.baseurl }}/{% endif %}" aria-label="{% if current_lang == 'zh' %}{{ site.title }}{% else %}Alisa Play Therapy, home{% endif %}">
+      <img src="{{ site.baseurl }}/assets/images/logo_horizontal.png" alt="" width="480" height="96">
     </a>
-    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-    {% assign current_lang = page.lang | default: 'en' %}
-    <ul class="nav-links">
-      {% if current_lang == 'zh' %}
+
+    <ul class="nav-links" id="navLinks">
+      {%- if current_lang == 'zh' -%}
         <li><a href="{{ site.baseurl }}/zh/#what-is-play-therapy">{{ site.data.zh.nav.what_is_play_therapy }}</a></li>
-        <li><a href="{{ site.baseurl }}/zh/#is-this-for-my-child">{{ site.data.zh.nav.is_this_for_my_child }}</a></li>
         <li><a href="{{ site.baseurl }}/zh/#services">{{ site.data.zh.nav.services }}</a></li>
         <li><a href="{{ site.baseurl }}/zh/about">{{ site.data.zh.nav.about }}</a></li>
-        <li><a href="{{ site.baseurl }}/zh/#faq">常见问题</a></li>
+        <li><a href="{{ site.baseurl }}/zh/#faq">{{ site.data.zh.nav.faq }}</a></li>
+        <li><a href="{{ site.baseurl }}/zh/blog">{{ site.data.zh.nav.blog }}</a></li>
         <li><a href="{{ site.baseurl }}/zh/#contact">{{ site.data.zh.nav.contact }}</a></li>
-      {% else %}
+        <li class="lang-toggle-mobile">
+          <a href="{{ site.baseurl }}/" class="lang-link">EN</a>
+          <span class="lang-sep">|</span>
+          <a href="{{ site.baseurl }}/zh/" class="lang-link active">中文</a>
+        </li>
+      {%- else -%}
         <li><a href="{{ site.baseurl }}/#what-is-play-therapy">{{ site.data.en.nav.what_is_play_therapy }}</a></li>
-        <li><a href="{{ site.baseurl }}/#is-this-for-my-child">{{ site.data.en.nav.is_this_for_my_child }}</a></li>
         <li><a href="{{ site.baseurl }}/#services">{{ site.data.en.nav.services }}</a></li>
         <li><a href="{{ site.baseurl }}/about">{{ site.data.en.nav.about }}</a></li>
-        <li><a href="{{ site.baseurl }}/#faq">FAQ</a></li>
+        <li><a href="{{ site.baseurl }}/#faq">{{ site.data.en.nav.faq }}</a></li>
+        <li><a href="{{ site.baseurl }}/blog">{{ site.data.en.nav.blog }}</a></li>
         <li><a href="{{ site.baseurl }}/#contact">{{ site.data.en.nav.contact }}</a></li>
-      {% endif %}
-      <li><a href="{% if current_lang == 'zh' %}{{ site.baseurl }}/zh/blog{% else %}{{ site.baseurl }}/blog{% endif %}">{% if current_lang == 'zh' %}{{ site.data.zh.nav.blog }}{% else %}{{ site.data.en.nav.blog }}{% endif %}</a></li>
-      <li class="lang-toggle-mobile">{% if current_lang == 'zh' %}<a href="{{ site.baseurl }}/" class="lang-link">EN</a><span class="lang-sep">|</span><a href="{{ site.baseurl }}/zh/" class="lang-link active">中文</a>{% else %}<a href="{{ site.baseurl }}/" class="lang-link active">EN</a><span class="lang-sep">|</span><a href="{{ site.baseurl }}/zh/" class="lang-link">中文</a>{% endif %}</li>
+        <li class="lang-toggle-mobile">
+          <a href="{{ site.baseurl }}/" class="lang-link active">EN</a>
+          <span class="lang-sep">|</span>
+          <a href="{{ site.baseurl }}/zh/" class="lang-link">中文</a>
+        </li>
+      {%- endif -%}
     </ul>
-  </div>
-  <div class="lang-toggle">
-    {% if current_lang == 'zh' %}
-      <a href="{{ site.baseurl }}/" class="lang-link">EN</a>
+
+    <div class="lang-toggle">
+      <a href="{{ site.baseurl }}/" class="lang-link {% if current_lang == 'en' %}active{% endif %}">EN</a>
       <span class="lang-sep">|</span>
-      <a href="{{ site.baseurl }}/zh/" class="lang-link active">中文</a>
-    {% else %}
-      <a href="{{ site.baseurl }}/" class="lang-link active">EN</a>
-      <span class="lang-sep">|</span>
-      <a href="{{ site.baseurl }}/zh/" class="lang-link">中文</a>
-    {% endif %}
-  </div>
-</nav>
+      <a href="{{ site.baseurl }}/zh/" class="lang-link {% if current_lang == 'zh' %}active{% endif %}">中文</a>
+    </div>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true">
+        <line class="bar" x1="4" y1="7"  x2="20" y2="7"/>
+        <line class="bar" x1="4" y1="12" x2="20" y2="12"/>
+        <line class="bar" x1="4" y1="17" x2="20" y2="17"/>
+      </svg>
+    </button>
+  </nav>
+</header>

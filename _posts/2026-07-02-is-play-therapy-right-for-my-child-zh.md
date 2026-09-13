@@ -3,6 +3,7 @@ layout: post
 title: "游戏治疗适合我的孩子吗？"
 date: 2026-07-02
 lang: zh
+permalink: /zh/blog/is-play-therapy-right-for-my-child/
 excerpt: "如果您一直在想，游戏治疗是否能帮到您的孩子——以下是一些值得留意的迹象，以及为什么尽早寻求支持会带来不同。"
 featured: true
 featured_order: 4
@@ -50,7 +51,3 @@ tags:
 
 ---
 
-<p style="text-align: center; margin-top: 32px;">
-  <a href="{{ site.baseurl }}/zh/#contact" class="btn btn-primary" style="margin: 0 8px;">联系我</a>
-  <a href="{{ site.baseurl }}/zh/#services" class="btn btn-outline" style="margin: 0 8px;">回到服务项目</a>
-</p>
