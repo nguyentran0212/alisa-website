@@ -32,12 +32,17 @@ permalink: /zh/
   <!-- ============ 什么是游戏治疗 (bright) ============ -->
   <section id="what-is-play-therapy">
     <div class="wrap">
-      <div class="section-head center">
-        <p class="eyebrow">{{ site.data.zh.sections.what_is_play_therapy.eyebrow }}</p>
-        <h2>{{ site.data.zh.sections.what_is_play_therapy.title }}</h2>
-      </div>
-      <div class="prose reveal">
-        {{ site.data.zh.sections.what_is_play_therapy.body_html }}
+      <div class="what-is-grid">
+        <div class="what-is-text reveal">
+          <p class="eyebrow">{{ site.data.zh.sections.what_is_play_therapy.eyebrow }}</p>
+          <h2>{{ site.data.zh.sections.what_is_play_therapy.title }}</h2>
+          <div class="prose">
+            {{ site.data.zh.sections.what_is_play_therapy.body_html }}
+          </div>
+        </div>
+        <div class="what-is-art reveal" style="--d: 0.08s">
+          <img src="{{ site.baseurl }}/assets/images/what-is-play-therapy.jpg" alt="">
+        </div>
       </div>
     </div>
   </section>
