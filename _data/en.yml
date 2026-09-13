@@ -207,6 +207,11 @@ sections:
       - label: "Service Area"
         value: "Metropolitan Adelaide · Telehealth"
 
+  cta:
+    heading: "Let's support your child's journey together."
+    cta: "Register Your Interest"
+    cta_url: "splose"
+
 blog:
   from_the_blog: "From the Blog"
   recent_articles: "Recent Articles"

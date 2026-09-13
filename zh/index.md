@@ -283,4 +283,23 @@ permalink: /zh/
     </div>
   </section>
 
+  <!-- ============ CTA BAND (warm, between contact and footer) ============
+       Mirrors the freetobeplay reference: heading on the left, vertical
+       hairline divider, big primary button on the right linking to the
+       Splose external form. Sits on --band-tint so it reads as a
+       distinct strip after the contact section's --band. -->
+  <section class="cta-band">
+    <div class="wrap">
+      <div class="cta-grid">
+        <div class="cta-text">
+          <h2>{{ site.data.zh.sections.cta.heading }}</h2>
+        </div>
+        <div class="cta-divider" aria-hidden="true"></div>
+        <div class="cta-action">
+          <a class="btn btn-primary" href="{{ site.data.zh.splose_form_url }}" target="_blank" rel="noopener">{{ site.data.zh.sections.cta.cta }}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </main>
