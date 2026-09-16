@@ -3,7 +3,7 @@ layout: post
 title: "Filial Therapy"
 date: 2026-07-02
 lang: en
-excerpt: "Filial Therapy is a parent-focused approach where parents become the agents of therapeutic change. Here's how the work unfolds and what it can offer your family."
+excerpt: "Filial Therapy empowers parents and caregivers to become agents of therapeutic change in their child's life — through play. Here's how the work unfolds and what it can offer your family."
 featured: true
 featured_order: 1
 tags:
@@ -14,13 +14,13 @@ tags:
 
 When a child is struggling — with big emotions, behaviour, or changes at home — parents often feel pulled in many directions. You want to help, but it can be hard to know what to say, what to do, or how to stay close when your child seems distant. Filial Therapy recognises something powerful: parents are central to your child's emotional world, and the relationship itself can be a path to healing.
 
-## Parents as the agents of change
+## Parents as Agents of Change
 
-Filial Therapy is a parent-focused approach in which parents become the primary agents of therapeutic change. Rather than the child attending sessions alone with a therapist, the work is centred on you — the parent or caregiver.
+Filial Therapy is a parent–child approach that empowers parents and caregivers to become agents of therapeutic change in their child's life. Rather than the child attending sessions alone with a therapist, parents are supported to take an active role in the therapeutic process.
 
-In Filial Therapy, you are equipped with essential therapeutic play skills that you can use at home in regular, intentional playtimes with your child. These playtimes become a space for connection, attunement, and emotional repair.
+In Filial Therapy, you learn essential therapeutic play skills and are guided in using them during regular, dedicated play sessions with your child. These special playtimes create opportunities for connection, understanding, emotional expression, and relationship-building.
 
-The work is rooted in the belief that the parent–child relationship is one of the most powerful forces for change in a child's life.
+The approach is grounded in the belief that the parent–child relationship is one of the most powerful resources for supporting a child's growth and wellbeing. By strengthening this relationship, parents can help foster lasting change both within and beyond the play sessions.
 
 ## What the work looks like
 
