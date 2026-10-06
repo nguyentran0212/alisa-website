@@ -12,7 +12,7 @@ permalink: /zh/about/
     <div class="wrap">
       <div class="about-page-grid">
         <div class="about-art reveal">
-          <img src="{{ site.baseurl }}/assets/images/alisa.png" alt="Alisa Liao，注册游戏治疗师">
+          <img src="{{ site.baseurl }}/assets/images/alisa.jpg" alt="Alisa Liao，注册游戏治疗师">
         </div>
         <div class="about-bio">
           <p class="eyebrow">{{ site.data.zh.sections.about.eyebrow }}</p>

@@ -81,7 +81,7 @@ permalink: /
     <div class="wrap">
       <div class="about-home-grid">
         <div class="about-home-art reveal">
-          <img src="{{ site.baseurl }}/assets/images/alisa.png" alt="Alisa Liao, Registered Play Therapist">
+          <img src="{{ site.baseurl }}/assets/images/alisa.jpg" alt="Alisa Liao, Registered Play Therapist">
         </div>
         <div class="about-home-bio reveal" style="--d: 0.08s">
           <p class="eyebrow">{{ site.data.en.sections.about.eyebrow }}</p>

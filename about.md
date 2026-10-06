@@ -13,7 +13,7 @@ permalink: /about/
     <div class="wrap">
       <div class="about-page-grid">
         <div class="about-art reveal">
-          <img src="{{ site.baseurl }}/assets/images/alisa.png" alt="Alisa Liao, Registered Play Therapist">
+          <img src="{{ site.baseurl }}/assets/images/alisa.jpg" alt="Alisa Liao, Registered Play Therapist">
         </div>
         <div class="about-bio">
           <p class="eyebrow">About</p>

@@ -78,7 +78,7 @@ permalink: /zh/
     <div class="wrap">
       <div class="about-home-grid">
         <div class="about-home-art reveal">
-          <img src="{{ site.baseurl }}/assets/images/alisa.png" alt="Alisa Liao，注册游戏治疗师">
+          <img src="{{ site.baseurl }}/assets/images/alisa.jpg" alt="Alisa Liao，注册游戏治疗师">
         </div>
         <div class="about-home-bio reveal" style="--d: 0.08s">
           <p class="eyebrow">{{ site.data.zh.sections.about.eyebrow }}</p>
