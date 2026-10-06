@@ -208,7 +208,7 @@ sections:
         value: "0405 491 343"
         href: "tel:+61405491343"
       - label: "Service Area"
-        value: "Metropolitan Adelaide · Telehealth"
+        value: "Mobile service for families within 15 km of North Adelaide · Telehealth"
 
   cta:
     heading: "Ready to take the next step?"
