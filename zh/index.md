@@ -290,40 +290,22 @@ permalink: /zh/
   </section>
 
   <!-- ============ CTA BAND (warm, between contact and footer) ============
-       Splose external form, embedded inline via iframe in place of the
-       previous "注册您的兴趣" button. Heading on top, iframe below in a
-       fixed-height wrapper so the Splose snippet (which uses
-       position:absolute;width/height:100%) has somewhere to sit. Sits on
-       --band-tint so it reads as a distinct strip after the contact
-       section's --band. -->
+       Mirrors the freetobeplay reference: heading on the left, vertical
+       hairline divider, big primary button on the right linking to the
+       Splose external form. Sits on --band-tint so it reads as a
+       distinct strip after the contact section's --band. -->
   <section class="cta-band">
     <div class="wrap">
-      <h2 class="cta-heading">{{ site.data.zh.sections.cta.heading }}</h2>
-      <div class="splose-form-wrapper">
-        <iframe id="splose-form-a81a2451-af8a-4692-9759-5d6fd76ade66"
-                src="https://play-therapy-with-alisa-1.splose.com/public-form/a81a2451-af8a-4692-9759-5d6fd76ade66"
-                name="embeddableForm"
-                style="position: absolute; top:0; left: 0; width: 100%; height: 100%;"
-                scrolling="auto"
-                width="100%" height="100%"
-                loading="lazy"
-                frameBorder="0">
-        </iframe>
+      <div class="cta-grid">
+        <div class="cta-text">
+          <h2>{{ site.data.zh.sections.cta.heading }}</h2>
+        </div>
+        <div class="cta-divider" aria-hidden="true"></div>
+        <div class="cta-action">
+          <a class="btn btn-primary" href="{{ site.data.zh.splose_form_url }}" target="_blank" rel="noopener">{{ site.data.zh.sections.cta.cta }}</a>
+        </div>
       </div>
     </div>
   </section>
-  <script>
-    window.addEventListener('message', function(e) {
-      if (e.origin !== 'https://play-therapy-with-alisa-1.splose.com') return;
-      if (!e.data || !e.data.type) return;
-      var f = document.getElementById('splose-form-a81a2451-af8a-4692-9759-5d6fd76ade66');
-      if (!f || e.source !== f.contentWindow) return;
-      if (e.data.type === 'sploseFormSubmit') {
-        var p = e.data.payload || {};
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({event: 'splose_form_submit', formName: String(p.formName), formId: String(p.formId)});
-      }
-    });
-  </script>
 
 </main>

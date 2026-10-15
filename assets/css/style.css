@@ -1391,33 +1391,6 @@ section { position: relative; }
   .cta-action { align-items: center; }
 }
 
-/* Splose inline form — used in place of the previous CTA button on the
-   Chinese home page. The wrapper gives the iframe a fixed height so
-   Splose's `position: absolute; width/height: 100%` styling has a real
-   box to fill. Background card lifts the form off the band tint. */
-.cta-heading {
-  font-family: 'Lora', Georgia, serif;
-  font-size: var(--fs-h2);
-  color: var(--sage-darker);
-  line-height: 1.2;
-  margin: 0 0 clamp(1rem, 2vw, 1.5rem) 0;
-  text-align: center;
-}
-.splose-form-wrapper {
-  position: relative;
-  width: 100%;
-  max-width: 760px;
-  height: 720px;
-  margin-inline: auto;
-  border-radius: 12px;
-  overflow: hidden;
-  background: var(--white);
-  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
-}
-@media (max-width: 760px) {
-  .splose-form-wrapper { height: 820px; }
-}
-
 /* ============ footer ============
  *
  * Master-style: a single centred column with the Acknowledgement of
